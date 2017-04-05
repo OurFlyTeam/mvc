@@ -11,6 +11,6 @@
 
 	<!--自动扫描含有@Service将其注入为bean -->
 	<context:component-scan base-package="ofly.ep.*.service" >
-		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 	</context:component-scan>
 </beans>
