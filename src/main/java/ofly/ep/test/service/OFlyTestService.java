@@ -7,15 +7,15 @@
  *
  */
 
-package com.test.service.impl;
+package ofly.ep.test.service;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.test.dao.ITestDao;
-import com.test.service.api.ITestService;
+import ofly.ep.test.api.IOFlyTestService;
+import ofly.ep.test.dao.IOFlyTestDao;
+import ofly.ep.test.vo.OFlyTestVo;
 
 /**
  *  类描述：
@@ -26,15 +26,17 @@ import com.test.service.api.ITestService;
  *           
  */
 @Service("/testService")
-public class TestService implements ITestService {
+public class OFlyTestService implements IOFlyTestService {
 
 	@Resource
-	ITestDao dao;
+	IOFlyTestDao dao;
 	
 	@Override
-	public String test() {
+	public OFlyTestVo test() {
 		String nameById = dao.qryNameById("N");
-		return "success";
+		OFlyTestVo vo = new OFlyTestVo();
+		vo.setName(nameById);
+		return vo;
 	}
 
 }

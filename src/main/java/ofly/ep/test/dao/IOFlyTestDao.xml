@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test.dao.ITestDao">
+<mapper namespace="ofly.ep.test.dao.IOFlyTestDao">
   <select id="qryNameById" parameterType="String" resultType="String">
-    select shop_name from shop a where a.shop_id = '1' 
+    select shop_name name from shop a where a.shop_id = '1' 
   </select>
 </mapper>

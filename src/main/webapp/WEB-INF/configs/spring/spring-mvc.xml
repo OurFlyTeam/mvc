@@ -11,7 +11,7 @@
 	<context:property-placeholder location="/WEB-INF/configs/config.properties"/>
 	<!-- 自动扫描controller包下的所有类，如果@Controller注入为bean -->
 	<context:annotation-config/>
-	<context:component-scan base-package="com.test.*" >
+	<context:component-scan base-package="ofly.ep.**" >
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 
@@ -72,11 +72,4 @@
 		<property name="resolveLazily" value="true"></property>
 	</bean>
 	
-	<mvc:interceptors>
-		<mvc:interceptor>
-			<mvc:mapping path="*"/>
-			<bean class="com.test.TestFilter"></bean>
-		</mvc:interceptor>
-	</mvc:interceptors>
- 
 </beans>

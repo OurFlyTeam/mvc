@@ -7,7 +7,9 @@
  *
  */
 
-package com.test.service.api;
+package ofly.ep.test.api;
+
+import ofly.ep.test.vo.OFlyTestVo;
 
 /**
  *  类描述：
@@ -17,7 +19,7 @@ package com.test.service.api;
  *  History:  2017年4月4日 下午7:42:03   Logan   Created.
  *           
  */
-public interface ITestService {
-	String test();
+public interface IOFlyTestService {
+	OFlyTestVo test();
 
 }

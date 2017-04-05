@@ -7,7 +7,7 @@
  *
  */
 
-package com.test.dao;
+package ofly.ep.test.dao;
 
 /**
  *  类描述：
@@ -17,6 +17,6 @@ package com.test.dao;
  *  History:  2017年4月5日 下午1:42:07   Logan   Created.
  *           
  */
-public interface ITestDao {
+public interface IOFlyTestDao {
 	String qryNameById(String id);
 }
