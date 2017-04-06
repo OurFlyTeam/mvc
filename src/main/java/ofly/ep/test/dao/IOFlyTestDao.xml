@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ofly.ep.test.dao.IOFlyTestDao">
-  <select id="qryNameById" parameterType="String" resultType="String">
-    select shop_name name from shop a where a.shop_id = '1' 
-  </select>
+	<select id="queryById" parameterType="int" resultType="String">
+		select shop_name name,shop_id id from shop a where a.shop_id = #{id}
+	</select>
+	<!-- 添加一条记录 -->
+	<insert id="insertByName" parameterType="String">
+		insert into shop(shop_name) values(#{name})
+	</insert>
+	<!-- 删除一条记录 -->
+	<delete id="deleteById" parameterType="int">
+		delete from shop where shop_id=#{id}
+	</delete>
+	<!-- 删除一条记录 -->
+	<delete id="deleteByName" parameterType="String">
+		delete from shop where shop_name=#{name}
+	</delete>
+	<!-- 更新一条记录 -->
+	<update id="updateByVo" parameterType="ofly.ep.test.vo.OFlyTestVo">
+		update shop set shop_name=#{name} where shop_id=#{id}
+	</update>
+
 </mapper>

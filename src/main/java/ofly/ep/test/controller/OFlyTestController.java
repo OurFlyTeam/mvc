@@ -9,6 +9,7 @@
 
 package ofly.ep.test.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -30,6 +31,9 @@ import ofly.ep.test.vo.OFlyTestVo;
 @Controller
 @RequestMapping("ofly/test")
 public class OFlyTestController {
+	
+    static Logger logger = Logger.getLogger(OFlyTestController.class.getName());
+    
 	@Autowired
 	@Qualifier("testService")  
 	IOFlyTestService TestService;
@@ -37,7 +41,27 @@ public class OFlyTestController {
 	@RequestMapping("/init")
 	@ResponseBody
 	public OFlyTestVo init(Model m) {
-		OFlyTestVo vo = TestService.test();
+		OFlyTestVo vo = TestService.findById(1);
 		return vo;
+	}
+	
+	@RequestMapping("/add")
+	@ResponseBody
+	public void addShop(Model m) {
+		try{
+			TestService.Insert("nihao3");
+			TestService.Insert("nihao21111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111");
+			TestService.Insert("nihao4");
+		}catch(Exception e){
+			 e.printStackTrace();
+			 logger.error("addShop 出错");
+		}
+	}
+	
+	@RequestMapping("/delete")
+	@ResponseBody
+	public void deleteShop(Model m) {
+		TestService.DeleteByName("nihao2");
+		TestService.DeleteByName("nihao3");
 	}
 }

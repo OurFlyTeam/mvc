@@ -20,6 +20,8 @@ import ofly.ep.test.vo.OFlyTestVo;
  *           
  */
 public interface IOFlyTestService {
-	OFlyTestVo test();
-
+	OFlyTestVo findById(int id);
+	boolean Insert(String name);
+	boolean Delete(int id);
+	boolean DeleteByName(String name);
 }

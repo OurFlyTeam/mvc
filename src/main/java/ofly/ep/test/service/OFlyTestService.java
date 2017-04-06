@@ -31,11 +31,32 @@ public class OFlyTestService implements IOFlyTestService {
 	IOFlyTestDao dao;
 	
 	@Override
-	public OFlyTestVo test() {
-		String nameById = dao.qryNameById("N");
+	public OFlyTestVo findById(int id) {
+		String nameById = dao.queryById(id);
 		OFlyTestVo vo = new OFlyTestVo();
 		vo.setName(nameById);
 		return vo;
+	}
+
+	@Override
+	public boolean Insert(String name) {
+		// TODO Auto-generated method stub
+		dao.insertByName(name);
+		return true;
+	}
+
+	@Override
+	public boolean Delete(int id) {
+		// TODO Auto-generated method stub
+		dao.deleteById(id);
+		return true;
+	}
+
+	@Override
+	public boolean DeleteByName(String name) {
+		// TODO Auto-generated method stub
+		dao.deleteByName(name);
+		return false;
 	}
 
 }
