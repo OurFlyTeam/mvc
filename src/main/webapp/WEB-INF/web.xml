@@ -3,19 +3,20 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
-
-	<display-name>SpringMVC Study</display-name>
+	
+	<display-name>MSM(Maven-SpringMVC-Mybatis) Demo</display-name>
 	<!-- Spring应用的上下文 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			/WEB-INF/configs/spring/spring.xml,
 			/WEB-INF/configs/spring/spring-mybatis.xml
-			</param-value>
+		</param-value>
 	</context-param>
 	<listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    
 	<!-- 日志打印 -->
 	<context-param>    
         <param-name>log4jConfigLocation</param-name>    

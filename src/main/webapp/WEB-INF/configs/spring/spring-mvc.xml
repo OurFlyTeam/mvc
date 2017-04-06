@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/context/spring-context-4.1.xsd 
 		http://www.springframework.org/schema/mvc 
 		http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
-	<context:property-placeholder location="/WEB-INF/configs/config.properties"/>
+		
 	<!-- 自动扫描controller包下的所有类，如果@Controller注入为bean -->
 	<context:annotation-config/>
 	<context:component-scan base-package="ofly.ep.**" >
@@ -17,11 +17,11 @@
 
 	<!-- 扩展注解驱动，可以将url的请求参数绑定到控制器的参数中 -->
 	<mvc:annotation-driven/>
-
+	<!--   待研究*************************************************************************
 	<mvc:resources mapping="/images/**" 	location="/images/" />
     <mvc:resources mapping="/css/**" 		location="/css/" />  
     <mvc:resources mapping="/js/**" 		location="/js/" />
-    <mvc:resources mapping="/imgdata/**" 	location="/imgdata/"/>
+    <mvc:resources mapping="/imgdata/**" 	location="/imgdata/"/>-->
 	<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
 	<!--<bean id="mappingJacksonHttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -43,7 +43,7 @@
 		</property>
 	</bean>
 -->
-
+<!-- 返回xml或者json窜  待研究*************************************************************************
 	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
        <property name="favorParameter" value="true"/>
        <property name="parameterName" value="format"/>
@@ -55,7 +55,7 @@
             </value>
        </property>
        <property name="defaultContentType" value="text/html"/>
-      </bean>
+      </bean>-->
 	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -64,12 +64,13 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<!-- 配置多文件上传 -->
+	<!-- 配置多文件上传     待研究*************************************************************************
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="defaultEncoding" value="UTF-8"/>
-		<property name="maxUploadSize" value="32505856"/> <!-- 上传文件大小限制为31M，31*1024*1024 -->
-		<property name="maxInMemorySize" value="4096"/>
+		<property name="maxUploadSize" value="32505856"/> --><!-- 上传文件大小限制为31M，31*1024*1024 -->
+	<!--	<property name="maxInMemorySize" value="4096"/>
 		<property name="resolveLazily" value="true"></property>
 	</bean>
+	 -->
 	
 </beans>

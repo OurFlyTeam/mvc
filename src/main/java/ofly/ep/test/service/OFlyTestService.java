@@ -10,7 +10,6 @@
 package ofly.ep.test.service;
 
 import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import ofly.ep.test.api.IOFlyTestService;
@@ -25,7 +24,7 @@ import ofly.ep.test.vo.OFlyTestVo;
  *  History:  2017年4月4日 下午7:42:48   Logan   Created.
  *           
  */
-@Service("/testService")
+@Service("testService")
 public class OFlyTestService implements IOFlyTestService {
 
 	@Resource
