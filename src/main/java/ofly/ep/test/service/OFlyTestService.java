@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import ofly.ep.test.aop.SystemLog;
 import ofly.ep.test.api.IOFlyTestService;
 import ofly.ep.test.dao.IOFlyTestDao;
 import ofly.ep.test.vo.OFlyTestVo;
@@ -33,6 +34,7 @@ public class OFlyTestService implements IOFlyTestService {
 
 	@Override
 	@Transactional
+	@SystemLog(methods = "用户管理",module = "用户查询")
 	public OFlyTestVo findById(int id) {
 		String nameById = dao.queryById(id);
 		OFlyTestVo vo = new OFlyTestVo();
@@ -42,6 +44,7 @@ public class OFlyTestService implements IOFlyTestService {
 
 	@Override
 	@Transactional
+	@SystemLog(methods = "用户管理",module = "用户新建")
 	public boolean Insert(String name) {
 		// TODO Auto-generated method stub
 		dao.insertByName(name);

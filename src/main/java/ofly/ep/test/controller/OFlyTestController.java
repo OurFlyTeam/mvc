@@ -16,7 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ofly.ep.test.aop.SystemLog;
 import ofly.ep.test.api.IOFlyTestService;
 import ofly.ep.test.vo.OFlyTestVo;
 
@@ -44,7 +43,6 @@ public class OFlyTestController {
 
 	@RequestMapping("/add")
 	@ResponseBody
-	@SystemLog(methods = "用户管理",module = "用户登陆")
 	public void addShop(Model m) throws Exception {
 		TestService.Insert("3bear");
 	}

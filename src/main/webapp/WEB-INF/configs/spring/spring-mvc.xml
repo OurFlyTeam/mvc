@@ -25,10 +25,9 @@
 	<mvc:annotation-driven/>
 	
 	
-	<!-- 配置成注解方式寻找要被代理的对象
-	<aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy> -->
-	<!-- 配置切面的类 
-	<bean id="methodAspectJ" class="ofly.ep.test.aop.MethodLogAspectJ" />-->
+	<!--Aop切面编程的配置 配置在springMVC层的话，只能控制conrtol层触发，service不能触发
+    <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>
+    <bean id="logAopAction" class="ofly.ep.test.aop.LogAopAction"></bean>-->
 	
 	
 	<!--   待研究*************************************************************************
