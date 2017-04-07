@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
 		http://www.springframework.org/schema/context 
 		http://www.springframework.org/schema/context/spring-context-4.1.xsd 
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		http://www.springframework.org/schema/mvc 
 		http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
 		
-	<!-- 自动扫描controller包下的所有类，如果@Controller注入为bean -->
+	<!-- 启用spring mvc 注解 -->
 	<context:annotation-config/>
+	<!-- 自动扫描controller包下的所有类，如果@Controller注入为bean -->
 	<context:component-scan base-package="ofly.ep.**" >
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>    
+		<!--初始化的Service保证事务的增强处理能力-->
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 	</context:component-scan>
 
-	<!-- 扩展注解驱动，可以将url的请求参数绑定到控制器的参数中 -->
+	<!-- 扩展注解驱动，可以将url的请求参数绑定到控制器的参数中 使用@Controller注解必须要有这个-->
 	<mvc:annotation-driven/>
+	
+	
+	<!-- 配置成注解方式寻找要被代理的对象
+	<aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy> -->
+	<!-- 配置切面的类 
+	<bean id="methodAspectJ" class="ofly.ep.test.aop.MethodLogAspectJ" />-->
+	
+	
 	<!--   待研究*************************************************************************
 	<mvc:resources mapping="/images/**" 	location="/images/" />
     <mvc:resources mapping="/css/**" 		location="/css/" />  

@@ -10,27 +10,29 @@
 package ofly.ep.test.service;
 
 import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ofly.ep.test.api.IOFlyTestService;
 import ofly.ep.test.dao.IOFlyTestDao;
 import ofly.ep.test.vo.OFlyTestVo;
 
 /**
- *  类描述：
+ * 类描述：
  * 
- *  @author:  Logan
+ * @author: Logan
  *
- *  History:  2017年4月4日 下午7:42:48   Logan   Created.
- *           
+ *          History: 2017年4月4日 下午7:42:48 Logan Created.
+ * 
  */
 @Service("testService")
 public class OFlyTestService implements IOFlyTestService {
-
 	@Resource
 	IOFlyTestDao dao;
-	
+
 	@Override
+	@Transactional
 	public OFlyTestVo findById(int id) {
 		String nameById = dao.queryById(id);
 		OFlyTestVo vo = new OFlyTestVo();
@@ -39,13 +41,16 @@ public class OFlyTestService implements IOFlyTestService {
 	}
 
 	@Override
+	@Transactional
 	public boolean Insert(String name) {
 		// TODO Auto-generated method stub
 		dao.insertByName(name);
+		int i = 1 / 0;
 		return true;
 	}
 
 	@Override
+	@Transactional
 	public boolean Delete(int id) {
 		// TODO Auto-generated method stub
 		dao.deleteById(id);
@@ -53,6 +58,7 @@ public class OFlyTestService implements IOFlyTestService {
 	}
 
 	@Override
+	@Transactional
 	public boolean DeleteByName(String name) {
 		// TODO Auto-generated method stub
 		dao.deleteByName(name);

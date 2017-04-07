@@ -9,6 +9,8 @@
 
 package ofly.ep.test.dao;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import ofly.ep.test.vo.OFlyTestVo;
 
 /**
@@ -20,9 +22,14 @@ import ofly.ep.test.vo.OFlyTestVo;
  *           
  */
 public interface IOFlyTestDao{
+	@Transactional(readOnly = true)
 	String queryById(int id);
+	@Transactional
 	void insertByName(String name);
+	@Transactional
 	void deleteById(int id);
+	@Transactional
 	void deleteByName(String name);
+	@Transactional
 	void updateByVo(OFlyTestVo vo);
 }
