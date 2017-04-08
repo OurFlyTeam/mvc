@@ -37,7 +37,8 @@ public class LogAopAction {
     private Log log = new Log();
 
 	//@Pointcut("execution(* ofly.ep.test.controller.OFlyTestController.*(..)))")
-	@Pointcut("execution(* ofly.ep.test..*.findById(..)))")
+	//@Pointcut("execution(* ofly.ep.test..*.*(..)))")
+    @Pointcut("@annotation(ofly.ep.test.aop.SystemLog)") 
 	private void controllerAspect() {
 	}
 

@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import ofly.ep.test.aop.SystemLog;
 import ofly.ep.test.api.IOFlyTestService;
 import ofly.ep.test.vo.OFlyTestVo;
 
@@ -36,6 +37,7 @@ public class OFlyTestController {
 
 	@RequestMapping("/find")
 	@ResponseBody
+	@SystemLog(methods = "Control",module = "用户查询")
 	public OFlyTestVo init(Model m) {
 		OFlyTestVo vo = TestService.findById(1);
 		return vo;
@@ -43,6 +45,7 @@ public class OFlyTestController {
 
 	@RequestMapping("/add")
 	@ResponseBody
+	@SystemLog(methods = "Control",module = "用户新建")
 	public void addShop(Model m) throws Exception {
 		TestService.Insert("3bear");
 	}

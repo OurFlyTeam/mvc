@@ -24,10 +24,8 @@
 	<!-- 扩展注解驱动，可以将url的请求参数绑定到控制器的参数中 使用@Controller注解必须要有这个-->
 	<mvc:annotation-driven/>
 	
-	
-	<!--Aop切面编程的配置 配置在springMVC层的话，只能控制conrtol层触发，service不能触发
-    <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>
-    <bean id="logAopAction" class="ofly.ep.test.aop.LogAopAction"></bean>-->
+	<!--通知spring使用cglib而不是jdk的来生成代理方法 AOP可以拦截到Controller，没有的话aop只能在service拦截--> 
+	<aop:aspectj-autoproxy proxy-target-class="true"/>  
 	
 	
 	<!--   待研究*************************************************************************

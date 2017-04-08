@@ -34,7 +34,7 @@ public class OFlyTestService implements IOFlyTestService {
 
 	@Override
 	@Transactional
-	@SystemLog(methods = "用户管理",module = "用户查询")
+	@SystemLog(methods = "Service",module = "用户查询")
 	public OFlyTestVo findById(int id) {
 		String nameById = dao.queryById(id);
 		OFlyTestVo vo = new OFlyTestVo();
@@ -44,7 +44,7 @@ public class OFlyTestService implements IOFlyTestService {
 
 	@Override
 	@Transactional
-	@SystemLog(methods = "用户管理",module = "用户新建")
+	@SystemLog(methods = "Service",module = "用户新建")
 	public boolean Insert(String name) {
 		// TODO Auto-generated method stub
 		dao.insertByName(name);
