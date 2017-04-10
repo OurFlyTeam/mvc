@@ -37,7 +37,6 @@ public class OFlyTestController {
 
 	@RequestMapping("/find")
 	@ResponseBody
-	@SystemLog(methods = "Control",module = "用户查询")
 	public OFlyTestVo init(Model m) {
 		OFlyTestVo vo = TestService.findById(1);
 		return vo;
@@ -45,7 +44,6 @@ public class OFlyTestController {
 
 	@RequestMapping("/add")
 	@ResponseBody
-	@SystemLog(methods = "Control",module = "用户新建")
 	public void addShop(Model m) throws Exception {
 		TestService.Insert("3bear");
 	}

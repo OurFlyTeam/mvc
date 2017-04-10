@@ -37,8 +37,8 @@ public class LogAopAction {
     private Log log = new Log();
 
 	//@Pointcut("execution(* ofly.ep.test.controller.OFlyTestController.*(..)))")
-	//@Pointcut("execution(* ofly.ep.test..*.*(..)))")
-    @Pointcut("@annotation(ofly.ep.test.aop.SystemLog)") 
+	@Pointcut("execution(* ofly.ep.test..*.*(..)))")
+    //@Pointcut("@annotation(ofly.ep.test.aop.SystemLog)") 
 	private void controllerAspect() {
 	}
 
@@ -93,6 +93,7 @@ public class LogAopAction {
 		logger.info("*********例外通知**********："+e.getMessage());
 	}
 	
+	/*
 	@Around("controllerAspect()")
 	public Object around(ProceedingJoinPoint pjp) throws Throwable{
 		logger.info("=========  1111111111  =========");  
@@ -149,6 +150,7 @@ public class LogAopAction {
                     log.setState((short) 1);
                 } catch (Throwable e) {
                     // TODO Auto-generated catch block
+                	logger.info("*********例外通知**********："+e.getMessage());
                     log.setDescription("执行失败");
                     log.setState((short)-1);
                 }
@@ -174,7 +176,7 @@ public class LogAopAction {
 		logger.info("getModule:"+log.getModule());  
 		logger.info("getState:"+log.getState()); 
         return object;
-    }
+    }*/
 
     /**
      * 获取ip地址

@@ -15,10 +15,10 @@
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan> 
 	
-	<!-- Aop切面编程的配置 如果不配置在springMVC层的话，只能控制service层触发，conrtol不能触发
-    <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy> -->
+	<!-- Aop切面编程的配置 如果不配置在springMVC层的话，只能控制service层触发，conrtol不能触发-->
+    <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy> 
     <bean id="logAopAction" class="ofly.ep.test.aop.LogAopAction"></bean>
-	<!-- 启动对@AspectJ注解的支持 -->  
-	<aop:aspectj-autoproxy/>  
+	<!-- 启动对@AspectJ注解的支持  
+	<aop:aspectj-autoproxy/>  -->
 
 </beans>
