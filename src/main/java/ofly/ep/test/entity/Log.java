@@ -1,5 +1,5 @@
 package ofly.ep.test.entity;
-
+ 
 import java.util.Date;
 
 public class Log {
