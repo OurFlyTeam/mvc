@@ -8,7 +8,7 @@
 </head>
 <body>
 Hello SpringMVC
-<form action="init">
+<form action="${pageContext.request.contextPath}/ofly/ep/main/goMain">
 	<input id="id" name="id" value="张三">
 	<input type="submit">
 </form>

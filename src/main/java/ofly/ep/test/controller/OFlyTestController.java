@@ -16,7 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ofly.ep.test.aop.SystemLog;
 import ofly.ep.test.api.IOFlyTestService;
 import ofly.ep.test.vo.OFlyTestVo;
 
@@ -53,4 +52,10 @@ public class OFlyTestController {
 	public void deleteShop(Model m) {
 		TestService.DeleteByName("3bear");
 	}
+	
+	@RequestMapping("/test")
+	public String test(Model m) {
+		return "test";
+	}
+	
 }
