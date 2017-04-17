@@ -16,9 +16,9 @@
 	<delete id="deleteByName" parameterType="String">
 		delete from shop where shop_name=#{name}
 	</delete>
-	<!-- 更新一条记录 -->
+	<!-- 更新一条记录
 	<update id="updateByVo" parameterType="ofly.ep.test.vo.OFlyTestVo">
 		update shop set shop_name=#{name} where shop_id=#{id}
 	</update>
-
+ -->
 </mapper>
