@@ -28,7 +28,7 @@ import ofly.ep.test.vo.OFlyTestVo;
  * 
  */
 @Controller
-@RequestMapping("ofly/test")
+@RequestMapping("/ofly/test")
 public class OFlyTestController {
 
 	@Resource(name="testService")
