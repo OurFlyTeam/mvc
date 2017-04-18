@@ -14,12 +14,19 @@
 		
 	<!-- 启用spring mvc 注解 -->
 	<context:annotation-config/>
+	
 	<!-- 自动扫描controller包下的所有类，如果@Controller注入为bean -->
+	<context:component-scan base-package="ofly.ep.*.controller" >
+	</context:component-scan>
+	<context:component-scan base-package="ofly.ep.*.service" >
+	</context:component-scan>
+	
+	<!-- 自动扫描controller包下的所有类，如果@Controller注入为bean
 	<context:component-scan base-package="ofly.ep.**" >
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>    
-		<!--初始化的Service保证事务的增强处理能力-->
+		初始化的Service保证事务的增强处理能力
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
-	</context:component-scan>
+	</context:component-scan>-->
 
 	<!-- 扩展注解驱动，可以将url的请求参数绑定到控制器的参数中 使用@Controller注解必须要有这个-->
 	<mvc:annotation-driven/>
