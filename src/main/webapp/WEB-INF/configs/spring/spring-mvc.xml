@@ -23,7 +23,7 @@
 
 	<!-- 扩展注解驱动，可以将url的请求参数绑定到控制器的参数中 使用@Controller注解必须要有这个-->
 	<!--通知spring使用cglib而不是jdk的来生成代理方法 AOP可以拦截到Controller，没有的话aop只能在service拦截
-	<aop:aspectj-autoproxy proxy-target-class="true"/>   -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>   --> 
 	
 	<mvc:annotation-driven/>
 	<mvc:resources mapping="/img/**" 		location="/resources/img/" />
