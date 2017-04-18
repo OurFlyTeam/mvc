@@ -4,59 +4,39 @@
 <html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>公司</title>
-	<meta name="keywords" content="关键字">
-	<meta name="description" content="简介">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/allUse/Layout.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/Main.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/allUse/Head.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/public/css/allUse/Foot.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>公司</title>
+<meta name="keywords" content="青岛晟荣环境工程有限公司">
+<meta name="description"
+	content="青岛晟荣环境工程有限公司位于风光秀丽、气候宜人的滨海度假旅游城市及国际性港口城市、国家历史文化名城——青岛，坐落在即墨华骏物流园西，是集科研、设计、生产制造、营销、安装调试、售后服务为一体的专业环保企业。">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/allUse/reset.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/allUse/Head.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/allUse/Foot.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/Main.css">
 </head>
 
 <body>
-	<div id="mainPage" class="main">
-		<jsp:include   page="/WEB-INF/jsp/allUse/Head.jsp" flush="true"/>  
-		<div id="showimg-box">
-			<div class="showimg-layout">
-				<ul>
-					<li class="first"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/1.jpg"></li>
-					<li class="center"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/2.jpg"></li>
-					<li class="last"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/9.jpg"></li>
-					<li class="follow"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/3.jpg"></li>
-					<li class="follow"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/4.jpg"></li>
-					<li class="follow"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/5.jpg"></li>
-					<li class="follow"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/6.jpg"></li>
-					<li class="follow"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/7.jpg"></li>
-					<li class="follow"><img alt="美女"
-						src="${pageContext.request.contextPath}/public/img/viewpicture/8.jpg"></li>
-				</ul>
-		
-				<div class="tbn">
-					<div class="left"><</div>
-					<div class="right">></div>
-				</div>
-			</div>
-		</div>
-		<div id="content-box">
-			<div class="content-layout">
-				<div class="main-nav"></div>
-				<div class="main-category"></div>
-			</div>
-		</div>
-		<jsp:include   page="/WEB-INF/jsp/allUse/Foot.jsp" flush="true"/>  
+	<jsp:include page="/WEB-INF/jsp/allUse/Head.jsp" flush="true" />
+	<div class="banner">
+		<ul>
+			<li data-num="1" class="on"></li>
+			<li data-num="2"></li>
+			<li data-num="3"></li>
+			<li data-num="4"></li>
+		</ul>
 	</div>
-	<script src="${pageContext.request.contextPath}/public/js/min/jquery-1.8.3.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/public/js/min/header.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/public/js/Main.js"></script>
-	
+	<div>
+		下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容
+		下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容下面是内容
+	</div>
+	<jsp:include page="/WEB-INF/jsp/allUse/Foot.jsp" flush="true" />
+	<script src="${pageContext.request.contextPath}/js/min/jquery-1.8.3.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/Main.js"></script>
+
 </body>
 </html>

@@ -10,17 +10,17 @@
 </head>
 
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/public/css/allUse/Layout.css">
+	href="${pageContext.request.contextPath}/css/allUse/Layout.css">
 <body>
 	<div id="index-main" class="main">
 		<div align="center">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
 				width="1000" height="600">
-				<param name="movie" value="${pageContext.request.contextPath}/public/img/flash/flash5230.swf">
+				<param name="movie" value="${pageContext.request.contextPath}/img/flash/flash5230.swf">
 				<param name="quality" value="high">
 				<PARAM name=bgcolor VALUE=#fff> 
-				<embed src="${pageContext.request.contextPath}/public/img/flash/flash5230.swf" quality="high" bgcolor=#fff
+				<embed src="${pageContext.request.contextPath}/img/flash/flash5230.swf" quality="high" bgcolor=#fff
 					pluginspage="http://www.macromedia.com/go/getflashplayer"
 					type="application/x-shockwave-flash" width="1000" height="600">
 			</object>
@@ -34,7 +34,7 @@
 
 <!-- 
 http://localhost:88/mvc/ofly/test/find/
-jsp:forward page="/WEB-INF/jsp/application/Main.jsp" /
+<jsp:forward page="/WEB-INF/jsp/application/Main.jsp" />
 http://localhost:88/mvc
 http://localhost:88/mvc/ofly/test/test/
  -->

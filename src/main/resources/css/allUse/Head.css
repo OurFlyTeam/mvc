@@ -1,106 +1,121 @@
-
-
-#head-box{
-	/*position:fixed;*/position:fixed;
-	top:0;
-	left:0;
-	height: 200px;
-	width: 100%;
-	background: #f2f2f2;
-	min-width: 1000px;
-	overflow: hidden;
-	z-index:10000;
+/*headerv title部分样式*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;    
 }
-
-.mini-top {
-	width: auto;
-	height: 30px;
-	border-bottom: 1px solid #e5e5e5;
+.header .title{
+    height: 86px;
+     background: rgba(255,255,255,0.4); 
+     -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+     -ms-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;   
 }
-.mini-top-layout{
-	width: 1000px;
-	height: 30px;
-	margin:0 auto;
+.header .title.header-scrolled{
+    background: linear-gradient(#f0ffec,#fff); 
 }
-
-.mini-top-left{
-	height: 30px;
-	width:200px;
-	float:left;
-	background:url("../../img/logo.jpg");
-	background-size:contain;
-	background-position:center;
+.header .title .wrap{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 12px 0;
 }
-
-.mini-top-right{
-	height: 30px;
-	float:right;
-	line-height:30px;
-	font-size: 14px;
-	font-weight: bold;
+.header .title a{
+    float: left;
+    width: 62px;
+    height: 62px;
+    margin-right: 20px;
+    background: url(../../img/allUse/logo.png) no-repeat;
+    background-size: cover;
 }
-#time{
-	height: 30px;
-	float:right;
-	line-height:30px;
-	font-size: 12px;
-	margin-left:30px;
+.header .title h1{
+    float: left;
+    width: 350px;
+    margin-top: 3px;
+    padding-left: 20px;
+    border-left: solid 1px #ddd;
+    color: #000;
 }
-
-
-.header-top {
-	height: 130px;
-	width: auto;
-	background: #fff;
+.header .title .china-name{
+    font: 25px "华文隶书","Microsoft YaHei";
 }
-
-.header-top-Layout{
-	height: 130px;
-	width: 1000px;
-	margin:0 auto;
+.header .title .english-name{
+    font: 12px "Microsoft YaHei";
 }
-.header-top-Con{
-	height: 130px;
-	width: 1000px;
-	margin:0 auto;
-	background: #f5f5f5;
+.header .title .tell{
+    float: right;
+    width: 200px;
+    padding-left: 60px;
+    margin-top: 8px;
+    color: #55bb0e;
+    background: url(../../img/allUse/tel.png) no-repeat;
 }
-
-.header-menu {
-	height: 40px;
-	width: auto;
-	background: #fff;
+.header .tell .link{
+    font: 16px "Microsoft YaHei";
+    
 }
-
-.header-menu-Layout{
-	height: 40px;
-	width: 1000px;
-	margin:0 auto;
+.header .tell .num{
+   font: 24px/26px Arial, Helvetica, sans-serif;
 }
-.header-menu-Con{
-	height: 40px;
-	width: 1000px;
-	margin:0 auto;
-	background: #f10f10f10;
+/*header nav样式*/
+.header .nav{
+    width: 100%;
+    height: 42px;
+    background: #83b91f; 
 }
-.header-menu-Con ul li{
-	position: relative;
-	list-style: none; 
-	width: 110px; /*宽度*/
-	height: 30px; /*高度*/
-	border-right: 2px solid #c0c0c0; 
-	float: left; 
-	margin: 5px 5px;
-	overflow: hidden;
-	line-height: 30px;
-	text-align: center;
-	border-radius: 2px;
+.header .nav .wrap{
+    width: 1000px;
+    margin: 0 auto;
 }
-.header-menu-Con ul li:hover{
-	background-color: #80ffff;
+.header .nav .item{
+    position: relative;
+    float: left;
+    width: 166px;
+    height: 42px;
 }
-.header-menu-Con ul li.nobot{
-	border-right: 0px; 
+.header .nav .item:hover{
+    background: #306f36;
+}
+.nav .item ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+.nav .item ul li{
+    width: 100%;
+    height: 28px;
+    margin: 1px auto;
+}
+.nav .item ul a{
+    height: 28px;
+    line-height: 28px;
+    background: #97c447;
+    font-size: 14px;
+    color: #fff;
+}
+.nav .item ul a:hover{
+    background: #306f36;
+}
+.nav .item:hover ul{
+    display: block;
+}
+.header .nav .item:not(:last-child){
+     border-right: 1px solid #699816; 
+}
+.header .nav .item:not(:first-child){
+     border-left: 1px solid #acdd4d; 
+}
+.header .nav a{
+    width: 166px;
+    height: 42px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
 }
 
 
