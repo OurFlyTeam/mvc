@@ -1,5 +1,5 @@
 body,button,figure,h1,h2,h3,input,p,span,textarea,ul,fieldset{box-sizing:border-box;margin:0;padding:0}
-div,li,a{box-sizing:border-box;}
+div,li{box-sizing:border-box;}
 a{display:inline-block;text-decoration:none}
 img{display:block}
 li{list-style:none}
