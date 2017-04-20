@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ofly.ep.common.dao.ICodeDao">
+	<select id="queryCodeListBySortCode" resultType="ofly.ep.common.vo.CodeVo">
+		SELECT 
+		    a.id sort_ID,
+		    a.code_sort_name sort_name,
+		    a.code_sort_code sort_code,
+		    b.id,
+		    b.parent_id,
+		    b.name,
+		    b.value
+		FROM
+		    ep_code_sort a,
+		    ep_code b
+		WHERE 
+			a.id=b.code_sort_id
+		AND a.code_sort_code = #{sortCode}
+		ORDER BY b.value
+	</select>
+</mapper>
