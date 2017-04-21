@@ -58,7 +58,13 @@
 	    var ctx = '<%=request.getContextPath()%>';
 	    var editor = UE.getEditor('editor');
 	    $(function() {
-	    	
+	    	OFLY.message("确认",function() {
+	    		OFLY.confirm("确认提交?", function() {
+	    			window.location.reload();
+	    		},function() {
+	    			alert(1);
+	    		});
+	    	},'warning');
 	    });
     </script>
 </body>
