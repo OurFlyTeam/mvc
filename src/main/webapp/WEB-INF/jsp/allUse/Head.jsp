@@ -10,7 +10,7 @@
                 </h1>
                 <p class="tell">
                     <span class="link">联系电话</span>
-                    <span class="num">1234567</span>
+                    <span class="num">18053215436</span>
                 </p>
             </div>
         </div>
