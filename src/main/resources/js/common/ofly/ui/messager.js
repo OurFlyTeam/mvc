@@ -45,3 +45,72 @@ OFLY.confirm = function(msg, sucFn, failFn) {
 		}
 	});
 }
+/**
+ * @Author			: Logan
+ * @introduction 	: Dialog框
+ * [
+ * 		id		: dialog ID
+ * 		url		: 统一资源定位
+ * 		params	: 入参
+ * 		title	: 标题
+ * 		width	: 宽度
+ * 		height	: 高度
+ * 		buttons	: 底层按钮(为数组，数组内部对象如下)格式为[{text:'',type:'',handler:fn},{text:'',type:'',handler:fn}...]
+ * 				  [
+ * 					text	: 按钮名称
+ * 					type	: 按钮类型
+ * 							 ['save','reload']
+ * 					handler	: 点击出来的方法
+ * 				  ]
+ * 		
+ * ]
+ */
+OFLY.dialog = function(id, url, params, title, width, height, buttons) {
+	var div = '<div id="'+id+'"></div>';
+	$(document.body).append(div); 
+	var options = {
+		title	: title,
+		width	: width,
+		height	: height,
+		href	: url+ "?"+$.param(params),
+		closed	: false,
+        cache	: false,
+        modal	: true
+	}
+	// 转换type 的为样式图标
+	var map = {
+		save	: 'icon-save',
+		reload	: 'icon-reload',
+		close	: 'icon-close'
+		
+	};
+	if(buttons!=null && buttons.length>0) {
+		$.each(buttons,function(index, item) {
+			item.iconCls 	= map[item.type];
+			item.plain 		= true;
+			delete item.type;
+		});
+		options['buttons'] = buttons;
+	}
+	
+	$('#dd').dialog({    
+	    title: 'My Dialog',    
+	    width: 400,    
+	    height: 200,    
+	    closed: false,    
+	    cache: false,    
+	    href: 'get_content.php',    
+	    modal: true   
+	});
+	$('#'+id).dialog(options);
+}
+/**
+ * @Author			: Logan
+ * @introduction 	: 关闭dialog 
+ * [
+ * 		id	: dialog ID
+ * ]
+ */
+OFLY.dialog.close = function(id) {
+	$('#'+id).dialog('close');
+}

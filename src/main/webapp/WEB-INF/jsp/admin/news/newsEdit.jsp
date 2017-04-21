@@ -52,20 +52,29 @@
 				</tr>
 			</table>
 	</form>
+	<a href="#" onclick="a()">ssssssssssssssssss</a>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/news/news.js"></script>
 	<script type="text/javascript">
 	    //实例化编辑器
 	    var ctx = '<%=request.getContextPath()%>';
 	    var editor = UE.getEditor('editor');
 	    $(function() {
-	    	OFLY.message("确认",function() {
-	    		OFLY.confirm("确认提交?", function() {
-	    			window.location.reload();
-	    		},function() {
-	    			alert(1);
-	    		});
-	    	},'warning');
+	    	
 	    });
+	   /*
+	    var a = function() {
+	    	var buttons = [
+	    		{
+	    			text	: "保存",
+	    			type	: "reload",
+	    			handler	: function() {
+	    				alert(1);
+	    			}
+	    		}
+	    	];
+	    	OFLY.dialog("dialog",ctx+'/newsEdit/init', {}, "title", 1000, 600, buttons);
+	    }
+	   */
     </script>
 </body>
 </html>
