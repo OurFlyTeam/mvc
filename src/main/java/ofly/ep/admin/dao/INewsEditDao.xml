@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ofly.ep.admin.dao.INewsEditDao">
+	
+	<select id="queryListByType" parameterType="map" resultType="ofly.ep.admin.vo.NewsVo">
+		select 
+			a.id,
+			a.title,
+			a.type,
+			date_format(a.creat_time, '%Y-%m-%d %H:%i:%s')  creat_time
+		from 
+			ep_news a 
+		where 
+			a.type = #{type}
+		order by a.creat_time
+		<if test="rows!=null and offset!=null">
+        	limit #{offset}, #{rows}
+        </if>
+	</select>
+	<select id="queryListNumByType" parameterType="map" resultType="int">
+		select 
+			count(1)
+		from 
+			ep_news a 
+		where 
+			a.type = #{type}
+	</select>
 	<insert id="save" parameterType="ofly.ep.admin.vo.NewsVo">
 		INSERT INTO 
 			ep_news (title, type, content, creat_time) 

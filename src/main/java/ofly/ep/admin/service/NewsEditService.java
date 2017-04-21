@@ -10,6 +10,7 @@
 package ofly.ep.admin.service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,38 @@ public class NewsEditService implements INewsEditService {
 			result.put("msg", "保存失败");
 		}
 		return result;
+	}
+	/**
+	 * Introduction	：根据类型查询新闻List
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年4月21日 下午11:11:44
+	 * History		: 2017年4月21日 下午11:11:44   Logan   Created.
+	 *
+	 * @param type
+	 * @return
+	 *
+	 */
+	@Override
+	public List<NewsVo> queryListByType(Map<String, Object> params) {
+		List<NewsVo> list = dao.queryListByType(params);
+		return list;
+	}
+	/**
+	 * Introduction	：根据类型查询新闻List数量
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年4月21日 下午11:43:55
+	 * History		: 2017年4月21日 下午11:43:55   Logan   Created.
+	 *
+	 * @param params
+	 * @return
+	 *
+	 */
+	@Override
+	public int queryListNumByType(Map<String, Object> params) {
+		int num = dao.queryListNumByType(params);
+		return num;
 	}
 
 }

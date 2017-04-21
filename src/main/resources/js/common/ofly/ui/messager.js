@@ -75,7 +75,10 @@ OFLY.dialog = function(id, url, params, title, width, height, buttons) {
 		href	: url+ "?"+$.param(params),
 		closed	: false,
         cache	: false,
-        modal	: true
+        modal	: true,
+        onClose	: function() {
+        	editor.destroy();
+        }
 	}
 	// 转换type 的为样式图标
 	var map = {
@@ -92,16 +95,6 @@ OFLY.dialog = function(id, url, params, title, width, height, buttons) {
 		});
 		options['buttons'] = buttons;
 	}
-	
-	$('#dd').dialog({    
-	    title: 'My Dialog',    
-	    width: 400,    
-	    height: 200,    
-	    closed: false,    
-	    cache: false,    
-	    href: 'get_content.php',    
-	    modal: true   
-	});
 	$('#'+id).dialog(options);
 }
 /**

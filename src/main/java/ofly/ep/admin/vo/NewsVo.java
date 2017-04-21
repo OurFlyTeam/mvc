@@ -18,9 +18,11 @@ package ofly.ep.admin.vo;
  *           
  */
 public class NewsVo {
+	private int id;
 	private String title;
 	private String type;
 	private String content;
+	private String creatTime;
 	public String getTitle() {
 		return title;
 	}
@@ -38,6 +40,23 @@ public class NewsVo {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCreatTime() {
+		return creatTime;
+	}
+	public void setCreatTime(String creatTime) {
+		this.creatTime = creatTime;
+	}
+	@Override
+	public String toString() {
+		return "NewsVo [id=" + id + ", title=" + title + ", type=" + type + ", content=" + content + ", creatTime="
+				+ creatTime + "]";
 	}
 	
 }

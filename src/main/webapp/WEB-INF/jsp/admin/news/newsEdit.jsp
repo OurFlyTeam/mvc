@@ -4,17 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/ueditor.all.min.js"> </script>
 <title>新闻</title>
 </head>
 <body>
-	<jsp:include page="../../../jsp/common/resources.jsp"></jsp:include>
-	<form id="newsForm" name="newsForm">
+	<form id="newsForm" name="newsForm" style="padding: 10px;">
 			<table width="100%">
 				<colgroup>
-					<col width="10%">
-					<col width="90%">
+					<col width="12%">
+					<col width="88%">
 				</colgroup>
 				<tr>
 					<td align="right" style="font-size: 24px;">标题:</td>
@@ -44,22 +41,15 @@
 					<td valign="top" align="right" style="font-size: 24px;">正文:</td>
 					<td><script id="editor" type="text/plain" style="width:100%;height:300px;"></script></td>
 				</tr>
-				<tr>
-					<td></td>
-					<td align="right">
-						<a id="saveBtn" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="news.save()">保存</a>
-					</td>
-				</tr>
 			</table>
 	</form>
-	<a href="#" onclick="a()">ssssssssssssssssss</a>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/news/news.js"></script>
 	<script type="text/javascript">
 	    //实例化编辑器
 	    var ctx = '<%=request.getContextPath()%>';
-	    var editor = UE.getEditor('editor');
+	    var editor ;
 	    $(function() {
-	    	
+	    	editor=UE.getEditor('editor');
 	    });
 	   /*
 	    var a = function() {
