@@ -85,6 +85,9 @@
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
 	
+	<script type="text/javascript">
+			var type="${type}";
+	</script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Product.js"></script>
 </body>

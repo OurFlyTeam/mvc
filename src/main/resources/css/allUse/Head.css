@@ -39,7 +39,7 @@
     margin-right: 20px;
     padding-right: 20px;
     border-right: solid 1px #ddd;
-    background: url(../images/logo.png) no-repeat;
+    background: url(../../img/allUse/logo.png) no-repeat;
 }
 .header .title .china-name{
     float: left;
@@ -57,7 +57,7 @@
     margin-top: 8px;
     text-align: center;
     color: #306f36;
-    background: url(../images/tel.png) no-repeat;
+    background: url(../../img/allUse/tel.png) no-repeat;
 }
 .header .tell .link{
     font: 16px "Microsoft YaHei";

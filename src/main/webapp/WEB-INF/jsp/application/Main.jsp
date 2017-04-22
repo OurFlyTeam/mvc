@@ -38,11 +38,12 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/Main.css">
 <body>
-     
+
 	<!--头部导航开始-->
 	<jsp:include page="../allUse/Head_main.jsp" flush="true" />
 	<!--头部导航结束-->
-	
+
+
 	<!--轮播图开始-->
 	<div class="banner">
 		<div class="owl-carousel owl-theme">
@@ -71,13 +72,15 @@
 	<!--轮播图结束-->
 
 	<!--业务领域开始-->
-	<div class="business-field">
+	<div class="section business-field">
 		<div class="wrap clearfix">
 			<h2>
 				业务领域<span> / BUSINESS</span>
 			</h2>
+
 			<div class="item mr">
-				<a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">
 					<figure class="field"> <figcaption class="bgwater">
 					<p class="num">1</p>
 					<p class="title">废水处理</p>
@@ -90,8 +93,9 @@
 				<p class="content">废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX废水处理XXXXXXXXXXXXXX</p>
 			</div>
 			<div class="item">
-				<a href="business.html"> <figure class="field"> <figcaption
-						class="bglung">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">
+					<figure class="field"> <figcaption class="bglung">
 					<p class="num">2</p>
 					<p class="title">废气处理</p>
 					</figcaption>
@@ -106,8 +110,9 @@
 				<p class="content">废气处理废气处理废气处理废气处理废气处理废气处理废气处理废气处理废气处理废气处理XXXXXXXXXXXXXXX</p>
 			</div>
 			<div class="item mr">
-				<a href="business.html"> <figure class="field"> <figcaption
-						class="noise">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">
+					<figure class="field"> <figcaption class="noise">
 					<p class="num">3</p>
 					<p class="title">一体化设备</p>
 					</figcaption>
@@ -120,8 +125,9 @@
 				<p class="content">一体化设备XXXXXXXXXXXXXX</p>
 			</div>
 			<div class="item">
-				<a href="business.html"> <figure class="field"> <figcaption
-						class="equipment">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">
+					<figure class="field"> <figcaption class="equipment">
 					<p class="num">4</p>
 					<p class="title">技改设备</p>
 					</figcaption>
@@ -133,8 +139,9 @@
 				<p class="content">技改设备技改设备技改设备技改设备技改设备技改设备技改设备技改设备技改设备XXXXXXXXXXX</p>
 			</div>
 			<div class="item">
-				<a href="business.html"> <figure class="field"> <figcaption
-						class="steel">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">
+					<figure class="field"> <figcaption class="steel">
 					<p class="num">5</p>
 					<p class="title">钢构工程</p>
 					</figcaption>
@@ -148,15 +155,16 @@
 		</div>
 	</div>
 	<!--业务领域结束-->
-	
-	<!--产品开始-->
-	<div class="product-field">
+
+	<!--产品中心开始-->
+	<div class="section product-field">
 		<div class="wrap clearfix">
 			<h2>
 				产品中心<span> / PRODUCT</span>
 			</h2>
 			<div class="item mr">
-				<a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">
 					<figure class="field"> <figcaption class="epequipment">
 					<p class="num">1</p>
 					<p class="title">环保设备</p>
@@ -169,8 +177,9 @@
 				<p class="content">环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX</p>
 			</div>
 			<div class="item">
-				<a href="business.html"> <figure class="field"> <figcaption
-						class="epparts">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">
+					<figure class="field"> <figcaption class="epparts">
 					<p class="num">2</p>
 					<p class="title">环保配件</p>
 					</figcaption>
@@ -185,14 +194,14 @@
 				<p class="content">环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX</p>
 			</div>
 			<div class="item mr">
-				<a href="business.html"> <figure class="field"> <figcaption
-						class="epreagent">
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">
+					<figure class="field"> <figcaption class="epreagent">
 					<p class="num">3</p>
 					<p class="title">滑雪试剂</p>
 					</figcaption>
 					<div class="field-img">
-						<img src="${pageContext.request.contextPath}/img/a.jpg"
-							alt="滑雪试剂">
+						<img src="${pageContext.request.contextPath}/img/a.jpg" alt="滑雪试剂">
 					</div>
 					</figure>
 				</a>
@@ -200,15 +209,91 @@
 			</div>
 		</div>
 	</div>
-	<!--业务领域结束-->
+	<!--产品中心结束-->
+
+	<!--新闻开始-->
+	<div class="section news">
+		<div class="wrap clearfix">
+			<h2>
+				新闻动态<span> / NEWS</span>
+			</h2>
+			<div class="compony-industry">
+				<div class="compony-news">
+					<h3>
+						公司新闻<a href="" class="more">更多>></a>
+					</h3>
+					<ul>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+					</ul>
+				</div>
+				<div class="industry-news">
+					<h3>
+						行业新闻<a href="" class="more">更多>></a>
+					</h3>
+					<ul>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--新闻结束-->
+
 
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
+	<script type="text/javascript">
+		var source = "${source}";
+	</script>
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Main.js"></script>
+	<script type="text/javascript">
+	    //实例化编辑器
+	    var ctx = '<%=request.getContextPath()%>
+		';
+		var id = '${id}';
+		var editor;
+		$(function() {
+			editor = UE.getEditor('editor');
+			if (id) {
+				var url = ctx + '/newsEdit/queryNewsByBrimaryKey';
+				var params = {
+					id : id
+				}
+				$.post(url, params, function(data) {
+					editor.ready(function() {//监听编辑器实例化完成的事件
+						$('#newsForm').find('#title').textbox('setValue',
+								data.title);
+						$('#newsForm').find('#type').combobox('setValue',
+								data.type)
+						$('#newsForm').find('#id').val(id);
+						editor.setContent(data.content);
+					});
 
+				});
+			}
+		});
+	</script>
 </body>
 </html>

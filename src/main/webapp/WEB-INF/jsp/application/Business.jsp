@@ -90,7 +90,7 @@
 	</div>
 	<!--钢构工程-->
 	<div class="business-item wrap">
-		<h2>技改设备</h2>
+		<h2>钢构工程</h2>
 		<p class="description">
 			钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程钢构工程。
 		</p>
@@ -98,11 +98,11 @@
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
-	
+	<script type="text/javascript">
+			var type="${type}";
+	</script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Business.js"></script>
-		<script type="text/javascript">
-			var type="${type}";
-		</script>
+		
 </body>
 </html>

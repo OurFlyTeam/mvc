@@ -29,19 +29,19 @@
                 <li class="item">    
                     <a href="javascript:;" id="business-field">业务领域</a>
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=01">废水处理</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=02">废气处理</a></li>
-                        <li><a href="#">一体化设备</a></li>
-                        <li><a href="#">技改设备</a></li>
-                        <li><a href="#">钢构工程</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">废水处理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">废气处理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">一体化设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">技改设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">钢构工程</a></li>
                     </ul>
                 </li>
                 <li class="item">
                     <a href="javascript:;" id="product-field">产品中心</a>
                     <ul>
-                        <li><a href="#">环保设备</a></li>
-                        <li><a href="#">环保配件</a></li>
-                        <li><a href="#">滑雪试剂</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">环保设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">环保配件</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">滑雪试剂</a></li>
                     </ul>
                 </li>
                 <li class="item">

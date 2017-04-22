@@ -1,9 +1,18 @@
-$(".business-tab li").click(function() {
-				$(".business-tab li").removeClass("active");
-				$(this).addClass("active");
+/*跳转到什么type*/
+$(function() {
 
-				$(".business-item").hide().eq($(this).index()).show();
-			});
+	if (type == "1" || type == "2" || type == "3" || type == "4" || type == "0") {
+		// 实现选中状态
 
-/*跳转到首页 对应模块*/
-    
+		$(".business-tab li").removeClass("active");
+		$(".business-tab li").eq(type).addClass("active");
+		$(".business-item").hide().eq(type).show();
+	}
+
+	$(".business-tab li").click(function() {
+		$(".business-tab li").removeClass("active");
+		$(this).addClass("active");
+		$(".business-item").hide().eq($(this).index()).show();
+	});
+
+});

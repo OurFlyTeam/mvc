@@ -1,0 +1,55 @@
+.news .compony-industry{
+
+}
+.news .compony-industry .more{
+    float: right;
+    padding-right: 10px;
+    color: #656565;
+    font: 12px/36px SimSun;
+}
+.news .compony-industry h3{
+    height: 36px;
+    padding-left: 15px;
+    border-left: 3px solid #306f36;
+    overflow: hidden;
+    color: #1a7fdd;
+    font: 15px/36px "Microsoft YaHei";
+}
+.news .compony-industry ul{
+    border-top: 1px solid #d2d2d2;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+.news .compony-industry li{
+    height: 27px;
+    font: 12px/27px "Microsoft YaHei";
+    padding: 0 26px;  
+    color: #999;
+    border-bottom: 1px dashed #d4d4d4;
+}
+.news .compony-industry .item{
+    width: 100%;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.news .compony-industry .item:hover{
+    color: #306f36;
+}
+
+.compony-industry .compony-news,.compony-industry .industry-news{
+    width: 48%;
+    height: 353px;
+    overflow: hidden;
+    padding: 12px 14px 0 12px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    border-radius: 5px;
+}
+.compony-industry .compony-news{
+    float: left;
+}
+.compony-industry .industry-news{
+    float: right;   
+}
