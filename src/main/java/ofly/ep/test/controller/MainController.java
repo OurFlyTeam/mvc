@@ -15,8 +15,9 @@ public class MainController{
 	}
 	
 	@RequestMapping("/goBusiness")
-	public String go_business(Model m) {
+	public String go_business(Model m,String type) {
 		// TODO Auto-generated method stub
+		m.addAttribute("type", type);
 		return "application/Business";
 	}
 	

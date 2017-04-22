@@ -101,5 +101,8 @@
 	
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Business.js"></script>
+		<script type="text/javascript">
+			var type="${type}";
+		</script>
 </body>
 </html>
