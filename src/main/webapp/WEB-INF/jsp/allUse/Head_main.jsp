@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <div class="header">
-        <div class="title header-scrolled">
+        <div class="title">
             <div class="wrap clearfix">    
                 <h1>
                     <a href="#" class="logo"></a>
@@ -17,7 +17,7 @@
         <div class="nav">
             <ul class="wrap clearfix">
                 <li class="item">
-                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain">网站首页</a>
+                    <a href="javascript:;" id="index">网站首页</a>
                 </li>
                 <li class="item">
                     <a href="">晟荣概况</a>
@@ -27,7 +27,7 @@
                     </ul>
                 </li>
                 <li class="item">    
-                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?from = 2">业务领域</a>
+                    <a href="javascript:;" id="business-field">业务领域</a>
                     <ul>
                         <li><a href="#">废水处理</a></li>
                         <li><a href="#">废气处理</a></li>

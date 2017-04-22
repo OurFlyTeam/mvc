@@ -1,10 +1,15 @@
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
 /*headerv title部分样式*/
 .header{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
-    width: 100%;    
+    width: 100%;   
+    min-width: 1200px; 
 }
 .header .title{
     height: 86px;
@@ -18,8 +23,6 @@
     background: linear-gradient(#f0ffec,#fff); 
 }
 .header .title .wrap{
-    width: 1200px;
-    margin: 0 auto;
     padding: 12px 0;
 }
 
@@ -36,7 +39,7 @@
     margin-right: 20px;
     padding-right: 20px;
     border-right: solid 1px #ddd;
-    background: url(../../img/allUse/logo.png) no-repeat;
+    background: url(../images/logo.png) no-repeat;
 }
 .header .title .china-name{
     float: left;
@@ -54,7 +57,7 @@
     margin-top: 8px;
     text-align: center;
     color: #306f36;
-    background: url(../../img/allUse/tel.png) no-repeat;
+    background: url(../images/tel.png) no-repeat;
 }
 .header .tell .link{
     font: 16px "Microsoft YaHei";
@@ -68,10 +71,6 @@
     width: 100%;
     height: 42px;
     background: #83b91f; 
-}
-.header .nav .wrap{
-    width: 1200px;
-    margin: 0 auto;
 }
 .header .nav .item{
     position: relative;
@@ -122,6 +121,3 @@
     line-height: 42px;
     color: #fff;
 }
-
-
-

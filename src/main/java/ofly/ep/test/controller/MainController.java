@@ -4,13 +4,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 @RequestMapping("ofly/ep/main")
-public class MainController {
-	
+public class MainController{
+
 	@RequestMapping("/goMain")
-	public String test(Model m) {
+	public String go_main(Model m) {
 		return "application/Main";
+	}
+	
+	@RequestMapping("/goBusiness")
+	public String go_business(Model m) {
+		// TODO Auto-generated method stub
+		return "application/Business";
 	}
 	
 

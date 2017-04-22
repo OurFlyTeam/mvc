@@ -1,6 +1,94 @@
 
-/*banner部分样式   轮换大图*/
+/*banner部分样式*/
 .banner{
     position: relative;
     width: 100%;
+}
+/*业务领域部分样式*/
+.business-field{
+    min-width: 1200px;
+    background: #f3f3f3;
+    /* border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc; */
+}
+
+.business-field .wrap{
+    padding: 20px 50px;
+    margin: 20px auto;
+    
+}
+.business-field h2{
+    margin: 15px 0 20px;
+    font-size: 30px;
+    color: #434242;
+}
+.business-field h2 span{
+    color: #aeaeae;
+    font-size: 14px;
+}
+.business-field .item{
+    float: left;
+    width: 48%;
+    margin-bottom: 25px;
+    
+}
+.business-field .mr{
+    margin-right: 4%;
+}
+.business-field .item .field{
+    width: 100%;
+    height: 155px;
+    overflow: hidden;
+}
+.business-field .item .content{
+    height: 65px;
+    margin-top: 10px;
+    font: 12px/22px "Microsoft YaHei";
+    color: #5f5f5f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.field figcaption{
+    float: left;
+    width: 155px;
+    height: 155px;
+    font: 16px/22px "Microsoft YaHei";
+    text-align: center;
+    color: #fff;
+}
+.bgwater{
+    background-color: #75b936;
+}
+.bglung{
+    background-color: #ffbb00;
+}
+.noise{
+    background-color: #00a1f1;
+}
+.equipment{
+    background-color: #f65314;
+}
+.steel{
+    background-color: #8f37a5;
+}
+
+.field figcaption .num{
+    margin-top: 25px;
+    font: 60px/60px "Microsoft YaHei";
+}
+.field figcaption .title{
+    margin-top: 10px;
+}
+.field .field-img{
+    float: left;
+    width: 373px;
+    height: 155px;
+    overflow: hidden;
+}
+.field img{
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+.field .field-img img:hover{
+    transform: scale(1.2);
 }
