@@ -7,11 +7,12 @@
 <title>新闻</title>
 <script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/lang/zh-cn/zh-cn.js"> </script>
 </head>
 <body>
 	<jsp:include page="../../../jsp/common/resources.jsp"></jsp:include>
 	<div id="tabs" class="easyui-tabs" 
-		 data-options=" tabPosition	: 'left',pill:true,onAdd:news.onAdd">
+		 data-options=" tabPosition	: 'top',pill:true,onAdd:news.onAdd,onSelect:news.onSelect">
 	</div>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/news/news.js"></script>
 	<script type="text/javascript">

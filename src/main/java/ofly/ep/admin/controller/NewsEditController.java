@@ -15,6 +15,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -58,9 +59,54 @@ public class NewsEditController {
 		return PATH_NEWS_INIT;
 	}
 	
-	@RequestMapping("/edit")
-	public String edit() {
+	/**
+	 * Introduction	：新增
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年4月22日 下午1:54:00
+	 * History		: 2017年4月22日 下午1:54:00   Logan   Created.
+	 *
+	 * @return
+	 *
+	 */
+	@RequestMapping("/add")
+	public String add() {
 		return PATH_NEWS_EDIT;
+	}
+	
+	/**
+	 * Introduction	：修改
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年4月22日 下午1:53:51
+	 * History		: 2017年4月22日 下午1:53:51   Logan   Created.
+	 *
+	 * @param id
+	 * @param m
+	 * @return
+	 *
+	 */
+	@RequestMapping("/edit")
+	public String edit(Integer id, Model m) {
+		m.addAttribute("id", id);
+		return PATH_NEWS_EDIT;
+	}
+	/**
+	 * Introduction	：根据主键查询新闻信息
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年4月22日 下午1:53:35
+	 * History		: 2017年4月22日 下午1:53:35   Logan   Created.
+	 *
+	 * @param id
+	 * @return
+	 *
+	 */
+	@RequestMapping("/queryNewsByBrimaryKey")
+	@ResponseBody	
+	public NewsVo queryNewsByBrimaryKey(Integer id) {
+		NewsVo vo = newsEditService.queryNewsByPrimaryKey(id);
+		return vo;
 	}
 	
 	/**
@@ -80,6 +126,23 @@ public class NewsEditController {
 		Map<String, Object> result = newsEditService.save(vo);
 		return result;
 	}
+	/**
+	 * Introduction	：删除
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年4月22日 下午1:53:27
+	 * History		: 2017年4月22日 下午1:53:27   Logan   Created.
+	 *
+	 * @param id
+	 * @return
+	 *
+	 */
+	@RequestMapping("/delete")
+	@ResponseBody
+	public Map<String, Object> delete(Integer id) {
+		Map<String, Object> result = newsEditService.deleteByPrimaryKey(id);
+		return result;
+	} 
 	
 	/**
 	 * Introduction	：根据类型查询List

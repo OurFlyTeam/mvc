@@ -12,7 +12,7 @@
 			ep_news a 
 		where 
 			a.type = #{type}
-		order by a.creat_time
+		order by a.creat_time desc
 		<if test="rows!=null and offset!=null">
         	limit #{offset}, #{rows}
         </if>
@@ -25,10 +25,38 @@
 		where 
 			a.type = #{type}
 	</select>
+	<select id="queryNewsByPrimaryKey" parameterType="int" resultType="ofly.ep.admin.vo.NewsVo">
+		select 
+			a.id,
+			a.title,
+			a.type,
+			a.content
+		from
+			ep_news a 
+		where 
+			a.id = #{id}
+	</select>
+	
 	<insert id="save" parameterType="ofly.ep.admin.vo.NewsVo">
 		INSERT INTO 
 			ep_news (title, type, content, creat_time) 
 		VALUES 
 			(#{title}, #{type}, #{content}, now());
 	</insert>
+	<delete id="deleteByPrimaryKey">
+		DELETE FROM
+			ep_news 
+		WHERE id=#{id}
+	</delete>
+	<update id="updateByPrimaryKey" parameterType="ofly.ep.admin.vo.NewsVo">
+		UPDATE 
+			ep_news a 
+		SET 
+			title=#{title},
+			type=#{type},
+			content=#{content},
+			creat_time = now() 
+		WHERE 
+			id=#{id}
+	</update>
 </mapper>

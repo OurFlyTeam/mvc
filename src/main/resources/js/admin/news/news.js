@@ -1,10 +1,11 @@
+
 /**
  * @Author			: Logan
  * @introduction 	: 新闻
  */
 var news = (function(){
 	var _this={};
-	
+	var currentTabIndex;
 	/**
 	 * @Author			: Logan
 	 * @introduction 	: 初始化新闻维护界面
@@ -19,7 +20,7 @@ var news = (function(){
 				$.each(data, function(index, item) {
 					$('#tabs').tabs("add",{
 						title	: item.name,
-						selected: false,
+						selected: index==0?true:false ,
 						value	: item.value
 					});
 				});
@@ -31,24 +32,31 @@ var news = (function(){
 	 * @Author			: Logan
 	 * @introduction 	: 保存
 	 */
-	var _save = function() {
+	var _save  = function() {
 		if(!_saveValid()) {
 			return;
 		}
 		var url = ctx +'/newsEdit/save'
 		var params = {
-			title	: $("#title").textbox("getValue"), 
-			type	: $("#type").combobox("getValue"),
+			
+			title	: $('#newsForm').find("#title").textbox("getValue"), 
+			type	: $('#newsForm').find("#type").combobox("getValue"),
 			content	: editor.getContent()
 		};
+		if($('#newsForm').find('#id').val()) {
+			params.id = $('#newsForm').find('#id').val();
+		}
 		$.post(url, params, function(data) {
+			debugger;
 			$.messager.alert({
 				title	: "",
 				msg		: data.msg,
 				icon	: 'info',
 				fn		: function() {
 					if(data.code==1) {
-						window.location.reload();
+						var newsValue = $('#newsForm').find("#type").combobox("getValue");
+						$('#addDialog').dialog("close");
+						$("#datagrid_"+newsValue).datagrid("reload");
 					}
 				}
 			});
@@ -92,14 +100,18 @@ var news = (function(){
 			        	   ]
 		});
 	}
+	/**
+	 * @Author			: Logan
+	 * @introduction 	: 新增弹出界面
+	 */
 	function _add(event) {
-		var url = ctx + '/newsEdit/edit'
+		var url = ctx + '/newsEdit/add'
 		var params = {};
 		var buttons = [{
 			text	: '保存',
 			iconCls : 'icon-save',
 			plain	: true,
-			hander	: _save
+			handler	: _save
 		}];
 		var options = {
 			title	: "新增",
@@ -111,7 +123,6 @@ var news = (function(){
 	        modal	: true,
 			buttons	: buttons,
 			onClose	: function() {
-				debugger;
 	        	editor.destroy();
 	        },
 		}
@@ -119,14 +130,81 @@ var news = (function(){
 		$(document.body).append(div); 
 		$("#addDialog").dialog(options);
 	}
+	
+	/**
+	 * @Author			: Logan
+	 * @introduction 	: 编辑弹出界面
+	 */
 	function _edit(event) {
-		debugger;
+		var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
+		var row = $('#datagrid_'+newsValue).datagrid("getSelected");
+		if(!row) {
+			OFLY.message("请先选择一条数据");
+			return;
+		}
+		var url = ctx + '/newsEdit/edit';
+		var params = {
+			id	: row.id
+		}
+		var buttons = [{
+			text	: '保存',
+			iconCls : 'icon-save',
+			plain	: true,
+			handler	: _save
+		}];
+		var options = {
+			title	: "修改",
+			width	: 1000,
+			height	: 610,
+			href	: url+ "?"+$.param(params),
+			closed	: false,
+	        cache	: false,
+	        modal	: true,
+			buttons	: buttons,
+			onClose	: function() {
+	        	editor.destroy();
+	        },
+		}
+		var div = '<div id="addDialog"></div>';
+		$(document.body).append(div); 
+		$("#addDialog").dialog(options);
 	}
+	
+	/**
+	 * @Author			: Logan
+	 * @introduction 	: 删除弹出界面
+	 * 
+	 */
 	function _del(event) {
-		debugger;
+		var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
+		var row = $('#datagrid_'+newsValue).datagrid("getSelected");
+		if(!row) {
+			OFLY.message("请先选择一条数据");
+			return;
+		}
+		var url = ctx + '/newsEdit/delete';
+		var params = {
+			id	: row.id
+		}
+		OFLY.confirm("确认删除该数据?", function(){
+			$.post(url, params, function(data) {
+				OFLY.message(data.msg, function() {
+					if(data.code){
+						var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
+						$('#datagrid_'+newsValue).datagrid("reload");
+					}
+				});
+			});
+		});
+		
 	}
-	_this.init = init;		// 初始化新闻维护界面
-	_this.onAdd = onAdd;	// 新增tab页触发
+	var onSelect = function(title, index) {
+		currentTabIndex = index;
+	} 
+	
+	_this.init = init;			// 初始化新闻维护界面
+	_this.onAdd = onAdd;		// 新增tab页触发
+	_this.onSelect = onSelect;	// 选择tab后触发事件
 	//_this.save = save;		// 保存
 	
 	return _this;

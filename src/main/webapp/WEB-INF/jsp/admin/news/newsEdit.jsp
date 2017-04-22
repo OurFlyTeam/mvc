@@ -8,6 +8,7 @@
 </head>
 <body>
 	<form id="newsForm" name="newsForm" style="padding: 10px;">
+		<input id="id" type="hidden">
 			<table width="100%">
 				<colgroup>
 					<col width="12%">
@@ -47,24 +48,25 @@
 	<script type="text/javascript">
 	    //实例化编辑器
 	    var ctx = '<%=request.getContextPath()%>';
+	    var id = '${id}';
 	    var editor ;
 	    $(function() {
 	    	editor=UE.getEditor('editor');
-	    });
-	   /*
-	    var a = function() {
-	    	var buttons = [
-	    		{
-	    			text	: "保存",
-	    			type	: "reload",
-	    			handler	: function() {
-	    				alert(1);
-	    			}
+	    	if(id) {
+	    		var url = ctx + '/newsEdit/queryNewsByBrimaryKey';
+	    		var params = {
+	    			id	: id
 	    		}
-	    	];
-	    	OFLY.dialog("dialog",ctx+'/newsEdit/init', {}, "title", 1000, 600, buttons);
-	    }
-	   */
-    </script>
+	    		$.post(url, params, function(data) {
+	    			editor.ready(function(){//监听编辑器实例化完成的事件
+	    				$('#newsForm').find('#title').textbox('setValue', data.title);
+		    			$('#newsForm').find('#type').combobox('setValue', data.type)
+		    			$('#newsForm').find('#id').val(id);
+		    			editor.setContent(data.content);
+	    			});
+	    			
+	    		});
+	    	}
+	    });
 </body>
 </html>
