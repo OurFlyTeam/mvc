@@ -1,0 +1,44 @@
+.pc{
+    margin-top: 128px; 
+}
+.pc img{
+    width: 100%;
+}
+/*业务领域tab切换*/
+.product-tab{
+   
+    padding: 22px 0;
+    border-bottom: 1px solid #b5b5b5;
+    text-align: center;
+}
+.product-tab li{
+    display: inline-block;
+    margin: 0 8px;
+    padding: 0 12px;
+    border: 1px solid #c9c9c9;
+    font: 14px/32px "Microsoft YaHei";
+    cursor: pointer;
+}
+.product-tab li:hover,.product-tab .active{
+    background-color: #72b831;
+    color: #fff;
+}
+/*废水，废气，等详情*/
+.product-item{
+    display: none;
+	min-height: 1000px;
+}
+.product-item h2{
+    padding: 50px 0;
+    border-bottom: 1px solid #c9c9c9;
+    text-align: center;
+}
+.product-item .description{
+    padding: 55px 55px 90px;
+    font: 12px/24px 微软雅黑;
+    color: #474747;
+    text-indent: 2em;
+}
+.product-item.show{
+    display: block;
+}

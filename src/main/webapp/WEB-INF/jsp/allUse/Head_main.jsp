@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="">产品中心</a>
+                    <a href="javascript:;" id="product-field">产品中心</a>
                     <ul>
                         <li><a href="#">环保设备</a></li>
                         <li><a href="#">环保配件</a></li>

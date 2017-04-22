@@ -148,6 +148,59 @@
 		</div>
 	</div>
 	<!--业务领域结束-->
+	
+	<!--产品开始-->
+	<div class="product-field">
+		<div class="wrap clearfix">
+			<h2>
+				产品中心<span> / PRODUCT</span>
+			</h2>
+			<div class="item mr">
+				<a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct">
+					<figure class="field"> <figcaption class="epequipment">
+					<p class="num">1</p>
+					<p class="title">环保设备</p>
+					</figcaption>
+					<div class="field-img">
+						<img src="${pageContext.request.contextPath}/img/a.jpg" alt="环保设备">
+					</div>
+					</figure>
+				</a>
+				<p class="content">环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX环保设备XXXXXXXXXXXXXX</p>
+			</div>
+			<div class="item">
+				<a href="business.html"> <figure class="field"> <figcaption
+						class="epparts">
+					<p class="num">2</p>
+					<p class="title">环保配件</p>
+					</figcaption>
+					<div class="field-img">
+						<div class="field-img">
+							<img src="${pageContext.request.contextPath}/img/a.jpg"
+								alt="环保配件">
+						</div>
+					</div>
+					</figure>
+				</a>
+				<p class="content">环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX环保配件XXXXXXXXXXXXXXX</p>
+			</div>
+			<div class="item mr">
+				<a href="business.html"> <figure class="field"> <figcaption
+						class="epreagent">
+					<p class="num">3</p>
+					<p class="title">滑雪试剂</p>
+					</figcaption>
+					<div class="field-img">
+						<img src="${pageContext.request.contextPath}/img/a.jpg"
+							alt="滑雪试剂">
+					</div>
+					</figure>
+				</a>
+				<p class="content">滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX滑雪试剂XXXXXXXXXXXXXX</p>
+			</div>
+		</div>
+	</div>
+	<!--业务领域结束-->
 
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script

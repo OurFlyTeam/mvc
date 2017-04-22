@@ -20,5 +20,11 @@ public class MainController{
 		return "application/Business";
 	}
 	
+	@RequestMapping("/goProduct")
+	public String go_product(Model m) {
+		// TODO Auto-generated method stub
+		return "application/Product";
+	}
+	
 
 }

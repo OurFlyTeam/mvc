@@ -1,3 +1,5 @@
+
+
 $(function(){
     $(".owl-carousel").owlCarousel({
         items:1,
@@ -24,14 +26,35 @@ $(function(){
     });
 });
 
-/**/
+/*实现首页内跳转到模块位置*/
+//on_click 定义参数，不能连续点击
+var on_click = false;
 $(function(){
-	
-    $("#business-field").click(function(){
-        $(".title").addClass("header-scrolled");
+	$("#product-field").click(function(){
+		if(!on_click){
+			on_click = true;
+			$(".title").addClass("header-scrolled");
 
-        $('html,body').animate({scrollTop:$('.business-field').offset().top},500)
-                      .animate({scrollTop:$('.business-field').offset().top-128},1000);
+	        $('html,body').animate({scrollTop:$('.product-field').offset().top},500)
+	                      .animate({scrollTop:$('.product-field').offset().top-128},1000
+	                    		  ,function(ev) {//动作完成之后再做什么
+	  						on_click = false;
+	  					});
+		}
+        
+        // $("#whole").animate({top:"-435px"});
+    });
+    $("#business-field").click(function(){
+		if(!on_click){
+			on_click = true;
+	        $(".title").addClass("header-scrolled");
+	
+	        $('html,body').animate({scrollTop:$('.business-field').offset().top},500)
+	                      .animate({scrollTop:$('.business-field').offset().top-128},1000
+                    		  ,function(ev) {//动作完成之后再做什么
+	  						on_click = false;
+	  					});
+		}
         // $("#whole").animate({top:"-435px"});
     });
     $("#index").click(function(){

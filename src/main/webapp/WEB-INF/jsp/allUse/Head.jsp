@@ -27,7 +27,7 @@
                     </ul>
                 </li>
                 <li class="item">    
-                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?from = 2">业务领域</a>
+                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?from = business">业务领域</a>
                     <ul>
                         <li><a href="#">废水处理</a></li>
                         <li><a href="#">废气处理</a></li>
@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="">产品中心</a>
+                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?from = product">产品中心</a>
                     <ul>
                         <li><a href="#">环保设备</a></li>
                         <li><a href="#">环保配件</a></li>
@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="">新闻动态</a>
+                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?from = news">新闻动态</a>
                     <ul>
                         <li><a href="#">行业新闻</a></li>
                         <li><a href="#">行业新闻</a></li>
