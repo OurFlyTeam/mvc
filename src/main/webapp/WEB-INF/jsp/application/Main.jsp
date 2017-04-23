@@ -212,7 +212,7 @@
 	<!--产品中心结束-->
 
 	<!--新闻开始-->
-	<div class="section news">
+	<div class="section news-field">
 		<div class="wrap clearfix">
 			<h2>
 				新闻动态<span> / NEWS</span>
@@ -229,23 +229,13 @@
 						行业新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=1" class="more">更多>></a>
 					</h3>
 					<ul>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--新闻结束-->
-
+	
 
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script type="text/javascript">
@@ -266,14 +256,14 @@
 			dataType: "json",
 			data : {
 				"type" : "01",
-				"rows" : 1,
+				"rows" : 10,
 				"page" : 1
 			},
 			success : function(data) {
 				if(data){
 					if(data.rows){
 						data.rows.forEach(function(item){
-							$(".compony-news ul").append('<li><a href="#" title="'+item.title+'" class="item">'+item.title+'</a></li>');
+							$(".compony-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'" title="'+item.title+'" class="item">'+item.title+'</a></li>');
 
 						});	
 					}
@@ -282,6 +272,30 @@
 			error : function() {
 				
 			}
+		});
+		$.ajax({
+				method : "POST",
+				url : url,
+				dataType: "json",
+			data : {
+				"type" : "02",
+				"rows" : 10,
+				"page" : 1
+			},
+			success : function(data) {
+				if(data){
+					if(data.rows){
+						data.rows.forEach(function(item){
+							$(".industry-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'" title="'+item.title+'" class="item">'+item.title+'</a></li>');
+
+						});	
+					}
+				} 
+			},
+			error : function() {
+				
+			}
+			
 		});
 	</script>
 </body>

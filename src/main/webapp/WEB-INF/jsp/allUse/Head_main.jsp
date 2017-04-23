@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="">新闻动态</a>
+                    <a href="javascript:;" id="news-field">新闻动态</a>
                     <ul>
                         <li><a href="#">行业新闻</a></li>
                         <li><a href="#">行业新闻</a></li>

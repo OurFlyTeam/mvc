@@ -28,7 +28,24 @@ $(function() {
 // on_click 定义参数，不能连续点击
 $(function() {
 	var on_click = false;
+	
+	$("#news-field").click(function() {
+		if (!on_click) {
+			on_click = true;
+			$(".title").addClass("header-scrolled");
 
+			$('html,body').animate({
+				scrollTop : $('.news-field').offset().top
+			}, 500).animate({
+				scrollTop : $('.news-field').offset().top - 128
+			}, 1000, function(ev) {// 动作完成之后再做什么
+				on_click = false;
+			});
+		}
+
+		// $("#whole").animate({top:"-435px"});
+	});
+	
 	$("#product-field").click(function() {
 		if (!on_click) {
 			on_click = true;
@@ -84,6 +101,13 @@ $(function() {
 			scrollTop : $('.business-field').offset().top
 		}, 500).animate({
 			scrollTop : $('.business-field').offset().top - 128
+		}, 1000);
+	} else if (source == "news") {
+		$(".title").addClass("header-scrolled");
+		$('html,body').animate({
+			scrollTop : $('.news-field').offset().top
+		}, 500).animate({
+			scrollTop : $('.news-field').offset().top - 128
 		}, 1000);
 	}
 	source = null;

@@ -35,5 +35,12 @@ public class MainController{
 		m.addAttribute("type", type);
 		return "application/newsmore";
 	}
+	
+	@RequestMapping("/goNewsInfo")
+	public String go_newsinfo(Model m,int id) {
+		// TODO Auto-generated method stub
+		m.addAttribute("id", id);
+		return "application/newsinfo";
+	}
 
 }

@@ -7,6 +7,7 @@
 			a.id,
 			a.title,
 			a.type,
+			a.content,
 			date_format(a.creat_time, '%Y-%m-%d %H:%i:%s')  creat_time
 		from 
 			ep_news a 

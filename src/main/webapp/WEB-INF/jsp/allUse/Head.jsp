@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?from = news">新闻动态</a>
+                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=news">新闻动态</a>
                     <ul>
                         <li><a href="#">行业新闻</a></li>
                         <li><a href="#">行业新闻</a></li>
