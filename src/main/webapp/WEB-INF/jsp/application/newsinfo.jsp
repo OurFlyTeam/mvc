@@ -47,43 +47,56 @@
 	</div>
 	<!--图片结束-->
 	<!--业务领域tab页面-->
-	<div class="newsinfo-tab">
-		<ul class="wrap clearfix">
-			
-		</ul>
+	<div class="newsinfo-tab wrap">
+		<div class="n_info_con" id="printableview">
+			<h1>指标进水比出水低是什么原因?</h1>
+			<div class="info_con_tit">
+				<div class="info_con_tit">
+					<div class="n_tit">
+						<span>发布时间：2017/3/20 9:24:38</span>
+					</div>
+				</div>
+			</div>
+			<div id="cntrBody">
+				
+			</div>
+		</div>
 	</div>
-	
-	<!--新闻内容-->
-	<div class="newsinfo-item wrap">
-		
-		
-	</div>
+
+
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
-	
+
 	<script type="text/javascript">
 		var id="${id}";
-		var ctx = '<%=request.getContextPath()%>';
+		var ctx = '<%=request.getContextPath()%>
+		';
 		var url = ctx + '/newsEdit/queryNewsByBrimaryKey';
-		$.ajax({
-			method : "POST",
-			url : url,
-			dataType: "json",
-			data : {
-				"id" : id
-			},
-			success : function(data) {
-				if(data){
-					$(".newsinfo-tab ul").append('<li class="active"><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=0">'+data.type+'</a></li>');
-					$(".newsinfo-item").append('<h2>'+data.title+'</h2>');
-					$(".newsinfo-item").append('<p class="info">'+data.content+'</p>');
-				} 
-			},
-			error : function() {
-				
-			}
-		});
+		$
+				.ajax({
+					method : "POST",
+					url : url,
+					dataType : "json",
+					data : {
+						"id" : id
+					},
+					success : function(data) {
+						if (data) {
+							$(".newsinfo-tab ul")
+									.append(
+											'<li class="active"><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=0">'
+													+ data.type + '</a></li>');
+							$(".newsinfo-item").append(
+									'<h2>' + data.title + '</h2>');
+							$(".newsinfo-item").append(
+									'<p class="info">' + data.content + '</p>');
+						}
+					},
+					error : function() {
+
+					}
+				});
 	</script>
 </body>
 </html>

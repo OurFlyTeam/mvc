@@ -1,0 +1,98 @@
+.pc{
+    margin-top: 128px; 
+}
+.pc img{
+    width: 100%;
+}
+/*业务领域tab切换*/
+.business-tab{ 
+    padding: 22px 0;
+    border-bottom: 1px solid #b5b5b5;
+    text-align: center;
+}
+.business-tab li{
+    display: inline-block;
+    margin: 0 8px;
+    padding: 0 12px;
+    border: 1px solid #c9c9c9;
+    font: 14px/32px "Microsoft YaHei";
+    cursor: pointer;
+}
+.business-tab li:hover,.business-tab .active{
+    background-color: #72b831;
+    color: #fff;
+}
+.news-lists{
+	margin: 30px auto 80px;
+	border: 1px solid #d5d5d5;
+	border-radius: 5px;
+}
+.news{
+	overflow: hidden;
+}
+.news .news_dl {
+    font-size: 14px;
+    color: #666;
+    padding: 0 5px;
+    line-height: 22px;
+    border-bottom: 1px dashed #CCCCCC;
+}
+.news_dl dt {
+    margin-bottom: 3px;
+    margin-top: 5px;
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+.news_dl .dt_1 {
+    height: 20px;
+/*     background: url(Img/ico10.gif) no-repeat 0 6px;
+ */    padding-left: 10px;
+    font-size: 14px;
+    color: #306f36;
+    font-weight: bold;
+}
+.news_dl .dt_2 {
+    font-size: 12px;
+    float: right;
+    padding: 0 10px 0 8px;
+    font-family: SimSun;
+}
+.news_dl dd{
+	position:relative;
+	font-size: 12px;
+    padding-left: 10px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.page{
+    height: 30px;
+    line-height: 30px;
+    background: #F9F9F9;
+    padding: 0 5px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.page .page-lists li{
+	display: inline-block;
+}
+.page .page-lists a{
+	height: 20px;
+	margin: 5px 0;
+	padding: 0 5px;
+	line-height: 20px;
+	color: #666;
+	border-radius: 10px;
+}
+.page .page-lists a:hover,.page .page-lists .go a{
+	background-color: #72b831;
+    color: #fff;
+}
+.page .page-lists .go input{
+	width: 50px;
+	margin: 0 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}

@@ -4,38 +4,8 @@
 .pc img{
     width: 100%;
 }
-
 .newsinfo-tab{
-   
-    padding: 22px 0;
-    border-bottom: 1px solid #b5b5b5;
-    text-align: center;
-}
-.newsinfo-tab li{
-    display: inline-block;
-    margin: 0 8px;
-    padding: 0 12px;
-    border: 1px solid #c9c9c9;
-    font: 14px/32px "Microsoft YaHei";
-    cursor: pointer;
-}
-.newsinfo-tab li:hover,.newsinfo-tab .active{
-    background-color: #72b831;
-    color: #fff;
-}
-
-.newsinfo-item{
-	display: block;
-	min-height: 1000px;
-}
-.newsinfo-item h2{
-    padding: 50px 0;
-    border-bottom: 1px solid #c9c9c9;
-    text-align: center;
-}
-.newsinfo-item .info{
-    padding: 55px 55px 90px;
-    font: 12px/24px 微软雅黑;
-    color: #474747;
-    text-indent: 2em;
+	border: solid 1px #d5d5d5;
+    padding: 15px 0;
+    overflow: hidden;
 }

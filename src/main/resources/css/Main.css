@@ -164,8 +164,8 @@
 }
 
 /*新闻*/
-.news-field .compony-industry{
-
+.news-field{
+	margin-bottom: 80px;
 }
 .news-field .compony-industry .more{
     float: right;
