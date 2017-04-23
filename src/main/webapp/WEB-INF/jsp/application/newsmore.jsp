@@ -34,6 +34,7 @@
 	href="${pageContext.request.contextPath}/css/newsmore.css">
 </head>
 
+
 <body>
 	<!--头部导航开始-->
 	<jsp:include page="../allUse/Head.jsp" flush="true" />
@@ -57,14 +58,14 @@
 		<div class="news"></div>
 		<!-- 分页 -->
 		<div class="page">
-			<ul class="page-lists">
-				<li><a href="#">首页</a></li>
-				<li><a href="#">上一页</a></li>
-				<li><a href="#">下一页</a></li>
-				<li><a href="#">末页</a></li>
-				<li>页次: 1/51页</li>
-				<li>共602条记录</li>
-				<li class="go">转<input type="text">页<a href="#">GO</a></li>
+			<ul class="page-lists">	
+				<li><a href="javascript:;" id="page_first">首页</a></li>
+				<li><a href="javascript:;" id="page_prev">上一页</a></li>
+				<li><a href="javascript:;" id="page_next")>下一页</a></li>
+				<li><a href="javascript:;" id="page_last">末页</a></li>
+				<li id="pagenum"></li>
+				<li id="records"></li>
+				<li class="go">转<input id="news_page_go" type="text">页<a href="javascript:;" id="page_go">GO</a></li>
 			</ul>
 		</div>
 	</div>
@@ -75,35 +76,259 @@
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
-		var type = "${type}";
+		type = "${type}";
 	</script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Business.js"></script>
 	<script type="text/javascript">
-		var ctx = '<%=request.getContextPath()%>';
-		var url = ctx + '/newsEdit/queryListByType';
-		$.ajax({
-			method : "POST",
-			url : url,
-			dataType: "json",
-			data : {
-				"type" : "01",
-				"rows" : 10,
-				"page" : 1
-			},
-			success : function(data) {
-				if(data){
-					if(data.rows){
-						data.rows.forEach(function(item){
-							$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
-
-						});	
-					}
-				} 
-			},
-			error : function() {
-				
+		var news_view_rows = 3;
+		var page_num;
+		$(function(){
+			var type="${type}";
+			var news_type;
+			var page = "${page}";
+			
+			if(type === "0"){
+				news_type = "01";
+			}else{
+				news_type = "02";
 			}
+			var ctx = '<%=request.getContextPath()%>';
+			var url = ctx + '/newsEdit/queryListByType';
+			$.ajax({
+				method : "POST",
+				url : url,
+				dataType: "json",
+				data : {
+					"type" : news_type,
+					"rows" : news_view_rows,
+					"page" : page
+				},
+				success : function(data) {
+					if(data){
+						$("#records").text("共"+data.total+"条"); 
+						$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+						page_num = Math.ceil(data.total/news_view_rows);
+						if(data.rows){
+							data.rows.forEach(function(item){
+								$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+									
+							});	
+						}
+					} 
+				},
+				error : function() {
+					
+				}
+			});
+		});
+		
+		//点击查询页
+		$(function(){
+			var page = "${page}";
+			var news_type;
+			//首页
+			$("#page_first").click(function() {
+				page = 1;
+				
+				if(type === "0"){
+					news_type = "01";
+				}else{
+					news_type = "02";
+				}
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/newsEdit/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : news_type,
+						"rows" : news_view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+							$(".news").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+										
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			
+			//上一页
+			$("#page_prev").click(function() {
+				if(page === "1"){
+						page = 1;
+					}else{
+						page = parseInt(page) - 1;
+					}
+				
+				if(type === "0"){
+					news_type = "01";
+				}else{
+					news_type = "02";
+				}
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/newsEdit/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : news_type,
+						"rows" : news_view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+							$(".news").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+										
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			//下一页
+			$("#page_next").click(function() {
+				if(page === page_num){
+						page = page_num;
+					}else{
+						page = parseInt(page) + 1;
+					}
+				
+				if(type === "0"){
+					news_type = "01";
+				}else{
+					news_type = "02";
+				}
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/newsEdit/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : news_type,
+						"rows" : news_view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+							$(".news").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+										
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			//末页
+			$("#page_last").click(function() {
+				page = page_num;
+				
+				if(type === "0"){
+					news_type = "01";
+				}else{
+					news_type = "02";
+				}
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/newsEdit/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : news_type,
+						"rows" : news_view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+							$(".news").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+										
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			
+			
+			//go页
+			$("#page_go").click(function() {
+					page = $("#news_page_go").val();
+					
+					if(type === "0"){
+						news_type = "01";
+					}else{
+						news_type = "02";
+					}
+					var ctx = '<%=request.getContextPath()%>';
+					var url = ctx + '/newsEdit/queryListByType';
+					$.ajax({
+						method : "POST",
+						url : url,
+						dataType: "json",
+						data : {
+							"type" : news_type,
+							"rows" : news_view_rows,
+							"page" : page
+						},
+						success : function(data) {
+							if(data){
+								$("#records").text("共"+data.total+"条"); 
+								$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+								$(".news").empty();
+								if(data.rows){
+									data.rows.forEach(function(item){
+										$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+											
+									});	
+								}
+							} 
+						},
+						error : function() {
+							
+						}
+					});
+				});
+			
 		});
 	</script>
 </body>

@@ -263,7 +263,7 @@
 				if(data){
 					if(data.rows){
 						data.rows.forEach(function(item){
-							$(".compony-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'" title="'+item.title+'" class="item">'+item.title+'</a></li>');
+							$(".compony-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type=0" title="'+item.title+'" class="item">'+item.title+'</a></li>');
 
 						});	
 					}
@@ -286,7 +286,7 @@
 				if(data){
 					if(data.rows){
 						data.rows.forEach(function(item){
-							$(".industry-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'" title="'+item.title+'" class="item">'+item.title+'</a></li>');
+							$(".industry-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type=1" title="'+item.title+'" class="item">'+item.title+'</a></li>');
 
 						});	
 					}

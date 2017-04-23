@@ -30,16 +30,18 @@ public class MainController{
 	}
 
 	@RequestMapping("/goNewsMore")
-	public String go_newsmore(Model m,String type) {
+	public String go_newsmore(Model m,String type,String page) {
 		// TODO Auto-generated method stub
 		m.addAttribute("type", type);
+		m.addAttribute("page", page);
 		return "application/newsmore";
 	}
 	
 	@RequestMapping("/goNewsInfo")
-	public String go_newsinfo(Model m,int id) {
+	public String go_newsinfo(Model m,int id,String type) {
 		// TODO Auto-generated method stub
 		m.addAttribute("id", id);
+		m.addAttribute("type", type);
 		return "application/newsinfo";
 	}
 

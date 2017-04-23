@@ -6,6 +6,44 @@
 }
 .newsinfo-tab{
 	border: solid 1px #d5d5d5;
-    padding: 15px 0;
+    overflow: hidden;
+    margin:20px auto 50px;
+    border-radius:5px;
+}
+.plc2 {
+    background-color: #008000;
+    text-indent: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    font:14px/27px "Microsoft YaHei";
+}
+
+.plc2 a {
+    color: #fff;
+}
+
+.n_info_con {
+    padding: 10px 15px 0 10px;
     overflow: hidden;
 }
+
+.n_info_con h1 {
+    border-bottom: 1px dashed #CCCCCC;
+    color: #333;
+    font-family: "宋体";
+    font-size: 22px;
+    line-height: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.n_tit{
+	text-align: right;
+}
+#cntrBody {
+    text-indent: 2em;
+    font-size: 14px;
+    margin: 20px 0;
+}
+

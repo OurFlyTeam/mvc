@@ -48,6 +48,13 @@
 	<!--图片结束-->
 	<!--业务领域tab页面-->
 	<div class="newsinfo-tab wrap">
+
+		<div class="plc2">
+			当前位置：<a href="${pageContext.request.contextPath}/ofly/ep/main/goMain" title="首页">首页</a> » 
+			<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type="+${type}
+				title="新闻 "> <%if(request.getAttribute("type").equals("0")){ %>公司新闻<% }else if(request.getAttribute("type").equals("1")){%>行业新闻<%}%>aaa</a> » <a href="" title="新闻详情">新闻详情</a>
+		</div>
+
 		<div class="n_info_con" id="printableview">
 			<h1>指标进水比出水低是什么原因?</h1>
 			<div class="info_con_tit">
@@ -57,9 +64,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="cntrBody">
-				
-			</div>
+			<div id="cntrBody">你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</div>
 		</div>
 	</div>
 
@@ -70,8 +75,7 @@
 
 	<script type="text/javascript">
 		var id="${id}";
-		var ctx = '<%=request.getContextPath()%>
-		';
+		var ctx = '<%=request.getContextPath()%>';
 		var url = ctx + '/newsEdit/queryNewsByBrimaryKey';
 		$
 				.ajax({
