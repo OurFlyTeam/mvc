@@ -220,13 +220,13 @@
 			<div class="compony-industry">
 				<div class="compony-news">
 					<h3>
-						公司新闻<a href="" class="more">更多>></a>
+						公司新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0" class="more">更多>></a>
 					</h3>
 					<ul></ul>
 				</div>
 				<div class="industry-news">
 					<h3>
-						行业新闻<a href="" class="more">更多>></a>
+						行业新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1" class="more">更多>></a>
 					</h3>
 					<ul>
 						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>

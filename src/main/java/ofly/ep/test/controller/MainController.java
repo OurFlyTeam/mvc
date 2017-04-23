@@ -28,6 +28,12 @@ public class MainController{
 		m.addAttribute("type", type);
 		return "application/Product";
 	}
-	
+
+	@RequestMapping("/goNewsMore")
+	public String go_newsmore(Model m,String type) {
+		// TODO Auto-generated method stub
+		m.addAttribute("type", type);
+		return "application/newsmore";
+	}
 
 }
