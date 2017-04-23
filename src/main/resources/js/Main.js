@@ -1,4 +1,3 @@
-
 $(function() {
 	$(".owl-carousel").owlCarousel({
 		items : 1,
@@ -29,7 +28,7 @@ $(function() {
 // on_click 定义参数，不能连续点击
 $(function() {
 	var on_click = false;
-	
+
 	$("#product-field").click(function() {
 		if (!on_click) {
 			on_click = true;
@@ -87,4 +86,9 @@ $(function() {
 			scrollTop : $('.business-field').offset().top - 128
 		}, 1000);
 	}
+	source = null;
+});
+/* 获取新闻列表 */
+$(function() {
+	 
 });

@@ -222,34 +222,23 @@
 					<h3>
 						公司新闻<a href="" class="more">更多>></a>
 					</h3>
-					<ul>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-					</ul>
+					<ul></ul>
 				</div>
 				<div class="industry-news">
 					<h3>
 						行业新闻<a href="" class="more">更多>></a>
 					</h3>
 					<ul>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
-						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a><>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
+						<li><a href="#" title="" class="item">厌氧处理的ph值范围是什么？</a></li>
 					</ul>
 				</div>
 			</div>
@@ -269,29 +258,29 @@
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Main.js"></script>
 	<script type="text/javascript">
-	    //实例化编辑器
-	    var ctx = '<%=request.getContextPath()%>
-		';
-		var id = '${id}';
-		var editor;
-		$(function() {
-			editor = UE.getEditor('editor');
-			if (id) {
-				var url = ctx + '/newsEdit/queryNewsByBrimaryKey';
-				var params = {
-					id : id
-				}
-				$.post(url, params, function(data) {
-					editor.ready(function() {//监听编辑器实例化完成的事件
-						$('#newsForm').find('#title').textbox('setValue',
-								data.title);
-						$('#newsForm').find('#type').combobox('setValue',
-								data.type)
-						$('#newsForm').find('#id').val(id);
-						editor.setContent(data.content);
-					});
+		var ctx = '<%=request.getContextPath()%>';
+		var url = ctx + '/newsEdit/queryListByType';
+		$.ajax({
+			method : "POST",
+			url : url,
+			dataType: "json",
+			data : {
+				"type" : "01",
+				"rows" : 1,
+				"page" : 1
+			},
+			success : function(data) {
+				if(data){
+					if(data.rows){
+						data.rows.forEach(function(item){
+							$(".compony-news ul").append('<li><a href="#" title="'+item.title+'" class="item">'+item.title+'</a></li>');
 
-				});
+						});	
+					}
+				} 
+			},
+			error : function() {
+				
 			}
 		});
 	</script>

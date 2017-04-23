@@ -201,7 +201,7 @@
     text-overflow: ellipsis;
 }
 .news .compony-industry .item:hover{
-    color: #306f36;
+    text-decoration: underline; 
 }
 
 .compony-industry .compony-news,.compony-industry .industry-news{
