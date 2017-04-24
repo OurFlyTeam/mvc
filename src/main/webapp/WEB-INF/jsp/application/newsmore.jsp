@@ -46,10 +46,10 @@
 	</div>
 	<!--图片结束-->
 	<!--业务领域tab页面-->
-	<div class="business-tab">
+	<div class="newsmore-tab">
 		<ul class="wrap clearfix">
-			<li class="active">公司新闻</li>
-			<li>行业新闻</li>
+			<li class="active" title="01">公司新闻</li>
+			<li title="02">行业新闻</li>
 		</ul>
 	</div>
 	<!--公司新闻-->
@@ -69,30 +69,32 @@
 			</ul>
 		</div>
 	</div>
-	<!--行业新闻-->
-	<div class="business-item wrap"></div>
 
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
-		type = "${type}";
-	</script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/js/Business.js"></script>
-	<script type="text/javascript">
 		var news_view_rows = 3;
 		var page_num;
+		var type="${type}";
+		var page = "${page}";
 		$(function(){
-			var type="${type}";
 			var news_type;
-			var page = "${page}";
 			
 			if(type === "0"){
 				news_type = "01";
 			}else{
 				news_type = "02";
 			}
+			
+			//当前页面是公司新闻或者行业新闻
+			if (type == "1" || type == "0") {
+				// 实现选中状态
+				$(".newsmore-tab li").removeClass("active");
+				$(".newsmore-tab li").eq(type).addClass("active");
+			}
+			
+			
 			var ctx = '<%=request.getContextPath()%>';
 			var url = ctx + '/newsEdit/queryListByType';
 			$.ajax({
@@ -111,7 +113,7 @@
 						page_num = Math.ceil(data.total/news_view_rows);
 						if(data.rows){
 							data.rows.forEach(function(item){
-								$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+								$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
 									
 							});	
 						}
@@ -123,10 +125,56 @@
 			});
 		});
 		
+		//跳转到公司新闻或者网页新闻
+		$(function() {
+			$(".newsmore-tab li").click(function() {
+				$(".newsmore-tab li").removeClass("active");
+				$(this).addClass("active");
+				
+				if($(this).attr("title") === "01"){
+					news_type = "01";
+					type = "0";
+				}else if($(this).attr("title") === "02"){
+					news_type = "02";
+					type = "1";
+				}
+				page = 1;
+				//查询
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/newsEdit/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : news_type,
+						"rows" : news_view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/news_view_rows)+"页"); 
+							page_num = Math.ceil(data.total/news_view_rows);
+							$(".news").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+										
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+
+		});
+		
 		//点击查询页
 		$(function(){
-			var page = "${page}";
-			var news_type;
 			//首页
 			$("#page_first").click(function() {
 				page = 1;
@@ -154,7 +202,7 @@
 							$(".news").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+									$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
 										
 								});	
 							}
@@ -197,7 +245,7 @@
 							$(".news").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+									$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
 										
 								});	
 							}
@@ -239,7 +287,7 @@
 							$(".news").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+									$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
 										
 								});	
 							}
@@ -277,7 +325,7 @@
 							$(".news").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+									$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
 										
 								});	
 							}
@@ -317,7 +365,7 @@
 								$(".news").empty();
 								if(data.rows){
 									data.rows.forEach(function(item){
-										$(".news").append('<dl class="news_dl"><dt><a href="" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
+										$(".news").append('<dl class="news_dl"><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type='+type+'" title="'+item.title +'" class="dt_1">'+item.title +'</a><span class="dt_2">['+ item.creatTime+']</span></dt><dd>'+item.content+ '</dd></dl>');
 											
 									});	
 								}

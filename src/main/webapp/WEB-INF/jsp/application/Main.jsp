@@ -220,13 +220,13 @@
 			<div class="compony-industry">
 				<div class="compony-news">
 					<h3>
-						公司新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=0" class="more">更多>></a>
+						公司新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=0" class="more">更多>></a>
 					</h3>
 					<ul></ul>
 				</div>
 				<div class="industry-news">
 					<h3>
-						行业新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=1" class="more">更多>></a>
+						行业新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=1" class="more">更多>></a>
 					</h3>
 					<ul>
 					</ul>

@@ -78,10 +78,16 @@ $(function() {
 		// $("#whole").animate({top:"-435px"});
 	});
 	$("#index").click(function() {
-		$(".title").removeClass("header-scrolled");
-		$('html,body').animate({
-			scrollTop : 0
-		}, 1000);
+		if (!on_click) {
+			on_click = true;
+		
+			$(".title").removeClass("header-scrolled");
+			$('html,body').animate({
+				scrollTop : 0
+			}, 1000, function(ev) {// 动作完成之后再做什么
+				on_click = false;
+			});
+		}
 	});
 
 });
@@ -111,8 +117,4 @@ $(function() {
 		}, 1000);
 	}
 	source = null;
-});
-/* 获取新闻列表 */
-$(function() {
-	 
 });

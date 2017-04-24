@@ -51,20 +51,20 @@
 
 		<div class="plc2">
 			当前位置：<a href="${pageContext.request.contextPath}/ofly/ep/main/goMain" title="首页">首页</a> » 
-			<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type="+${type}
-				title="新闻 "> <%if(request.getAttribute("type").equals("0")){ %>公司新闻<% }else if(request.getAttribute("type").equals("1")){%>行业新闻<%}%>aaa</a> » <a href="" title="新闻详情">新闻详情</a>
+			<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=${type}"
+				title="新闻 "> <%if(request.getAttribute("type").equals("0")){ %>公司新闻<% }else if(request.getAttribute("type").equals("1")){%>行业新闻<%}%></a> » <a href="" title="新闻详情">新闻详情</a>
 		</div>
 
 		<div class="n_info_con" id="printableview">
-			<h1>指标进水比出水低是什么原因?</h1>
+			<h1 id="news_title"></h1>
 			<div class="info_con_tit">
 				<div class="info_con_tit">
 					<div class="n_tit">
-						<span>发布时间：2017/3/20 9:24:38</span>
+						<span id="news_time"></span>
 					</div>
 				</div>
 			</div>
-			<div id="cntrBody">你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</div>
+			<!--<div id="cntrBody"></div>-->
 		</div>
 	</div>
 
@@ -87,14 +87,11 @@
 					},
 					success : function(data) {
 						if (data) {
-							$(".newsinfo-tab ul")
-									.append(
-											'<li class="active"><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=0">'
-													+ data.type + '</a></li>');
-							$(".newsinfo-item").append(
-									'<h2>' + data.title + '</h2>');
-							$(".newsinfo-item").append(
-									'<p class="info">' + data.content + '</p>');
+							$("#news_title").text(data.title); 
+							$("#news_time").text("发布时间："+data.creatTime);
+							//$("#cntrBody").text(data.content);
+							$("#printableview").append(
+									'<div id="cntrBody">' + data.content + '</div>');
 						}
 					},
 					error : function() {

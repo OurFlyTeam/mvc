@@ -4,13 +4,13 @@
 .pc img{
     width: 100%;
 }
-/*业务领域tab切换*/
-.business-tab{ 
+/*newsmore tab*/
+.newsmore-tab{ 
     padding: 22px 0;
     border-bottom: 1px solid #b5b5b5;
     text-align: center;
 }
-.business-tab li{
+.newsmore-tab li{
     display: inline-block;
     margin: 0 8px;
     padding: 0 12px;
@@ -18,7 +18,7 @@
     font: 14px/32px "Microsoft YaHei";
     cursor: pointer;
 }
-.business-tab li:hover,.business-tab .active{
+.newsmore-tab li:hover,.newsmore-tab .active{
     background-color: #72b831;
     color: #fff;
 }
