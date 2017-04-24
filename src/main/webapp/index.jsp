@@ -35,10 +35,13 @@
 				<param name="quality" value="high">
 				<PARAM name=bgcolor VALUE=#fff>
 				<param name="wmode" value="transparent">
+				
 				<embed src="${pageContext.request.contextPath}/img/flash/index.swf"
 					quality="high" bgcolor=#fff
-					pluginspage="http://www.macromedia.com/go/getflashplayer"
+					pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+					wmode="transparent" 
 					type="application/x-shockwave-flash" width="1400" height="900">
+					
 			</object>
 		</div>
 	</div>
