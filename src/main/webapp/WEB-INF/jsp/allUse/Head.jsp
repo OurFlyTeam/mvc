@@ -20,11 +20,13 @@
                     <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain">网站首页</a>
                 </li>
                 <li class="item">
-                    <a href="">晟荣概况</a>
+                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=company">晟荣概况</a>
+                    <!--  
                     <ul>
                         <li><a href="#">公司简介</a></li>
                         <li><a href="#">企业文化</a></li>
                     </ul>
+                    -->
                 </li>
                 <li class="item">    
                     <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=business">业务领域</a>
@@ -52,7 +54,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="">联系我们</a>
+                    <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=contact">联系我们</a>
                 </li>
             </ul>
         </div>

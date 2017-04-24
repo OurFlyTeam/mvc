@@ -20,11 +20,13 @@
                     <a href="javascript:;" id="index">网站首页</a>
                 </li>
                 <li class="item">
-                    <a href="">晟荣概况</a>
+                    <a href="javascript:;" id="company-field">晟荣概况</a>
+                    <!--  
                     <ul>
                         <li><a href="#">公司简介</a></li>
                         <li><a href="#">企业文化</a></li>
                     </ul>
+                    -->
                 </li>
                 <li class="item">    
                     <a href="javascript:;" id="business-field">业务领域</a>
@@ -52,7 +54,7 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="">联系我们</a>
+                    <a href="javascript:;" id="contact-field">联系我们</a>
                 </li>
             </ul>
         </div>

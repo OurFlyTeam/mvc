@@ -71,6 +71,65 @@
 	</div>
 	<!--轮播图结束-->
 
+	<!--晟荣概况开始-->
+	<div class="section company-field">
+		<div class="wrap clearfix">
+			<h2>
+				晟荣概况<span> / COMPANY</span>
+			</h2>
+
+			<div class="pro01">
+
+				<div class="barpro">
+					<ul class="barpro01">
+						<li class="cur" k="projsdivq0"><a href="javascript:void(0);"
+							title="公司简介">公司简介</a></li>
+
+						<li class="" k="projsdivq1"><a href="javascript:void(0);"
+							title="企业文化">企业文化</a></li>
+
+					</ul>
+				</div>
+
+
+
+
+				<div class="projs projsdivq projsdivq0" style="display: block;">
+					<dd class="fl">
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;青岛晟荣环境工程有限公司位于风光秀丽、气候宜人的滨海度假旅游城市及国际性港口城市、国家历史文化名城——青岛，坐落在即墨华骏物流园西，是集科研、设计、生产制造、营销、安装调试、售后服务为一体的专业环保企业。<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;公司汇聚了大批环保专业高端技术英才，拥有专业经验丰富的工程技术和安装人员，并与国内一些知名大学及科研机构建立非常密切的联系。目前公司正卓有成效地从事各类污水和废气处理工程的设计、咨询、技改、施工、运营及配套污水工程和废气工程的钢结构的建设等服务，涵盖了化工、造纸、食品、酿造、医药、医疗、养殖、城市市政等污水和废气治理领域，工程遍布全国各地，受到用户的一至好评。
+										通过科研研发和技术创新，公司推出多种高品质的环保治理一体化设备。专业为各种行业的污水、废气处理，提供安全可靠的工艺技术设备和高效优质的工程服务。<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;公司一贯坚持客户至上的服务理念，从项目设计、工程实施、运营及售后服务的每一个过程，都切实为客户着想，致力于打造精品工程、样板工程、惠民工程，为环保事业做出贡献。<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;晟荣人以高度的社会责任感、国际领先的技术水平，愿与有识之士共同携手，应对日益凸显的环境挑战，捍卫美丽中国！<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+						</p>
+					</dd>
+					<div class="clear"></div>
+				</div>
+
+
+				<div class="projs projsdivq projsdivq1" style="display: none;">
+					<dd class="fl">
+
+						<p>企业使命 引领环保行业，改善生态环境</p>
+						<p>企业愿景 为客户创造价值 为社会创造美好</p>
+						<p>经营理念 顾客至上 质量第一</p>
+						<p>企业精神 科技创新 和谐共赢</p>
+
+					</dd>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--晟荣概况结束-->
+
 	<!--业务领域开始-->
 	<div class="section business-field">
 		<div class="wrap clearfix">
@@ -220,13 +279,17 @@
 			<div class="compony-industry">
 				<div class="compony-news">
 					<h3>
-						公司新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=0" class="more">更多>></a>
+						公司新闻<a
+							href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=0"
+							class="more">更多>></a>
 					</h3>
 					<ul></ul>
 				</div>
 				<div class="industry-news">
 					<h3>
-						行业新闻<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=1" class="more">更多>></a>
+						行业新闻<a
+							href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=1"
+							class="more">更多>></a>
 					</h3>
 					<ul>
 					</ul>
@@ -236,6 +299,77 @@
 	</div>
 	<!--新闻结束-->
 	
+	
+	<!--联系我们-->
+	<div class="section contact-field">
+		<div class="wrap clearfix">
+			<h2>
+				联系我们<span> / CONNECT</span>
+			</h2>
+			<div class="text_con cl">
+				<ul class="contact_icon">
+					<li>
+						<span><img src="${pageContext.request.contextPath}/img/contact/con_icon_1.png"></span> 
+						<h2>
+							公司地址：
+						</h2>
+						<h3>
+							公司地址公司地址公司地址公司地址公司地址公司地址公司地址公司地址
+						</h3>
+					</li>
+					<li>
+						<span><img src="${pageContext.request.contextPath}/img/contact/con_icon_2.png"></span> 
+						<h2>
+							电话：
+						</h2>
+						<h3>
+							0532-12345678
+						</h3>
+					</li>
+					<li>
+						<span><img src="${pageContext.request.contextPath}/img/contact/con_icon_3.png"></span> 
+						<h2>
+							传真：
+						</h2>
+						<h3>
+							0532-12345678
+						</h3>
+					</li>
+				</ul>
+				<ul class="contact_icon">
+					<li>
+						<span><img src="${pageContext.request.contextPath}/img/contact/con_icon_4.png"></span> 
+						<h2>
+							邮编：
+						</h2>
+						<h3>
+							123456
+						</h3>
+					</li>
+					<li>
+						<span><img src="${pageContext.request.contextPath}/img/contact/con_icon_5.png"></span> 
+						<h2>
+							邮箱：
+						</h2>
+						<h3>
+							123456778@163.com
+						</h3>
+					</li>
+					<li>
+						<span><img src="${pageContext.request.contextPath}/img/contact/con_icon_7.png"></span> 
+						<h2>
+							微博：
+						</h2>
+						<h3>
+							微博微博微博微博微博微博
+						</h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--联系我们-->
+
 
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script type="text/javascript">
@@ -247,56 +381,81 @@
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/js/Main.js"></script>
+	
 	<script type="text/javascript">
+				    $(function () {
+				        $(".barpro01 li").each(function () {
+				            $(this).stop().hover(function () {
+				                $(".barpro01 li").removeClass("cur");
+				                $(this).addClass("cur");
+				                $(".projsdivq").css("display", "none");
+				                $("." + $(this).attr("k")).css("display", "block");
+				            }, function () { })
+				        })
+				    })
+	</script>
+	<script type="text/javascript">
+	//新闻查询
+	$(function () {
 		var ctx = '<%=request.getContextPath()%>';
 		var url = ctx + '/newsEdit/queryListByType';
 		$.ajax({
 			method : "POST",
 			url : url,
-			dataType: "json",
+			dataType : "json",
 			data : {
 				"type" : "01",
 				"rows" : 10,
 				"page" : 1
 			},
 			success : function(data) {
-				if(data){
-					if(data.rows){
-						data.rows.forEach(function(item){
-							$(".compony-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type=0" title="'+item.title+'" class="item">'+item.title+'</a></li>');
+				if (data) {
+					if (data.rows) {
+						data.rows.forEach(function(item) {
+							$(".compony-news ul").append(
+									'<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='
+											+ item.id + '&type=0" title="'
+											+ item.title + '" class="item">'
+											+ item.title + '</a></li>');
 
-						});	
+						});
 					}
-				} 
+				}
 			},
 			error : function() {
-				
+
 			}
 		});
 		$.ajax({
-				method : "POST",
-				url : url,
-				dataType: "json",
+			method : "POST",
+			url : url,
+			dataType : "json",
 			data : {
 				"type" : "02",
 				"rows" : 10,
 				"page" : 1
 			},
 			success : function(data) {
-				if(data){
-					if(data.rows){
-						data.rows.forEach(function(item){
-							$(".industry-news ul").append('<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='+item.id+'&type=1" title="'+item.title+'" class="item">'+item.title+'</a></li>');
+				if (data) {
+					if (data.rows) {
+						data.rows.forEach(function(item) {
+							$(".industry-news ul").append(
+									'<li><a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsInfo?id='
+											+ item.id + '&type=1" title="'
+											+ item.title + '" class="item">'
+											+ item.title + '</a></li>');
 
-						});	
+						});
 					}
-				} 
+				}
 			},
 			error : function() {
-				
+
 			}
-			
+
 		});
+		
+	});	
 	</script>
 </body>
 </html>

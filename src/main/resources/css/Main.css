@@ -164,9 +164,6 @@
 }
 
 /*新闻*/
-.news-field{
-	margin-bottom: 80px;
-}
 .news-field .compony-industry .more{
     float: right;
     padding-right: 10px;
@@ -218,5 +215,105 @@
 }
 .compony-industry .industry-news{
     float: right;   
+}
+
+/*晟荣概况*/
+.pro01 {
+    height: 460px;
+    overflow: hidden;
+    background: #fff;
+    padding: 0 28px;
+    margin-bottom: 18px;
+}
+.barpro {
+    height: 58px;
+    border-bottom: 1px solid #e3e3e3;
+    overflow: hidden;
+}
+.barpro ul{
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.barpro ul li {
+    float: left;
+    height: 36px;
+    display: inline;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.barpro ul li a {
+    color: #525252;
+    font: 15px/36px "微软雅黑";
+    background: #ececec;
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    display: inline-block;
+}
+.barpro ul li a:hover, .barpro ul .cur a {
+    color: #fff;
+    background: #1a7fdd;
+    display: inline-block;
+    text-decoration: none;
+}
+.projs {
+    padding: 26px 5px 0 0;
+}
+.projs dd {
+    overflow: hidden;
+}
+.fl {
+    float: left;
+}
+.projs dd p {
+    border-bottom: 1px dashed #c5c5c5;
+    color: #7d7d7d;
+    font: 14px/22px "微软雅黑";
+    padding: 8px 0;
+}
+/*联系我们*/
+.contact-field{
+	margin-bottom:120px;
+}
+.text_con {
+    padding: 55px;
+    font: 12px/24px 微软雅黑;
+    color: #474747;
+    background: #fff;
+    overflow: hidden;
+}
+.cl {
+    clear: both;
+    overflow: hidden;
+}
+.contact_icon {
+    clear: both;
+    overflow: hidden;
+}
+
+.contact_icon li {
+    width: 280px;
+    float: left;
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 50px;
+}
+.contact_icon li img {
+    vertical-align: top;
+    margin-left:115px;
+    border: 0;
+}
+
+.contact_icon li h2 {
+    font: 14px/28px 微软雅黑;
+    font-weight: bold;
+}
+.contact_icon li h3 {
+    font: 14px/28px 微软雅黑;
 }
 
