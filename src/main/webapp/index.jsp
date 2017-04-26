@@ -1,7 +1,8 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />  
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <!--开发团队:OurFlyTeam@gmail.com-->
 <title>青岛晟荣环境工程有限公司欢迎您</title>

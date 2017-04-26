@@ -6,7 +6,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />  
 <title>青岛晟荣环境工程有限公司</title>
 <meta name="keywords" content="青岛晟荣环境工程有限公司">
 <meta name="description"
