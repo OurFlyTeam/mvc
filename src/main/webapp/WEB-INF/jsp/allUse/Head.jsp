@@ -9,7 +9,7 @@
                     <span class="english-name">QingDao ShengRong Environmental Protection</span>
                 </h1>
                 <p class="tell">
-                    <span class="link">联系电话</span>
+                    <span class="link">咨询热线</span>
                     <span class="num">18053215436</span>
                 </p>
             </div>
@@ -33,17 +33,19 @@
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">废水处理</a></li>
                         <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">废气处理</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">一体化设备</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">技改设备</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">钢构工程</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">水处理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">一体化设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">技术改造</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">钢构工程</a></li>
                     </ul>
                 </li>
                 <li class="item">
                     <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=product">产品中心</a>
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">环保设备</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">环保配件</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">滑雪试剂</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">沼气发电</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">环保设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">环保配件</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=3">化学试剂</a></li>
                     </ul>
                 </li>
                 <li class="item">

@@ -3,26 +3,26 @@ $(function() {
 		items : 1,
 		loop : true,
 		autoplay : true,
-		autoplayTimeout : 1000,
+		autoplayTimeout : 4000,
 		autoplayHoverPause : true
 	});
 });
 /* 滚动导航更换背景 */
-$(function() {
-	$(window).scroll(function() {
-		var $this = $(this);
-		var targetTop = $(this).scrollTop();
-
-		var height = $(window).height();
-
-		if (targetTop > 128) {
-			$(".title").addClass("header-scrolled");
-		} else {
-			$(".title").removeClass("header-scrolled");
-		}
-
-	});
-});
+//$(function() {
+//	$(window).scroll(function() {
+//		var $this = $(this);
+//		var targetTop = $(this).scrollTop();
+//
+//		var height = $(window).height();
+//
+//		if (targetTop > 128) {
+//			$(".title").addClass("header-scrolled");
+//		} else {
+//			$(".title").removeClass("header-scrolled");
+//		}
+//
+//	});
+//});
 
 // 晟荣概况
 $(function() {

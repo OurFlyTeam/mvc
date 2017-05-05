@@ -49,18 +49,21 @@
 .header .title .english-name{
     float: left;
     font: 12px "Microsoft YaHei";
+    text-align: center;
+    width: 300px;
 }
 .header .title .tell{
     float: right;
     width: 200px;
-    padding-left: 40px;
+    padding-left: 60px;
     margin-top: 8px;
     text-align: center;
     color: #306f36;
     background: url(../../img/allUse/tel.png) no-repeat;
+    background-size: contain;
 }
 .header .tell .link{
-    font: 16px "Microsoft YaHei";
+    font: 22px "STLiti";
     
 }
 .header .tell .num{
