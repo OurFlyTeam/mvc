@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ofly.ep.common.dao.IFileDao">
+	<resultMap type="java.util.Map" id="imgResultMap" >  
+            <result  property="file" column="file" jdbcType="BLOB"  typeHandler="org.apache.ibatis.type.BlobTypeHandler"/>  
+      </resultMap>
+	<select id="download" resultMap="imgResultMap">
+		select file from ep_file where file_id = #{fileId}
+	</select>
+	<insert id="upload" parameterType="ofly.ep.common.vo.FileVo">
+		INSERT INTO ep_file 
+			(file_id, 
+			 file_name, 
+			 file, 
+			 upload_time) 
+		VALUES 
+			(#{fileId},
+			 #{fileName}, 
+			 #{file}, 
+			 now());
+	</insert>
+	<update id="update" parameterType="ofly.ep.common.vo.FileVo">
+		UPDATE 
+			ep_file 
+		SET 
+			file_name = #{fileName}, 
+			upload_time = now(),
+			file = #{file}
+		WHERE 
+			file_id=#{fileId}
+	</update>
+	<delete id="delete">
+		DELETE FROM 
+			ep_file 
+		WHERE 
+			file_id =#{fileId}
+		
+	</delete>
+</mapper>

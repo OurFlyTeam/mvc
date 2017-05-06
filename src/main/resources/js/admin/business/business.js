@@ -1,21 +1,16 @@
-
 /**
- * @Author			: Logan
- * @introduction 	: 新闻
+ * 业务领域模块
  */
-var news = (function(){
-	var _this={};
+var business = (function(){
+	var _this= {};
 	var currentTabIndex;
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 初始化新闻维护界面
-	 */
 	var init = function() {
 		var url = ctx + '/code/getCodeListBySortCode';
 		var params = {
-			sortCode	: 'newsType'	
+			sortCode	: 'businessAreaType'	
 		};
 		$.get(url, params, function(data) {
+			
 			if(data!=null) {
 				$.each(data, function(index, item) {
 					$('#tabs').tabs("add",{
@@ -28,61 +23,13 @@ var news = (function(){
 		});
 	}
 	
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 保存
-	 */
-	var _save  = function() {
-		if(!_saveValid()) {
-			return;
-		}
-		var url = ctx +'/newsEdit/save'
-		var params = {
-			
-			title	: $('#newsForm').find("#title").textbox("getValue"), 
-			type	: $('#newsForm').find("#type").combobox("getValue"),
-			content	: editor.getContent()
-		};
-		if($('#newsForm').find('#id').val()) {
-			params.id = $('#newsForm').find('#id').val();
-		}
-		$.post(url, params, function(data) {
-			$.messager.alert({
-				title	: "",
-				msg		: data.msg,
-				icon	: 'info',
-				fn		: function() {
-					if(data.code==1) {
-						var newsValue = $('#newsForm').find("#type").combobox("getValue");
-						$('#addDialog').dialog("close");
-						$("#datagrid_"+newsValue).datagrid("reload");
-					}
-				}
-			});
-		});
-	};
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 保存_验证
-	 */
-	var _saveValid = function() {
-		if(!$('#newsForm').form("validate")) {
-			return false;
-		}
-		return true;
-	}
-	
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 新增tab页时候调用的函数
-	 */
-	var onAdd = function (title, index) {
+	var onAdd = function(title, index) {
 		var tab = $(this).tabs("getTab", index);
 		var value = tab.panel("options").value;
 		var datagrid = $('<table id="datagrid_'+value+'"></table>');
 		tab.html(datagrid);
 		datagrid.datagrid({
-			url			: ctx + '/newsEdit/queryListByType?type='+value,
+			url			: ctx + '/businessArea/queryListByType?type='+value,
 			singleSelect:true,
 			rownumbers	:true,
 			loadMsg		:'查询中',
@@ -99,16 +46,16 @@ var news = (function(){
 			        	   ]
 		});
 	}
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 新增弹出界面
-	 */
+	
 	function _add(event) {
-		var url = ctx + '/newsEdit/add'
-		var params = {};
+		var type = $('#tabs').tabs("getSelected").panel("options").value;
+		var url = ctx + '/businessArea/add';
+		var params = {
+				type	: type
+		};
 		var buttons = [{
 			text	: '保存',
-			iconCls : 'icon-save',
+			iconCls	: 'icon-save',
 			plain	: true,
 			handler	: _save
 		}];
@@ -128,22 +75,20 @@ var news = (function(){
 		var div = '<div id="addDialog"></div>';
 		$(document.body).append(div); 
 		$("#addDialog").dialog(options);
+		
 	}
 	
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 编辑弹出界面
-	 */
-	function _edit(event) {
-		var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
-		var row = $('#datagrid_'+newsValue).datagrid("getSelected");
+	var _edit = function (event) {
+		var type = $('#tabs').tabs("getSelected").panel("options").value;
+		var row = $('#datagrid_'+type).datagrid("getSelected");
 		if(!row) {
 			OFLY.message("请先选择一条数据");
 			return;
 		}
-		var url = ctx + '/newsEdit/edit';
+		var url = ctx + '/businessArea/edit';
 		var params = {
-			id	: row.id
+			id	: row.id,
+			type: type
 		}
 		var buttons = [{
 			text	: '保存',
@@ -168,20 +113,14 @@ var news = (function(){
 		$(document.body).append(div); 
 		$("#addDialog").dialog(options);
 	}
-	
-	/**
-	 * @Author			: Logan
-	 * @introduction 	: 删除弹出界面
-	 * 
-	 */
-	function _del(event) {
-		var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
-		var row = $('#datagrid_'+newsValue).datagrid("getSelected");
+	var _del = function (event) {
+		var type = $('#tabs').tabs("getSelected").panel("options").value;
+		var row = $('#datagrid_'+type).datagrid("getSelected");
 		if(!row) {
 			OFLY.message("请先选择一条数据");
 			return;
 		}
-		var url = ctx + '/newsEdit/delete';
+		var url = ctx + '/businessArea/delete';
 		var params = {
 			id	: row.id
 		}
@@ -189,22 +128,64 @@ var news = (function(){
 			$.post(url, params, function(data) {
 				OFLY.message(data.msg, function() {
 					if(data.code){
-						var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
-						$('#datagrid_'+newsValue).datagrid("reload");
+						var type = $('#tabs').tabs("getSelected").panel("options").value;
+						$('#datagrid_'+type).datagrid("reload");
 					}
 				});
 			});
 		});
-		
 	}
-	var onSelect = function(title, index) {
-		currentTabIndex = index;
-	} 
 	
-	_this.init = init;			// 初始化新闻维护界面
-	_this.onAdd = onAdd;		// 新增tab页触发
-	_this.onSelect = onSelect;	// 选择tab后触发事件
-	//_this.save = save;		// 保存
+	var _save = function () {
+		if(!_saveValid()) {
+			return;
+		}
+		debugger
+		var url = ctx +'/businessArea/save';
+		var formData = new FormData($('#businessForm')[0]);
+		formData.append("content",editor.getContent());
+		formData.append("title",$('#businessForm').find("#title").textbox("getValue"));
+		OFLY.confirm("确认保存?", function() {
+			$.ajax({
+			    url			: url,
+			    type		: 'POST',
+			    cache		: false,
+			    processData	: false,
+			    contentType	: false,
+			    data		: formData
+			}).done(function(res) {
+				OFLY.message(res.msg,function() {
+					if(res.code) {
+						var type = $('#tabs').tabs("getSelected").panel("options").value;
+						$("#datagrid_"+type).datagrid("reload");
+						OFLY.dialog.close("addDialog");
+					}
+				});
+			}).fail(function(res) {
+				OFLY.message(res);
+			});
+		});
+	}
 	
+	var _saveValid = function() {
+		if(!$('#businessForm').form("validate")) {
+			return false;
+		}
+		//验证图片
+		if(!$('#businessForm').find('#picFile').val() && !id) {
+			OFLY.message("请选择标题图片");
+			return false;
+		}
+		// 验证内容
+		if(!$.trim(editor.getContent()).length) {
+			OFLY.message("请填写正文");
+			return false;
+		}
+		
+		return true;
+	}
+	
+	_this.init					= init;
+	_this.onAdd					= onAdd;
 	return _this;
 })();

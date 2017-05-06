@@ -34,4 +34,17 @@ public interface ICodeService {
 	 *
 	 */
 	List<CodeVo> queryCodeListBySortCode(String sortCode);
+	/**
+	 * Introduction	：根据分类+值查询名称
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年5月6日 上午10:51:26
+	 * History		: 2017年5月6日 上午10:51:26   Logan   Created.
+	 *
+	 * @param sortCode
+	 * @param value
+	 * @return
+	 *
+	 */
+	String queryCodeBySortCodeAndValue(String sortCode, String value);
 }
