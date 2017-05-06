@@ -22,7 +22,7 @@ public class MainController {
 	}
 
 	@RequestMapping("/goBusinessMore")
-	public String go_businessMore(Model m, String type) {
+	public String go_businessMore(Model m, String type, String page) {
 		// TODO Auto-generated method stub
 		m.addAttribute("type", type);
 		if (type.equals("0")) {
@@ -38,7 +38,33 @@ public class MainController {
 		} else if (type.equals("5")) {
 			m.addAttribute("type_name", "钢构工程");
 		}
+		if(page==null){
+			m.addAttribute("page", 1);
+		}else{
+			m.addAttribute("page", page);
+		}
 		return "application/BusinessMore";
+	}
+	
+	@RequestMapping("/goBusinessInfo")
+	public String go_businessIfo(Model m, String type,int id) {
+		// TODO Auto-generated method stub
+		m.addAttribute("type", type);
+		if (type.equals("0")) {
+			m.addAttribute("type_name", "废水处理");
+		} else if (type.equals("1")) {
+			m.addAttribute("type_name", "废气处理");
+		} else if (type.equals("2")) {
+			m.addAttribute("type_name", "水处理");
+		} else if (type.equals("3")) {
+			m.addAttribute("type_name", "一体化设备");
+		} else if (type.equals("4")) {
+			m.addAttribute("type_name", "技术改造");
+		} else if (type.equals("5")) {
+			m.addAttribute("type_name", "钢构工程");
+		}
+		m.addAttribute("id", id);
+		return "application/BusinessInfo";
 	}
 
 	@RequestMapping("/goProduct")
@@ -52,7 +78,11 @@ public class MainController {
 	public String go_newsmore(Model m, String type, String page) {
 		// TODO Auto-generated method stub
 		m.addAttribute("type", type);
-		m.addAttribute("page", page);
+		if(page==null){
+			m.addAttribute("page", 1);
+		}else{
+			m.addAttribute("page", page);
+		}
 		return "application/newsmore";
 	}
 

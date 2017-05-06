@@ -218,7 +218,7 @@
 			
 			//上一页
 			$("#page_prev").click(function() {
-				if(page === "1"){
+				if(page == "1"){
 						page = 1;
 					}else{
 						page = parseInt(page) - 1;
@@ -260,7 +260,7 @@
 			});
 			//下一页
 			$("#page_next").click(function() {
-				if(page === page_num){
+				if(page == page_num){
 						page = page_num;
 					}else{
 						page = parseInt(page) + 1;

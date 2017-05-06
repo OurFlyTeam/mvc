@@ -7,6 +7,7 @@
 			a.id,
 			a.title,
 			a.type,
+			a.title_pic_id,
 			date_format(a.creat_time, '%Y-%m-%d %H:%i:%s')  creatTime
 		from 
 			ep_business_area a 

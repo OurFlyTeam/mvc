@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="" content="">
 <meta>
-<title>青岛晟荣环境工程有限公司-新闻</title>
+<title>青岛晟荣环境工程有限公司-业务领域</title>
 <meta name="keywords" content="青岛晟荣环境工程有限公司">
 <meta name="description"
 	content="青岛晟荣环境工程有限公司位于风光秀丽、气候宜人的滨海度假旅游城市及国际性港口城市、国家历史文化名城——青岛，坐落在即墨华骏物流园西，是集科研、设计、生产制造、营销、安装调试、售后服务为一体的专业环保企业。">
@@ -34,7 +34,7 @@
 
 <!-- Product -->
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/newsinfo.css">
+	href="${pageContext.request.contextPath}/css/BusinessInfo.css">
 
 </head>
 
@@ -45,16 +45,18 @@
 	<!--图片-->
 	<div class="pc">
 		<img src="${pageContext.request.contextPath}/img/business.jpg"
-			alt="新闻">
+			alt="业务领域">
 	</div>
 	<!--图片结束-->
-	<div class="newsinfo-tab wrap">
+	<div class="businessinfo-tab wrap">
 
 		<div class="plc2">
 			当前位置：<a href="${pageContext.request.contextPath}/ofly/ep/main/goMain" title="首页">首页</a> &gt; 
-			<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=${type}"
-				title="新闻 "> <%if(request.getAttribute("type").equals("0")){ %>公司新闻<% }else if(request.getAttribute("type").equals("1")){%>行业新闻<%}%></a> &gt; <a href="" title="新闻详情">新闻详情</a>
+			<a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=${type}"
+				title="${type_name}">${type_name}</a> &gt; <a href="" title="详情">详情</a>
 		</div>
+		
+		
 
 		<div class="n_info_con" id="printableview">
 			<h1 id="news_title"></h1>
@@ -65,7 +67,12 @@
 					</div>
 				</div>
 			</div>
-			<!--<div id="cntrBody"></div>-->
+			<div id="case_ct_pic">
+				<center><img id="img_center" width="330"></center>
+			</div>
+			<div id="cntrBody">
+				<p id="all_info" style="font-weight:bold; padding-left:20px; font-size:16px;">详情：</p>
+			</div>
 		</div>
 	</div>
 
@@ -77,7 +84,7 @@
 	<script type="text/javascript">
 		var id="${id}";
 		var ctx = '<%=request.getContextPath()%>';
-		var url = ctx + '/newsEdit/queryNewsByBrimaryKey';
+		var url = ctx + '/businessArea/queryByPrimarkKey';
 		$
 				.ajax({
 					method : "POST",
@@ -91,8 +98,10 @@
 							$("#news_title").text(data.title); 
 							$("#news_time").text("发布时间："+data.creatTime);
 							//$("#cntrBody").text(data.content);
-							$("#printableview").append(
-									'<div id="cntrBody">' + data.content + '</div>');
+							$("#cntrBody").append(
+									'<div id="cntrinfo">' + data.content + '</div>');
+							$("#img_center").show();
+							$("#img_center").attr('src',ctx + '/file/download?id='+data.titlePicId);
 						}
 					},
 					error : function() {

@@ -31,12 +31,12 @@
                 <li class="item">    
                     <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=business">业务领域</a>
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">废水处理</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">废气处理</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">水处理</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">一体化设备</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">技术改造</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">钢构工程</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=0">废水处理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=1">废气处理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=2">水处理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=3">一体化设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=4">技术改造</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=5">钢构工程</a></li>
                     </ul>
                 </li>
                 <li class="item">

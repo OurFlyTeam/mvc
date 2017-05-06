@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta name="renderer" content="webkit" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />  
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
 <meta charset="UTF-8">
 <meta http-equiv="" content="">
 <meta>
-<title>青岛晟荣环境工程有限公司-产品中心</title>
+<title>青岛晟荣环境工程有限公司</title>
 <meta name="keywords" content="青岛晟荣环境工程有限公司">
 <meta name="description"
 	content="青岛晟荣环境工程有限公司位于风光秀丽、气候宜人的滨海度假旅游城市及国际性港口城市、国家历史文化名城——青岛，坐落在即墨华骏物流园西，是集科研、设计、生产制造、营销、安装调试、售后服务为一体的专业环保企业。">
@@ -31,11 +31,9 @@
 	href="${pageContext.request.contextPath}/css/allUse/Head.css">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/allUse/Foot.css">
-
-<!-- Product -->
+<!-- business -->
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/Product.css">
-
+	href="${pageContext.request.contextPath}/css/BusinessMore.css">
 </head>
 
 <body>
@@ -45,52 +43,322 @@
 	<!--图片-->
 	<div class="pc">
 		<img src="${pageContext.request.contextPath}/img/business.jpg"
-			alt="产品中心">
+			alt="业务领域">
 	</div>
 	<!--图片结束-->
-	<!--业务领域tab页面-->
-	<div class="product-tab">
-		<ul class="wrap clearfix">
-			<li class="active">环保设备</li>
-			<li>环保配件</li>
-			<li>滑雪试剂</li>
-		</ul>
+
+	<div id="tpl_c">
+		<div id="tpl_l">
+			<div class="hbsb">
+				<img src="${pageContext.request.contextPath}/img/business/hbsb.jpg">
+				<p>${type_name}</p>
+			</div>
+			<ul>
+				<li><p>AAAAAAAA</p></li>
+				<li><p>BBBBBBBBBBB</p></li>
+				<li><p>CCCCCCCCCCC</p></li>
+				<li><p>DDDDDDDDD</p></li>
+				<li><p>EEEEEEEE</p></li>
+				<li><p>AAAAAAAA</p></li>
+				<li><p>BBBBBBBBBBB</p></li>
+				<li><p>CCCCCCCCCCC</p></li>
+				<li><p>DDDDDDDDD</p></li>
+				<li><p>EEEEEEEE</p></li>
+			</ul>
+			<div><img src="${pageContext.request.contextPath}/img/business/tpl_l_f.gif"></div>
+		</div>
+		<div id="tpl_r">
+			<div id="tpl_r_t">
+				<!--  <strong>${type_name}</strong>-->
+				<span>您当前所在的位置： <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain"
+					title="首页">首页</a> &gt; <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=business">业务领域</a>
+					&gt; <a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=${type}">${type_name}</a>
+				</span>
+			</div>
+			<div id="tpl_r_c">
+				<div class="mg_gcal">
+					
+				</div>
+				<div class="clear"></div>
+				<div class="page">
+					<ul class="page-lists">	
+						<li><a href="javascript:;" id="page_first">首页</a></li>
+						<li><a href="javascript:;" id="page_prev">上一页</a></li>
+						<li><a href="javascript:;" id="page_next")>下一页</a></li>
+						<li><a href="javascript:;" id="page_last">末页</a></li>
+						<li id="pagenum"></li>
+						<li id="records"></li>
+						<li class="go">转<input id="news_page_go" type="text">页<a href="javascript:;" id="page_go">GO</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!--环保设备-->
-	<div class="product-item wrap show">
-		<h2>环保设备</h2>
-		<p class="description">
-			腾禹环保多年来一直致力于环境保护事业的健康发展，在各个领域始终坚持"以技术指导实践，以实践检验技术"的原则，不断提高技术水平，积累实践经验，研发节能高效的新式工艺和新型设备，为广大民众、公共机构和企事业单位提供高水平的技术服务和高质量的工程产品。
-			水处理工程是腾禹环保的主营业务，拥有丰富的项目业绩，涉及给水处理、输配水系统、污水处理、雨水综合利用、中水回用、污水热能利用等各个领域。公司为广大业主提供从技术咨询、设备研发、处理方案、施工图设计到工程施工、调试、运营管理的全方位服务。
-			1、给水处理
-			人类社会为了满足生活和生产的需要，要从各种原水中取用大量的水，而水中含有的有害杂质，既有碍于人们的生活又影响生产的使用，因此需要将这些原水通过物理、化学、微生物等方法进行处理，使之达到相应的水质标准，满足生活和生产使用的要求。
-			给水处理即通过给水处理工艺对不符合用水对象水质要求的原水进行处理，使其水质改善，达到使用要求或相应标准的过程。
-			在给水处理领域，公司业务范围包括工业纯水、高纯水的制备、工业水软化除盐、循环冷却水处理、饮用水除氟、除钙等。</p>
-	</div>
-	<!--环保配件-->
-	<div class="product-item wrap">
-		<h2>环保配件</h2>
-		<p class="description">
-			在废气治理领域，我公司在坚持自主开发环境污染治理技术的同时，也积极引进吸收美国、德国等国家多项先进环保技术，同时密切加强与国内研究机构的合作，从而近一步完善自身设备品质。
-			经过公司团队多年的工程经验和技术积累，已形成以"低温等离子体油雾异味处理"，"特种光催化技术恶臭气体处理"，"低温等离子体工业废气治理"，"高效雾化分解异味气体处理"，等为特色的废气治理技术，并在化工、皮革、污水处理厂、食品行业、制药等行业进行了广泛的应用，得到了环保管理部门和客户的广泛好评。
-			青岛腾禹环保将以可靠的技术、最佳的设计方案、精良的设备加工能力、专业的施工队伍及周到的售后服务，为企业的环保问题提供系统化解决方案，共同为企业的可持续发展而努力。
-		</p>
-	</div>
-	<!--滑雪试剂-->
-	<div class="product-item wrap">
-		<h2>滑雪试剂</h2>
-		<p class="description">
-			一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备一体化设备。
-		</p>
-	</div>
+
 	<jsp:include page="../allUse/Foot.jsp" flush="true" />
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
-	
 	<script type="text/javascript">
-			var type="${type}";
+		var view_rows = 12;
+		var page_num;//总页数
+		var type="${type}";
+		var page = "${page}";
+		$(function(){
+			var business_type;
+			business_type = get_business_type(type);
+			
+			var ctx = '<%=request.getContextPath()%>';
+			var url = ctx + '/businessArea/queryListByType';
+			$.ajax({
+				method : "POST",
+				url : url,
+				dataType: "json",
+				data : {
+					"type" : business_type,
+					"rows" : view_rows,
+					"page" : page
+				},
+				success : function(data) {
+					if(data){
+						$("#records").text("共"+data.total+"条"); 
+						$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/view_rows)+"页"); 
+						page_num = Math.ceil(data.total/view_rows);
+						if(data.rows){
+							data.rows.forEach(function(item){
+								$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+										+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+								$("#previewImg"+item.id).show();
+								$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
+							});	
+						}
+					} 
+				},
+				error : function() {
+					
+				}
+			});
+		});
+		
+		
+		//点击查询页
+		$(function(){
+			//首页
+			$("#page_first").click(function() {
+				page = 1;
+				business_type = get_business_type(type);
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/businessArea/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : business_type,
+						"rows" : view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/view_rows)+"页"); 
+							$(".mg_gcal").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$("#previewImg"+item.id).show();
+									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			
+			//上一页
+			$("#page_prev").click(function() {
+				if(page == "1"){
+					page = 1;
+				}else{
+					page = parseInt(page) - 1;
+				}
+				
+				business_type = get_business_type(type);
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/businessArea/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : business_type,
+						"rows" : view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/view_rows)+"页"); 
+							$(".mg_gcal").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$("#previewImg"+item.id).show();
+									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			//下一页
+			$("#page_next").click(function() {
+			   if(page == page_num){
+					page = page_num;
+				}else{
+					page = parseInt(page) + 1;
+				}
+				
+				business_type = get_business_type(type);
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/businessArea/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : business_type,
+						"rows" : view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/view_rows)+"页"); 
+							$(".mg_gcal").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$("#previewImg"+item.id).show();
+									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			//末页
+			$("#page_last").click(function() {
+				page = page_num;
+				
+
+				business_type = get_business_type(type);
+				var ctx = '<%=request.getContextPath()%>';
+				var url = ctx + '/businessArea/queryListByType';
+				$.ajax({
+					method : "POST",
+					url : url,
+					dataType: "json",
+					data : {
+						"type" : business_type,
+						"rows" : view_rows,
+						"page" : page
+					},
+					success : function(data) {
+						if(data){
+							$("#records").text("共"+data.total+"条"); 
+							$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/view_rows)+"页"); 
+							$(".mg_gcal").empty();
+							if(data.rows){
+								data.rows.forEach(function(item){
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$("#previewImg"+item.id).show();
+									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
+								});	
+							}
+						} 
+					},
+					error : function() {
+						
+					}
+				});
+			});
+			
+			
+			//go页
+			$("#page_go").click(function() {
+					page = $("#news_page_go").val();
+					
+					business_type = get_business_type(type);
+					var ctx = '<%=request.getContextPath()%>';
+					var url = ctx + '/businessArea/queryListByType';
+					$.ajax({
+						method : "POST",
+						url : url,
+						dataType: "json",
+						data : {
+							"type" : business_type,
+							"rows" : view_rows,
+							"page" : page
+						},
+						success : function(data) {
+							if(data){
+								$("#records").text("共"+data.total+"条"); 
+								$("#pagenum").text("当前页："+ page+"/"+Math.ceil(data.total/view_rows)+"页"); 
+								$(".mg_gcal").empty();
+								if(data.rows){
+									data.rows.forEach(function(item){
+										$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+												+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+										$("#previewImg"+item.id).show();
+										$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
+									});	
+								}
+							} 
+						},
+						error : function() {
+							
+						}
+					});
+				});
+		});
+		function get_business_type(type){
+			var business_type;
+			switch(type){
+				case "0":
+					business_type = "01";
+				    break;
+				case "1":
+					business_type = "02";
+				    break;
+				case "2":
+					business_type = "03";
+				    break;
+				case "3":
+					business_type = "04";
+				    break;
+				case "4":
+					business_type = "05";
+				    break;
+				case "5":
+					business_type = "06";
+				    break;
+			}
+			return business_type;
+		}
+		
 	</script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/js/Product.js"></script>
 </body>
 </html>

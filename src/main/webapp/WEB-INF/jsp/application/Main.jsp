@@ -171,12 +171,12 @@
 				</a>
 				<p class="content">治理废水的成功案例，包括医疗、屠宰养殖、工业废水、高难废水……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=0">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=1">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/business/b.jpg"
 									alt="废气处理">	
@@ -184,12 +184,12 @@
 				</a>
 				<p class="content">治理废气的成功案例，包括除尘、有机废气、恶臭异味……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=1">[了解更多]
 					</a></p>
 			</div>
 			<div class="item mr">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=2">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/business/c.jpg"
 									alt="水处理">	
@@ -197,12 +197,12 @@
 				</a>
 				<p class="content">利用MBR、NF、RO膜及EDI制备纯水、净水、矿泉水……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=2">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=3">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/business/d.jpg"
 									alt="一体化设备">	
@@ -210,12 +210,12 @@
 				</a>
 				<p class="content">治理污水的成套设备，安装周期短，占地面积，投资省……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=3">[了解更多]
 					</a></p>
 			</div>
 			<div class="item mr">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=4">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/business/e.jpg"
 									alt="技术改造">	
@@ -223,12 +223,12 @@
 				</a>
 				<p class="content">针对客户提标改造、未达标工程的改造，提供咨询、设计、安装……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=4">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=5">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/business/f.jpg"
 									alt="钢构工程">	
@@ -236,7 +236,7 @@
 				</a>
 				<p class="content">办公、市政、厂房的钢构工程及环保工程中的配套钢构工程……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=5">[了解更多]
 					</a></p>
 			</div>
 		</div>
@@ -311,7 +311,7 @@
 				<div class="compony-news">
 					<h3>
 						公司新闻<a
-							href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=0"
+							href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=0"
 							class="more">更多>></a>
 					</h3>
 					<ul></ul>
@@ -319,7 +319,7 @@
 				<div class="industry-news">
 					<h3>
 						行业新闻<a
-							href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=1"
+							href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?type=1"
 							class="more">更多>></a>
 					</h3>
 					<ul>

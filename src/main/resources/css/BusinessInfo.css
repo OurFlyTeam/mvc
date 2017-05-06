@@ -4,7 +4,7 @@
 .pc img{
     width: 100%;
 }
-.newsinfo-tab{
+.businessinfo-tab{
 	border: solid 1px #d5d5d5;
     overflow: hidden;
     margin:20px auto 50px;
@@ -20,6 +20,20 @@
 
 .plc2 a {
     color: #fff;
+}
+#case_ct_pic {
+    margin: 0px auto;
+    width: 730px;
+    height: auto;
+}
+center {
+    display: block;
+    text-align: -webkit-center;
+}
+#case_ct_pic img {
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    margin: 0px auto;
 }
 
 .n_info_con {
@@ -45,5 +59,15 @@
 #cntrBody {
     font-size: 14px;
     margin: 20px 0;
+}
+#cntrBody #all_info{
+    font-size: 14px;
+    border-bottom: 1px dashed #CCCCCC;
+}
+
+#cntrinfo {
+	width:900px;
+    font-size: 14px;
+    margin:20px auto;
 }
 

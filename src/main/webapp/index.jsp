@@ -66,4 +66,5 @@ jsp:    -forward page="/WEB-INF/jsp/application/Main.jsp"
 http://localhost:88/mvc
 http://localhost:88/mvc/ofly/test/test/
 http://localhost:88/mvc/newsEdit/init
+http://localhost:88/mvc/businessArea/init
  -->

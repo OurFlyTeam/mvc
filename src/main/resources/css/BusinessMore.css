@@ -16,6 +16,21 @@
     float: left;
     min-height: 600px;
 }
+
+.hbsb{
+	position: relative;
+}
+.hbsb p{
+	position: absolute;
+	top: 26px;
+	left: 0;
+	right: 0;
+	height: 40px;
+    font:20px/40px "Microsoft YaHei";
+    color: #fff;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+}
 #tpl_l ul {
     width: 210px;
     height: auto;
@@ -60,9 +75,13 @@
     font-family: "微软雅黑"!important;
 }
 #tpl_r_t span{
-    font-size: 12px;
-    font-family: "微软雅黑"!important;
+    font:12px/27px "Microsoft YaHei";
 }
+
+#tpl_r_t a {
+    color: #000;
+}
+
 #tpl_r_c {
     width: 730px;
     height: auto;
@@ -88,6 +107,14 @@
 .mg_gcal dl dt img {
     border-radius: 0px 0px 5px 5px;
 }
+.mg_gcal dl dd{
+    text-align: center;
+    margin-left: 0;
+}
+.mg_gcal dl dd a{
+    color: #000;
+    font:12px/27px "Microsoft YaHei";
+}
 
 .clear {
     clear: both;
@@ -98,10 +125,33 @@
     visibility: hidden;
     overflow: hidden;
 }
-.page {
-    width: 400px;
+.page{
     height: 30px;
     line-height: 30px;
-    margin: 0px auto;
+    background: #F9F9F9;
+    padding: 0 5px;
+    margin-top: 10px;
     text-align: center;
+    border-radius: 5px;
+}
+.page .page-lists li{
+	display: inline-block;
+}
+.page .page-lists a{
+	height: 20px;
+	margin: 5px 0;
+	padding: 0 5px;
+	line-height: 20px;
+	color: #666;
+	border-radius: 10px;
+}
+.page .page-lists a:hover,.page .page-lists .go a{
+	background-color: #72b831;
+    color: #fff;
+}
+.page .page-lists .go input{
+	width: 50px;
+	margin: 0 10px;
+	border: 1px solid #ccc;
+	text-align: center;
 }
