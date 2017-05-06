@@ -153,8 +153,9 @@
 
 			<div class="item mr">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=0">
 					<figure class="field"> 
+					<!--
 						<figcaption class="bglung">
 							<img src="${pageContext.request.contextPath}/img/business/titile_a.jpg"
 									alt="废水处理">
@@ -163,100 +164,79 @@
 								<img src="${pageContext.request.contextPath}/img/business/a.jpg"
 									alt="废水处理">
 						</div>
+					-->
+						<img src="${pageContext.request.contextPath}/img/business/a.jpg"
+										alt="废水处理">	
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">废水处理XXXXXXXXXXXXXX
+				<p class="content">治理废水的成功案例，包括医疗、屠宰养殖、工业废水、高难废水……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=0">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">
 					<figure class="field"> 
-						<figcaption class="bglung">
-							<img src="${pageContext.request.contextPath}/img/business/titile_b.jpg"
-									alt="废气处理">
-						</figcaption>
-						<div class="field-img">
-								<img src="${pageContext.request.contextPath}/img/business/b.jpg"
-									alt="废气处理">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/business/b.jpg"
+									alt="废气处理">	
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">废气处理XXXXXXXXXXXXXXX
+				<p class="content">治理废气的成功案例，包括除尘、有机废气、恶臭异味……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=1">[了解更多]
 					</a></p>
 			</div>
 			<div class="item mr">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">
 					<figure class="field"> 
-						<figcaption class="noise">
-							<img src="${pageContext.request.contextPath}/img/business/titile_c.jpg"
-											alt="水处理">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/business/c.jpg"
-								alt="水处理">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/business/c.jpg"
+									alt="水处理">	
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">水处理设备XXXXXXXXXXXXXX
+				<p class="content">利用MBR、NF、RO膜及EDI制备纯水、净水、矿泉水……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=2">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">
 					<figure class="field"> 
-						<figcaption class="noise">
-							<img src="${pageContext.request.contextPath}/img/business/titile_d.jpg"
-											alt="一体化设备">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/business/d.jpg"
-								alt="一体化设备">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/business/d.jpg"
+									alt="一体化设备">	
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">一体化设备XXXXXXXXXXXXXX
+				<p class="content">治理污水的成套设备，安装周期短，占地面积，投资省……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=3">[了解更多]
 					</a></p>
 			</div>
 			<div class="item mr">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">
 					<figure class="field"> 
-						<figcaption class="equipment">
-							<img src="${pageContext.request.contextPath}/img/business/titile_e.jpg"
-									alt="技术改造">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/business/e.jpg"
-									alt="技术改造">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/business/e.jpg"
+									alt="技术改造">	
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">技改设备XXXXXXXXXXX
+				<p class="content">针对客户提标改造、未达标工程的改造，提供咨询、设计、安装……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=4">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">
 					<figure class="field"> 
-						<figcaption class="steel">
-							<img src="${pageContext.request.contextPath}/img/business/titile_f.jpg"
-										alt="钢构工程">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/business/f.jpg"
-										alt="钢构工程">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/business/f.jpg"
+									alt="钢构工程">	
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">钢构工程XXXXXXXXXXX
+				<p class="content">办公、市政、厂房的钢构工程及环保工程中的配套钢构工程……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goBusiness?type=5">[了解更多]
 					</a></p>
 			</div>
 		</div>
@@ -273,64 +253,48 @@
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">
 					<figure class="field"> 
-						<figcaption class="epequipment">
-							<img src="${pageContext.request.contextPath}/img/product/title_a.jpg" alt="沼气发电">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/product/a.jpg" alt="沼气发电">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/product/a.jpg" alt="沼气发电">
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">沼气发电XXXXXXXXXXXXXX
+				<p class="content">沼气生产设备及配套发电设备的设计、生产、安装、调试……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">
 					<figure class="field"> 
-						<figcaption class="epequipment">
-							<img src="${pageContext.request.contextPath}/img/product/title_b.jpg" alt="环保设备">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/product/b.jpg" alt="环保设备">
-						</div>
+						<img src="${pageContext.request.contextPath}/img/product/b.jpg" alt="环保设备">
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">环保设备XXXXXXXXXXXXXX
+				<p class="content">废水、废气处理配套设备的设计、生产、安装、调试……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
 					</a></p>
 			</div>
 			<div class="item mr">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">
 					<figure class="field"> 
-						<figcaption class="epequipment">
-							<img src="${pageContext.request.contextPath}/img/product/title_c.jpg" alt="环保配件">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/product/c.jpg" alt="环保配件">
-						</div>	
+						<img src="${pageContext.request.contextPath}/img/product/c.jpg" alt="环保配件">
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">环保配件XXXXXXXXXXXXXXX
+				<p class="content">填料、曝气器、释放器、三相分离器……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
 					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=3">
 					<figure class="field"> 
-						<figcaption class="epequipment">
-							<img src="${pageContext.request.contextPath}/img/product/title_d.jpg" alt="化学试剂">
-						</figcaption>
-						<div class="field-img">
-							<img src="${pageContext.request.contextPath}/img/product/d.jpg" alt="化学试剂">
-						</div>		
+						<img src="${pageContext.request.contextPath}/img/product/d.jpg" alt="化学试剂">
 					</figure>
 				</a>
-				<p class="content"><a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">化学试剂XXXXXXXXXXXXXX
+				<p class="content">废水处理用PAC、PAM、脱色剂、强氧化剂……
+				<a
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
 					</a></p>
 			</div>
 		</div>
@@ -369,41 +333,48 @@
 
 	<!--联系我们-->
 	<div class="section contact-field">
+		  
 		<div class="wrap clearfix">
+		
 			<h2>
 				联系我们<span> / CONNECT</span>
 			</h2>
 			<div class="text_con cl">
-				<ul class="contact_icon">
-					<li><span><img
-							src="${pageContext.request.contextPath}/img/contact/con_icon_1.png"></span>
-						<h2>公司地址：</h2>
-						<h3>公司地址公司地址公司地址公司地址公司地址公司地址公司地址公司地址</h3></li>
-					<li><span><img
-							src="${pageContext.request.contextPath}/img/contact/con_icon_2.png"></span>
-						<h2>电话：</h2>
-						<h3>0532-12345678</h3></li>
-					<li><span><img
-							src="${pageContext.request.contextPath}/img/contact/con_icon_3.png"></span>
-						<h2>传真：</h2>
-						<h3>0532-12345678</h3></li>
-				</ul>
-				<ul class="contact_icon">
-					<li><span><img
-							src="${pageContext.request.contextPath}/img/contact/con_icon_4.png"></span>
-						<h2>邮编：</h2>
-						<h3>123456</h3></li>
-					<li><span><img
-							src="${pageContext.request.contextPath}/img/contact/con_icon_5.png"></span>
-						<h2>邮箱：</h2>
-						<h3>123456778@163.com</h3></li>
-					<li><span><img
-							src="${pageContext.request.contextPath}/img/contact/con_icon_7.png"></span>
-						<h2>微博：</h2>
-						<h3>微博微博微博微博微博微博</h3></li>
-				</ul>
+				<table width="1100" border="0" cellspacing="0" cellpadding="0" style="margin:0px 0px 0px 0px;">
+					<tbody>
+						<tr>
+							<td><img src="${pageContext.request.contextPath}/img/contact/map.jpg"
+								alt="企业文化" /></td>
+							<td valign="top">
+								<p>&nbsp;</p>
+								<p><strong style="font-size:16px; color:#009944;">青岛晟荣环境工程有限公司</strong><br>
+									QingDao ShengRong Environmental Protection</p>
+								<p>&nbsp;</p>
+								<p>
+									销售电话：刘经理 18053215436<br>
+									技术电话：杨经理 13668861007<br>
+									公司QQ：1191183939<br>
+									邮 箱：qdsrhj@163.com<br>
+									地 址：山东省青岛市即墨市南泉华骏物流园东（邮编266231）<br>
+								</p>
+								<p>&nbsp;</p>	
+								<p>
+									<b>乘车线路：</b> <br>
+									1、即墨市汽车总站到达公交路线<br>
+									&nbsp;&nbsp;118路公交车：乔戈庄站下<br>
+									2、青岛北站、机场、市区到达乘车路线<br>
+									&nbsp;&nbsp;青岛-平度快客：蓝村乔戈庄下<br>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+					
+				
+				
 			</div>
 		</div>
+		
 	</div>
 	<!--联系我们-->
 

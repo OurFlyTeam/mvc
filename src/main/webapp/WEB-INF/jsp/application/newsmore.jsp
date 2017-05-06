@@ -76,7 +76,7 @@
 	<script
 		src="${pageContext.request.contextPath}/js/owl.carousel.2.0.0-beta.2.4/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
-		var news_view_rows = 3;
+		var news_view_rows = 6;
 		var page_num;
 		var type="${type}";
 		var page = "${page}";

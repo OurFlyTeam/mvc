@@ -1,0 +1,107 @@
+.pc{
+    margin-top: 128px; 
+}
+.pc img{
+    width: 100%;
+}
+#tpl_c {
+    width: 1000px;
+    height: auto;
+    margin: 15px auto;
+}
+
+#tpl_l {
+    width: 210px;
+    height: auto;
+    float: left;
+    min-height: 600px;
+}
+#tpl_l ul {
+    width: 210px;
+    height: auto;
+    border-right: 1px solid #CCC;
+    border-left: 1px solid #e0e0e0;
+}
+#tpl_l ul li {
+    width: 190px;
+    height: 40px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 5px 0px;
+}
+#tpl_l ul li p{
+    color: #000;
+    background: url(../img/business/tpl_li_bg.png) no-repeat;
+    width: 190px;
+    height: 30px;
+    display: block;
+}
+#tpl_r {
+    width: 760px;
+    height: auto;
+    float: right;
+    margin-bottom: 15px;
+}
+#tpl_r_t {
+    width: 730px;
+    height: 30px;
+    border-bottom: 1px solid #CCC;
+    line-height: 30px;
+    margin: 0px auto;
+    padding-left: 20px;
+    margin-bottom: 1px;
+}
+#tpl_r_t span {
+    float: right;
+}
+#tpl_r_t strong {
+    font-size: 14px;
+    font-family: "微软雅黑"!important;
+}
+#tpl_r_t span{
+    font-size: 12px;
+    font-family: "微软雅黑"!important;
+}
+#tpl_r_c {
+    width: 730px;
+    height: auto;
+    line-height: 180%;
+    margin: 0px auto 0px auto;
+}
+.mg_gcal {
+    width: 730px;
+    height: auto;
+    margin: 20px auto 0px;
+}
+.mg_gcal dl {
+    border: 1px solid #dedede;
+    float: left;
+    border-radius: 0px 0px 5px 5px;
+    margin: 13px;
+}
+.mg_gcal dl dt {
+    width: 205px;
+    height: 125px;
+    padding: 5px;
+}
+.mg_gcal dl dt img {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    width: 100%;
+    font-size: 1px;
+    line-height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+}
+.page {
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0px auto;
+    text-align: center;
+}

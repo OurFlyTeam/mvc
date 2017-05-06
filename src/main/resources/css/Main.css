@@ -33,7 +33,6 @@
 }
 .business-field .item .field{
     width: 100%;
-    height: 155px;
     overflow: hidden;
 }
 .business-field .item .content{
@@ -114,7 +113,6 @@
 }
 .product-field .item .field{
     width: 100%;
-    height: 155px;
     overflow: hidden;
 }
 .product-field .item .content{
@@ -273,7 +271,7 @@
 
 /*联系我们*/
 .contact-field{
-	margin-bottom:120px;
+	margin-bottom:50px;
 }
 .text_con {
     padding: 55px;
@@ -289,26 +287,5 @@
 .contact_icon {
     clear: both;
     overflow: hidden;
-}
-
-.contact_icon li {
-    width: 280px;
-    float: left;
-    text-align: center;
-    margin: 20px;
-    padding-bottom: 50px;
-}
-.contact_icon li img {
-    vertical-align: top;
-    margin-left:115px;
-    border: 0;
-}
-
-.contact_icon li h2 {
-    font: 14px/28px 微软雅黑;
-    font-weight: bold;
-}
-.contact_icon li h3 {
-    font: 14px/28px 微软雅黑;
 }
 

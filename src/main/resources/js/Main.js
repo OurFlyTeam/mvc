@@ -48,9 +48,9 @@ $(function() {
 			$(".title").addClass("header-scrolled");
 
 			$('html,body').animate({
-				scrollTop : $('.contact-field').offset().top - 178
+				scrollTop : $('.contact-field').offset().top - 178 - 215
 			}, 500).animate({
-				scrollTop : $('.contact-field').offset().top - 128
+				scrollTop : $('.contact-field').offset().top - 128 - 215
 			}, 1000, function(ev) {// 动作完成之后再做什么
 				on_click = false;
 			});
@@ -123,7 +123,7 @@ $(function() {
 		if (!on_click) {
 			on_click = true;
 
-			$(".title").removeClass("header-scrolled");
+			//$(".title").removeClass("header-scrolled");
 			$('html,body').animate({
 				scrollTop : 0
 			}, 1000, function(ev) {// 动作完成之后再做什么
@@ -167,9 +167,9 @@ $(function() {
 	} else if (source == "contact") {
 		$(".title").addClass("header-scrolled");
 		$('html,body').animate({
-			scrollTop : $('.contact-field').offset().top - 178
+			scrollTop : $('.contact-field').offset().top - 178 - 215
 		}, 500).animate({
-			scrollTop : $('.contact-field').offset().top - 128
+			scrollTop : $('.contact-field').offset().top - 128 - 215
 		}, 1000);
 	}
 	source = null;

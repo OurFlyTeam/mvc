@@ -25,6 +25,7 @@
 .n_info_con {
     padding: 10px 15px 0 10px;
     overflow: hidden;
+	min-height: 1000px;
 }
 
 .n_info_con h1 {

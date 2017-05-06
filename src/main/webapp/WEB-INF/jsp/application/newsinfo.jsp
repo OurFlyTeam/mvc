@@ -52,9 +52,9 @@
 	<div class="newsinfo-tab wrap">
 
 		<div class="plc2">
-			当前位置：<a href="${pageContext.request.contextPath}/ofly/ep/main/goMain" title="首页">首页</a> » 
+			当前位置：<a href="${pageContext.request.contextPath}/ofly/ep/main/goMain" title="首页">首页</a> &gt; 
 			<a href="${pageContext.request.contextPath}/ofly/ep/main/goNewsMore?page=1&type=${type}"
-				title="新闻 "> <%if(request.getAttribute("type").equals("0")){ %>公司新闻<% }else if(request.getAttribute("type").equals("1")){%>行业新闻<%}%></a> » <a href="" title="新闻详情">新闻详情</a>
+				title="新闻 "> <%if(request.getAttribute("type").equals("0")){ %>公司新闻<% }else if(request.getAttribute("type").equals("1")){%>行业新闻<%}%></a> &gt; <a href="" title="新闻详情">新闻详情</a>
 		</div>
 
 		<div class="n_info_con" id="printableview">
