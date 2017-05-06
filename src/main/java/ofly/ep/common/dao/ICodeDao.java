@@ -37,5 +37,17 @@ public interface ICodeDao {
 	 *
 	 */
 	List<CodeVo> queryCodeListBySortCode(@Param("sortCode")String sortCode);
-
+	/**
+	 * Introduction	：根据标准代码分类和值获取中文年Name
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年5月6日 上午10:50:03
+	 * History		: 2017年5月6日 上午10:50:03   Logan   Created.
+	 *
+	 * @param sortCode
+	 * @param value
+	 * @return
+	 *
+	 */
+	String queryCodeBySortCodeAndValue(@Param("sortCode")String sortCode, @Param("value")String value);
 }

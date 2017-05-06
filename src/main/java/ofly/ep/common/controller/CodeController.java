@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import ofly.ep.common.api.ICodeService;
-import ofly.ep.common.service.CodeService;
 import ofly.ep.common.vo.CodeVo;
 
 /**
@@ -53,5 +52,5 @@ public class CodeController {
 		return list;
 		
 	}
-
+	
 }

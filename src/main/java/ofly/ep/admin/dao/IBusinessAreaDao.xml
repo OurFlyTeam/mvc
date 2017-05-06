@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ofly.ep.admin.dao.IBusinessAreaDao">
+	
+	<select id="queryListByType" parameterType="map" resultType="ofly.ep.admin.vo.BusinessAreaVo">
+		select 
+			a.id,
+			a.title,
+			a.type,
+			date_format(a.creat_time, '%Y-%m-%d %H:%i:%s')  creatTime
+		from 
+			ep_business_area a 
+		where 
+			a.type = #{type}
+		order by a.creat_time desc
+		<if test="rows!=null and offset!=null">
+        	limit #{offset}, #{rows}
+        </if>
+	</select>
+	<select id="queryListNumByType" parameterType="map" resultType="int">
+		select 
+			count(1)
+		from 
+			ep_business_area a 
+		where 
+			a.type = #{type}
+	</select>
+	<select id="queryByPrimarkKey" resultType="ofly.ep.admin.vo.BusinessAreaVo">
+		SELECT * FROM ep_business_area where id = #{id}
+	</select>
+	<insert id="insert" parameterType="ofly.ep.admin.vo.BusinessAreaVo">
+		INSERT INTO ep_business_area 
+			(type, 
+			 title, 
+			 content, 
+			 title_pic_id, 
+			 creat_time)
+		VALUES 
+			(#{type}, 
+			 #{title}, 
+			 #{content}, 
+			 #{titlePicId}, 
+			 now())
+	</insert>
+	<update id="update" parameterType="ofly.ep.admin.vo.BusinessAreaVo">
+		UPDATE 
+			ep_business_area 
+		SET 
+			title = #{title}, 
+			content = #{content},
+			creat_time = now()
+		WHERE 
+			id=#{id}
+	</update>
+	<delete id="delete" parameterType="int">
+		DELETE FROM 
+			ep_business_area 
+		WHERE 
+			id=#{id}
+	</delete>
+	
+	
+</mapper>

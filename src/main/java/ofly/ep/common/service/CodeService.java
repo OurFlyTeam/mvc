@@ -48,5 +48,21 @@ public class CodeService implements ICodeService {
 		List<CodeVo> list = dao.queryCodeListBySortCode(sortCode);
 		return list;
 	}
+	/**
+	 * Introduction	：根据分类+值查询名称
+	 *
+	 * Author		：Logan                
+	 * Create Date	：2017年5月6日 上午10:51:26
+	 * History		: 2017年5月6日 上午10:51:26   Logan   Created.
+	 *
+	 * @param sortCode
+	 * @param value
+	 * @return
+	 *
+	 */
+	public String queryCodeBySortCodeAndValue(String sortCode, String value) {
+		String name = dao.queryCodeBySortCodeAndValue(sortCode, value);
+		return name;
+	}
 
 }

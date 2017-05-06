@@ -18,4 +18,15 @@
 		AND a.code_sort_code = #{sortCode}
 		ORDER BY b.value
 	</select>
+	<select id="queryCodeBySortCodeAndValue" resultType="String">
+		SELECT 
+		    b.name
+		FROM
+		    ep_code_sort a,
+		    ep_code b
+		WHERE 
+			a.id=b.code_sort_id
+		AND a.code_sort_code = #{sortCode}
+		AND b.value = #{value}
+	</select>
 </mapper>
