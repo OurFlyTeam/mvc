@@ -33,6 +33,7 @@ var news = (function(){
 	 * @introduction 	: 保存
 	 */
 	var _save  = function() {
+		var _this = this;
 		if(!_saveValid()) {
 			return;
 		}
@@ -46,18 +47,23 @@ var news = (function(){
 		if($('#newsForm').find('#id').val()) {
 			params.id = $('#newsForm').find('#id').val();
 		}
-		$.post(url, params, function(data) {
-			$.messager.alert({
-				title	: "",
-				msg		: data.msg,
-				icon	: 'info',
-				fn		: function() {
-					if(data.code==1) {
-						var newsValue = $('#newsForm').find("#type").combobox("getValue");
-						$('#addDialog').dialog("close");
-						$("#datagrid_news_"+newsValue).datagrid("reload");
+		OFLY.confirm("确认保存?", function() {
+			$(_this).linkbutton("disable");
+			$.post(url, params, function(data) {
+				$.messager.alert({
+					title	: "",
+					msg		: data.msg,
+					icon	: 'info',
+					fn		: function() {
+						if(data.code==1) {
+							var newsValue = $('#newsForm').find("#type").combobox("getValue");
+							$('#addDialog').dialog("close");
+							$("#datagrid_news_"+newsValue).datagrid("reload");
+						} else {
+							$(_this).linkbutton("enable");
+						}
 					}
-				}
+				});
 			});
 		});
 	};

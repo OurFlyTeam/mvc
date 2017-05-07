@@ -10,7 +10,6 @@ var business = (function(){
 			sortCode	: 'businessAreaType'	
 		};
 		$.get(url, params, function(data) {
-			
 			if(data!=null) {
 				$.each(data, function(index, item) {
 					$('#tabsBusiness').tabs("add",{
@@ -138,6 +137,7 @@ var business = (function(){
 	}
 	
 	var _save = function () {
+		var _this = this;
 		if(!_saveValid()) {
 			return;
 		}
@@ -146,6 +146,7 @@ var business = (function(){
 		formData.append("content",editor.getContent());
 		formData.append("title",$('#businessForm').find("#title").textbox("getValue"));
 		OFLY.confirm("确认保存?", function() {
+			$(_this).linkbutton("disable");
 			$.ajax({
 			    url			: url,
 			    type		: 'POST',
@@ -159,6 +160,8 @@ var business = (function(){
 						var type = $('#tabsBusiness').tabs("getSelected").panel("options").value;
 						$("#datagrid_business_"+type).datagrid("reload");
 						OFLY.dialog.close("addDialog");
+					} else {
+						$(_this).linkbutton("enable");
 					}
 				});
 			}).fail(function(res) {

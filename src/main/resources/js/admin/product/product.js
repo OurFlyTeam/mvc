@@ -138,6 +138,7 @@ var product = (function(){
 	}
 	
 	var _save = function () {
+		var _this = this;
 		if(!_saveValid()) {
 			return;
 		}
@@ -146,6 +147,7 @@ var product = (function(){
 		formData.append("content",editor.getContent());
 		formData.append("title",$('#productForm').find("#title").textbox("getValue"));
 		OFLY.confirm("确认保存?", function() {
+			$(_this).linkbutton("disable");
 			$.ajax({
 			    url			: url,
 			    type		: 'POST',
@@ -162,6 +164,7 @@ var product = (function(){
 					}
 				});
 			}).fail(function(res) {
+				$(_this).linkbutton("enable");
 				OFLY.message(res);
 			});
 		});
@@ -184,7 +187,6 @@ var product = (function(){
 		
 		return true;
 	}
-	
 	_this.init					= init;
 	_this.onAdd					= onAdd;
 	return _this;
