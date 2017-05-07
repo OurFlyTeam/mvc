@@ -57,7 +57,7 @@
 		$(function() {
 			editor = UE.getEditor('editor');
 			 if(id) {
-				var url = ctx + '/businessArea/queryByPrimarkKey';
+				var url = ctx + '/productCenter/queryByPrimarkKey';
 				var params = {
 					id	: id
 				}
