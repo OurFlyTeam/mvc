@@ -343,8 +343,121 @@
 				<table width="1100" border="0" cellspacing="0" cellpadding="0" style="margin:0px 0px 0px 0px;">
 					<tbody>
 						<tr>
-							<td><img src="${pageContext.request.contextPath}/img/contact/map.jpg"
-								alt="企业文化" /></td>
+							<td>
+								<div style="margin-top:20px; ">      
+									<!--引用百度地图API-->
+									<style type="text/css">
+									    html,body{margin:0;padding:0;}
+									    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+									    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+									</style>
+									<script type="text/javascript" src="http://api.map.baidu.com/api?key=&amp;v=1.1&amp;services=true"></script>
+									<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=1.1&amp;ak=&amp;services=true&amp;t=20130716024058"></script><link rel="stylesheet" type="text/css" href="http://api.map.baidu.com/res/11/bmap.css">
+									
+									<!--百度地图容器-->
+									<div style="width: 520px; height: 319px; border: 1px solid rgb(204, 204, 204); overflow: hidden; position: relative; z-index: 0; background-image: url(&quot;http://api.map.baidu.com/images/bg.png&quot;); color: rgb(0, 0, 0); text-align: left;" id="dituContent"><div id="platform" style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;"><div id="mask" class=" BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; user-select: none; width: 697px; height: 300px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; background: url(&quot;http://api.map.baidu.com/images/blank.gif&quot;); width: 21px; height: 21px; left: 327px; top: 149px; z-index: -7254142;" title=""></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 333px; top: 170px; z-index: -7254142;"><div style="position: absolute; margin: 0px; padding: 0px; width: 21px; height: 21px; left: -6px; top: -21px; overflow: hidden;"><img src="http://app.baidu.com/map/images/us_mk_icon.png" style="border:none;left:0px; top:0px; position:absolute;"></div><label class=" BMapLabel" unselectable="on" style="position: absolute; display: inline; cursor: pointer; background-color: rgb(255, 255, 255); border: 1px solid rgb(128, 128, 128); padding: 1px; white-space: nowrap; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: arial, simsun; z-index: 80; color: rgb(51, 51, 51); user-select: none; left: 9px; top: -20px;">青岛建城伟业环境工程有限公司</label></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; z-index: -1; left: 348px; top: 150px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=6545&amp;y=2106&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -312px; top: -319px;"><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=6546&amp;y=2105&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -56px; top: -63px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=6544&amp;y=2106&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -568px; top: -319px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=6545&amp;y=2105&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -312px; top: -63px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=6546&amp;y=2106&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -56px; top: -319px;"><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=6547&amp;y=2105&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: 200px; top: -63px;"><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=6544&amp;y=2105&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -568px; top: -63px;"><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=6547&amp;y=2106&amp;z=15&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: 200px; top: -319px;"></div></div><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api.map.baidu.com/images/openhand.cur) 8 8,default"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div class=" anchorBL" style="height: 32px; position: absolute; z-index: 10; bottom: 0px; right: auto; top: auto; left: 1px;"><a title="到百度地图首页" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img style="border:none;width:77px;height:32px" src="http://api.map.baidu.com/images/copyright_logo.png"></a></div><div unselectable="on" class=" BMap_cpyCtrl anchorBL" style="cursor: default; white-space: nowrap; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10;"><span style="-webkit-text-size-adjust:none;color:#000;background:none;line-height:15px;font:11px arial,simsun" _cid="1">© 2015 Baidu</span></div><div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType0 BMap_noprint anchorTL" style="width: 52px; height: 226px; bottom: auto; right: auto; top: 10px; left: 10px; position: absolute; z-index: 1100;"><div class="BMap_stdMpPan"><div class="BMap_button BMap_panN" title="向上平移"></div><div class="BMap_button BMap_panW" title="向左平移"></div><div class="BMap_button BMap_panE" title="向右平移"></div><div class="BMap_button BMap_panS" title="向下平移"></div><div class="BMap_stdMpPanBg BMap_smcbg"></div></div><div class="BMap_stdMpZoom" style="height: 167px; width: 52px;"><div style="height: 167px; width: 37px;"><div class="BMap_button BMap_stdMpZoomIn" title="放大一级"><div class="BMap_smcbg"></div></div><div class="BMap_button BMap_stdMpZoomOut" title="缩小一级"><div class="BMap_smcbg"></div></div></div><div class="BMap_stdMpSlider" style="height: 133px;"><div class="BMap_stdMpSliderBgTop" style="height: 124px;"><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSliderBgBot" style="top: 124px;"><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSliderMask" title="放置到此级别"></div><div class="BMap_stdMpSliderBar" title="拖动缩放" style="cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default; top: 22px;"><div class="BMap_smcbg"></div></div></div><div class="BMap_zlHolder"><div class="BMap_zlSt"><div class="BMap_smcbg"></div></div><div class="BMap_zlCity"><div class="BMap_smcbg"></div></div><div class="BMap_zlProv"><div class="BMap_smcbg"></div></div><div class="BMap_zlCountry"><div class="BMap_smcbg"></div></div></div></div></div><div unselectable="on" class=" BMap_omCtrl BMap_noprint anchorBR quad4" style="width: 150px; height: 150px; bottom: 0px; right: 0px; top: auto; left: auto; position: absolute; z-index: 10;"><div class="BMap_omOutFrame" style="width: 149px; height: 149px;"><div class="BMap_omInnFrame" style="bottom: auto; right: auto; top: 8px; left: 8px; width: 139px; height: 139px;"><div class="BMap_omMapContainer" style="overflow: hidden; background-image: url(&quot;http://api.map.baidu.com/images/bg.png&quot;); color: rgb(0, 0, 0); text-align: left;"><div id="platform" style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;"><div id="mask" class=" BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; user-select: none; width: 139px; height: 139px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><div class="BMap_Division" style="position: absolute; width: 44px; display: block; overflow: hidden; border-width: 1px; border-style: solid; border-color: rgb(173, 207, 244) rgb(39, 75, 139) rgb(39, 75, 139) rgb(132, 176, 223); border-image: initial; opacity: 1; z-index: 60; user-select: none; left: 47px; top: 59px; height: 19px;"><div class="BMap_omViewInnFrame" style="width: 42px; height: 17px;"><div class="BMap_omViewMask"></div></div></div></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; z-index: -1; left: 70px; top: 70px;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=409&amp;y=131&amp;z=11&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -36px; top: -100px;"><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=408&amp;y=131&amp;z=11&amp;styles=pl&amp;udt=20140928" style="position: absolute; border: none; width: 256px; height: 256px; left: -292px; top: -100px;"></div></div></div><div class="BMap_omViewMv" style="cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default; width: 44px; height: 19px; left: 47px; top: 59px;"><div class="BMap_omViewInnFrame" style="width: 42px; height: 17px;"><div></div></div></div></div></div><div class="BMap_omBtn" style="bottom: 0px; right: 0px; top: auto; left: auto;"></div></div><div unselectable="on" class=" BMap_scaleCtrl BMap_noprint anchorBL" style="bottom: 18px; right: auto; top: auto; left: 81px; width: 83px; position: absolute; z-index: 10;"><div class="BMap_scaleTxt" unselectable="on">500&nbsp;米</div><div class="BMap_scaleBar BMap_scaleHBar"><img style="border:none" src="http://api.map.baidu.com/images/mapctrls11.png"></div><div class="BMap_scaleBar BMap_scaleLBar"><img style="border:none" src="http://api.map.baidu.com/images/mapctrls11.png"></div><div class="BMap_scaleBar BMap_scaleRBar"><img style="border:none" src="http://api.map.baidu.com/images/mapctrls11.png"></div></div></div>
+									
+									<script type="text/javascript">
+									    //创建和初始化地图函数：
+									    function initMap(){
+									        createMap();//创建地图
+									        setMapEvent();//设置地图事件
+									        addMapControl();//向地图添加控件
+									        addMarker();//向地图中添加marker
+									    }
+									    
+									    //创建地图函数：
+									    function createMap(){
+									        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+									        var point = new BMap.Point(120.300891,36.361588);//定义一个中心点坐标
+									        map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中
+									        window.map = map;//将map变量存储在全局
+									    }
+									    
+									    //地图事件设置函数：
+									    function setMapEvent(){
+									        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+									        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+									        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+									        map.enableKeyboard();//启用键盘上下左右键移动地图
+									    }
+									    
+									    //地图控件添加函数：
+									    function addMapControl(){
+									        //向地图中添加缩放控件
+										var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+										map.addControl(ctrl_nav);
+									        //向地图中添加缩略图控件
+										var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+										map.addControl(ctrl_ove);
+									        //向地图中添加比例尺控件
+										var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+										map.addControl(ctrl_sca);
+									    }
+									    
+									    //标注点数组
+									    var markerArr = [{title:"青岛晟荣环境工程有限公司",content:"",point:"120.300891|36.361588",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+											 ];
+									    //创建marker
+									    
+									    function addMarker(){
+									        for(var i=0;i<markerArr.length;i++){
+									            var json = markerArr[i];
+									            var p0 = json.point.split("|")[0];
+									            var p1 = json.point.split("|")[1];
+									            var point = new BMap.Point(p0,p1);
+												var iconImg = createIcon(json.icon);
+									            var marker = new BMap.Marker(point,{icon:iconImg});
+												var iw = createInfoWindow(i);
+												var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+												marker.setLabel(label);
+									            map.addOverlay(marker);
+									            label.setStyle({
+									                        borderColor:"#808080",
+									                        color:"#333",
+									                        cursor:"pointer"
+									            });
+												
+												(function(){
+													var index = i;
+													var _iw = createInfoWindow(i);
+													var _marker = marker;
+													_marker.addEventListener("click",function(){
+													    this.openInfoWindow(_iw);
+												    });
+												    _iw.addEventListener("open",function(){
+													    _marker.getLabel().hide();
+												    })
+												    _iw.addEventListener("close",function(){
+													    _marker.getLabel().show();
+												    })
+													label.addEventListener("click",function(){
+													    _marker.openInfoWindow(_iw);
+												    })
+													if(!!json.isOpen){
+														label.hide();
+														_marker.openInfoWindow(_iw);
+													}
+												})()
+									        }
+									    }
+									    //创建InfoWindow
+									    function createInfoWindow(i){
+									        var json = markerArr[i];
+									        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+									        return iw;
+									    }
+									
+									    //创建一个Icon
+									    function createIcon(json){
+									        var icon = new BMap.Icon("${pageContext.request.contextPath}/img/allUse/favicon.ico", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+									        return icon;
+									    }
+									    
+									    initMap();//创建和初始化地图
+									</script>
+								 </div>		
+							</td>
 							<td valign="top">
 								<p>&nbsp;</p>
 								<p><strong style="font-size:16px; color:#009944;">青岛晟荣环境工程有限公司</strong><br>
