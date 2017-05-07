@@ -1,0 +1,73 @@
+.pc{
+    margin-top: 128px; 
+}
+.pc img{
+    width: 100%;
+}
+.businessinfo-tab{
+	border: solid 1px #d5d5d5;
+    overflow: hidden;
+    margin:20px auto 50px;
+    border-radius:5px;
+}
+.plc2 {
+    background-color: #008000;
+    text-indent: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    font:14px/27px "Microsoft YaHei";
+}
+
+.plc2 a {
+    color: #fff;
+}
+#case_ct_pic {
+    margin: 0px auto;
+    width: 730px;
+    height: auto;
+}
+center {
+    display: block;
+    text-align: -webkit-center;
+}
+#case_ct_pic img {
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    margin: 0px auto;
+}
+
+.n_info_con {
+    padding: 10px 15px 0 10px;
+    overflow: hidden;
+	min-height: 1000px;
+}
+
+.n_info_con h1 {
+    border-bottom: 1px dashed #CCCCCC;
+    color: #333;
+    font-family: "宋体";
+    font-size: 22px;
+    line-height: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.n_tit{
+	text-align: right;
+}
+#cntrBody {
+    font-size: 14px;
+    margin: 20px 0;
+}
+#cntrBody #all_info{
+    font-size: 14px;
+    border-bottom: 1px dashed #CCCCCC;
+}
+
+#cntrinfo {
+	width:900px;
+    font-size: 14px;
+    margin:20px auto;
+}
+

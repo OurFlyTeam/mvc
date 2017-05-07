@@ -73,6 +73,44 @@ public class MainController {
 		m.addAttribute("type", type);
 		return "application/Product";
 	}
+	
+	@RequestMapping("/goProductMore")
+	public String go_productMore(Model m, String type, String page) {
+		// TODO Auto-generated method stub
+		m.addAttribute("type", type);
+		if (type.equals("0")) {
+			m.addAttribute("type_name", "沼气发电");
+		} else if (type.equals("1")) {
+			m.addAttribute("type_name", "环保设备");
+		} else if (type.equals("2")) {
+			m.addAttribute("type_name", "环保配件");
+		} else if (type.equals("3")) {
+			m.addAttribute("type_name", "化学试剂");
+		}
+		if(page==null){
+			m.addAttribute("page", 1);
+		}else{
+			m.addAttribute("page", page);
+		}
+		return "application/ProductMore";
+	}
+	
+	@RequestMapping("/goProductInfo")
+	public String go_productIfo(Model m, String type,int id) {
+		// TODO Auto-generated method stub
+		m.addAttribute("type", type);
+		if (type.equals("0")) {
+			m.addAttribute("type_name", "沼气发电");
+		} else if (type.equals("1")) {
+			m.addAttribute("type_name", "环保设备");
+		} else if (type.equals("2")) {
+			m.addAttribute("type_name", "环保配件");
+		} else if (type.equals("3")) {
+			m.addAttribute("type_name", "化学试剂");
+		}
+		m.addAttribute("id", id);
+		return "application/ProductInfo";
+	}
 
 	@RequestMapping("/goNewsMore")
 	public String go_newsmore(Model m, String type, String page) {

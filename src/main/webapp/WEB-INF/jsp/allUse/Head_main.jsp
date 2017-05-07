@@ -42,10 +42,10 @@
                 <li class="item">
                     <a href="javascript:;" id="product-field">产品中心</a>
                     <ul>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">沼气发电</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">环保设备</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">环保配件</a></li>
-                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=3">化学试剂</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=0">沼气发电</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=1">环保设备</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=2">环保配件</a></li>
+                        <li><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=3">化学试剂</a></li>
                     </ul>
                 </li>
                 <li class="item">

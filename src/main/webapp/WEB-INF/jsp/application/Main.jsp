@@ -251,50 +251,50 @@
 			</h2>
 			<div class="item mr">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=0">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/product/a.jpg" alt="沼气发电">
 					</figure>
 				</a>
 				<p class="content">沼气生产设备及配套发电设备的设计、生产、安装、调试……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=0">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=1">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=1">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/product/b.jpg" alt="环保设备">
 					</figure>
 				</a>
 				<p class="content">废水、废气处理配套设备的设计、生产、安装、调试……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=1">[了解更多]
 					</a></p>
 			</div>
 			<div class="item mr">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=2">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=2">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/product/c.jpg" alt="环保配件">
 					</figure>
 				</a>
 				<p class="content">填料、曝气器、释放器、三相分离器……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=2">[了解更多]
 					</a></p>
 			</div>
 			<div class="item">
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=3">
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=3">
 					<figure class="field"> 
 						<img src="${pageContext.request.contextPath}/img/product/d.jpg" alt="化学试剂">
 					</figure>
 				</a>
 				<p class="content">废水处理用PAC、PAM、脱色剂、强氧化剂……
 				<a
-					href="${pageContext.request.contextPath}/ofly/ep/main/goProduct?type=0">[了解更多]
+					href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=3">[了解更多]
 					</a></p>
 			</div>
 		</div>
@@ -413,7 +413,7 @@
 				dataType : "json",
 				data : {
 					"type" : "01",
-					"rows" : 10,
+					"rows" : 6,
 					"page" : 1
 				},
 				success : function(data) {
@@ -441,7 +441,7 @@
 				dataType : "json",
 				data : {
 					"type" : "02",
-					"rows" : 10,
+					"rows" : 6,
 					"page" : 1
 				},
 				success : function(data) {

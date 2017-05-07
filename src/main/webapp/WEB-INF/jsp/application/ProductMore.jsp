@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="" content="">
 <meta>
-<title>青岛晟荣环境工程有限公司</title>
+<title>青岛晟荣环境工程有限公司-产品中心</title>
 <meta name="keywords" content="青岛晟荣环境工程有限公司">
 <meta name="description"
 	content="青岛晟荣环境工程有限公司位于风光秀丽、气候宜人的滨海度假旅游城市及国际性港口城市、国家历史文化名城——青岛，坐落在即墨华骏物流园西，是集科研、设计、生产制造、营销、安装调试、售后服务为一体的专业环保企业。">
@@ -33,7 +33,7 @@
 	href="${pageContext.request.contextPath}/css/allUse/Foot.css">
 <!-- business -->
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/BusinessMore.css">
+	href="${pageContext.request.contextPath}/css/ProductMore.css">
 </head>
 
 <body>
@@ -43,14 +43,14 @@
 	<!--图片-->
 	<div class="pc">
 		<img src="${pageContext.request.contextPath}/img/business.jpg"
-			alt="业务领域">
+			alt="产品中心">
 	</div>
 	<!--图片结束-->
 
 	<div id="tpl_c">
 		<div id="tpl_l">
 			<div class="hbsb">
-				<img src="${pageContext.request.contextPath}/img/business/hbsb.jpg">
+				<img src="${pageContext.request.contextPath}/img/product/hbsb.jpg">
 				<p>${type_name}</p>
 			</div>
 			<ul>
@@ -65,14 +65,14 @@
 				<li><p>DDDDDDDDD</p></li>
 				<li><p>EEEEEEEE</p></li>
 			</ul>
-			<div><img src="${pageContext.request.contextPath}/img/business/tpl_l_f.gif"></div>
+			<div><img src="${pageContext.request.contextPath}/img/product/tpl_l_f.gif"></div>
 		</div>
 		<div id="tpl_r">
 			<div id="tpl_r_t">
 				<!--  <strong>${type_name}</strong>-->
 				<span>您当前所在的位置： <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain"
-					title="首页">首页</a> &gt; <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=business">业务领域</a>
-					&gt; <a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessMore?type=${type}">${type_name}</a>
+					title="首页">首页</a> &gt; <a href="${pageContext.request.contextPath}/ofly/ep/main/goMain?source=product">产品中心</a>
+					&gt; <a href="${pageContext.request.contextPath}/ofly/ep/main/goProductMore?type=${type}">${type_name}</a>
 				</span>
 			</div>
 			<div id="tpl_r_c">
@@ -108,7 +108,7 @@
 			business_type = get_business_type(type);
 			
 			var ctx = '<%=request.getContextPath()%>';
-			var url = ctx + '/businessArea/queryListByType';
+			var url = ctx + '/productCenter/queryListByType';
 			$.ajax({
 				method : "POST",
 				url : url,
@@ -125,8 +125,8 @@
 						page_num = Math.ceil(data.total/view_rows);
 						if(data.rows){
 							data.rows.forEach(function(item){
-								$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-										+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+								$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+										+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 								$("#previewImg"+item.id).show();
 								$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 							});	
@@ -164,8 +164,8 @@
 							$(".mg_gcal").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -205,8 +205,8 @@
 							$(".mg_gcal").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -245,8 +245,8 @@
 							$(".mg_gcal").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -282,8 +282,8 @@
 							$(".mg_gcal").empty();
 							if(data.rows){
 								data.rows.forEach(function(item){
-									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -320,8 +320,8 @@
 								$(".mg_gcal").empty();
 								if(data.rows){
 									data.rows.forEach(function(item){
-										$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBussinessInfo"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-												+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+										$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
+												+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goProductInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 										$("#previewImg"+item.id).show();
 										$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 									});	

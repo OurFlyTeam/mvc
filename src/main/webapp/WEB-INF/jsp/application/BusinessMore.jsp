@@ -126,7 +126,7 @@
 						if(data.rows){
 							data.rows.forEach(function(item){
 								$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-										+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+										+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 								$("#previewImg"+item.id).show();
 								$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 							});	
@@ -165,7 +165,7 @@
 							if(data.rows){
 								data.rows.forEach(function(item){
 									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -206,7 +206,7 @@
 							if(data.rows){
 								data.rows.forEach(function(item){
 									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -246,7 +246,7 @@
 							if(data.rows){
 								data.rows.forEach(function(item){
 									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	
@@ -283,7 +283,7 @@
 							if(data.rows){
 								data.rows.forEach(function(item){
 									$(".mg_gcal").append('<dl><dt><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'"><img id="previewImg'+item.id+'" width="205" height="125"></a>'
-											+ '</dt><dd><a href="html/2016/1227/299.html">'+item.title+'</a></dd></dl>');
+											+ '</dt><dd><a href="${pageContext.request.contextPath}/ofly/ep/main/goBusinessInfo?id='+item.id+'&type='+type+'">'+item.title+'</a></dd></dl>');
 									$("#previewImg"+item.id).show();
 									$("#previewImg"+item.id).attr('src',ctx + '/file/download?id='+item.titlePicId);
 								});	

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>业务领域</title>
+<title>产品中心/title>
 </head>
 <body>
 	<form id="productForm" name="productForm" enctype="multipart/form-data" style="padding: 10px;">
