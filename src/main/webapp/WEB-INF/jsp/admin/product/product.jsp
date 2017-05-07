@@ -8,17 +8,20 @@
 <script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/ueditor.all.min.js"> </script>
 <script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/lang/zh-cn/zh-cn.js"> </script>
+
 </head>
 <body style="margin: 0px;">
 	<jsp:include page="../../../jsp/common/resources.jsp"></jsp:include>
-	<div id="tabsNews" class="easyui-tabs" 
-		 data-options=" tabPosition	: 'top',pill:true,onAdd:news.onAdd,onSelect:news.onSelect">
+	<div id="tabsProduct" class="easyui-tabs" 
+		 data-options=" tabPosition	: 'top',
+		 				pill		: true,
+		 				onAdd		: business.onAdd">
 	</div>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/news/news.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/business/product.js"></script>
 	<script type="text/javascript">
 		var ctx = '<%=request.getContextPath()%>';
 		$(function() {
-			news.init();
+			product.init();
 		});
     </script>
 </body>

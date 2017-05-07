@@ -10,19 +10,44 @@
 <script type="text/javascript" charset="utf-8" src="<%=request.getContextPath()%>/js/common/utf8-jsp/lang/zh-cn/zh-cn.js"> </script>
 
 </head>
-<body style="margin: 0px;">
-	<jsp:include page="../../../jsp/common/resources.jsp"></jsp:include>
-	<div id="tabsBusiness" class="easyui-tabs" 
+<body>
+	<jsp:include page="../../jsp/common/resources.jsp"></jsp:include>
+	<div id="tabsAdmin" class="easyui-tabs" 
 		 data-options=" tabPosition	: 'top',
 		 				pill		: true,
-		 				onAdd		: business.onAdd">
+		 				height		: 770">
+		 <div title="新闻">
+		 	<div id="tabsNews" class="easyui-tabs" 
+				 data-options=" tabPosition	: 'top',pill:true,onAdd:news.onAdd,onSelect:news.onSelect">
+			</div>
+		 </div>
+		 <div title="业务领域">
+		 	<div id="tabsBusiness" class="easyui-tabs" 
+				 data-options=" tabPosition	: 'top',
+				 				pill		: true,
+				 				onAdd		: business.onAdd">
+			</div>
+		 </div>
+		 <div title="产品中心">
+		 	<div id="tabsProduct" class="easyui-tabs" 
+				 data-options=" tabPosition	: 'top',
+				 				pill		: true,
+				 				onAdd		: product.onAdd">
+			</div>
+		 </div>
 	</div>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/news/news.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/business/business.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/admin/product/product.js"></script>
 	<script type="text/javascript">
 		var ctx = '<%=request.getContextPath()%>';
 		$(function() {
+			news.init();
 			business.init();
+			product.init();
 		});
+		
+		
     </script>
 </body>
 </html>

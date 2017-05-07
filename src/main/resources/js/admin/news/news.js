@@ -18,7 +18,7 @@ var news = (function(){
 		$.get(url, params, function(data) {
 			if(data!=null) {
 				$.each(data, function(index, item) {
-					$('#tabs').tabs("add",{
+					$('#tabsNews').tabs("add",{
 						title	: item.name,
 						selected: index==0?true:false ,
 						value	: item.value
@@ -55,7 +55,7 @@ var news = (function(){
 					if(data.code==1) {
 						var newsValue = $('#newsForm').find("#type").combobox("getValue");
 						$('#addDialog').dialog("close");
-						$("#datagrid_"+newsValue).datagrid("reload");
+						$("#datagrid_news_"+newsValue).datagrid("reload");
 					}
 				}
 			});
@@ -79,7 +79,7 @@ var news = (function(){
 	var onAdd = function (title, index) {
 		var tab = $(this).tabs("getTab", index);
 		var value = tab.panel("options").value;
-		var datagrid = $('<table id="datagrid_'+value+'"></table>');
+		var datagrid = $('<table id="datagrid_news_'+value+'"></table>');
 		tab.html(datagrid);
 		datagrid.datagrid({
 			url			: ctx + '/newsEdit/queryListByType?type='+value,
@@ -135,8 +135,8 @@ var news = (function(){
 	 * @introduction 	: 编辑弹出界面
 	 */
 	function _edit(event) {
-		var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
-		var row = $('#datagrid_'+newsValue).datagrid("getSelected");
+		var newsValue = $('#tabsNews').tabs("getTab", currentTabIndex).panel('options').value;
+		var row = $('#datagrid_news_'+newsValue).datagrid("getSelected");
 		if(!row) {
 			OFLY.message("请先选择一条数据");
 			return;
@@ -175,8 +175,8 @@ var news = (function(){
 	 * 
 	 */
 	function _del(event) {
-		var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
-		var row = $('#datagrid_'+newsValue).datagrid("getSelected");
+		var newsValue = $('#tabsNews').tabs("getTab", currentTabIndex).panel('options').value;
+		var row = $('#datagrid_news_'+newsValue).datagrid("getSelected");
 		if(!row) {
 			OFLY.message("请先选择一条数据");
 			return;
@@ -189,8 +189,8 @@ var news = (function(){
 			$.post(url, params, function(data) {
 				OFLY.message(data.msg, function() {
 					if(data.code){
-						var newsValue = $('#tabs').tabs("getTab", currentTabIndex).panel('options').value;
-						$('#datagrid_'+newsValue).datagrid("reload");
+						var newsValue = $('#tabsNews').tabs("getTab", currentTabIndex).panel('options').value;
+						$('#datagrid_news_'+newsValue).datagrid("reload");
 					}
 				});
 			});

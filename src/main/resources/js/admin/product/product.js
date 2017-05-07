@@ -1,19 +1,19 @@
 /**
  * 业务领域模块
  */
-var business = (function(){
+var product = (function(){
 	var _this= {};
 	var currentTabIndex;
 	var init = function() {
 		var url = ctx + '/code/getCodeListBySortCode';
 		var params = {
-			sortCode	: 'businessAreaType'	
+			sortCode	: 'productCenterType'	
 		};
 		$.get(url, params, function(data) {
 			
 			if(data!=null) {
 				$.each(data, function(index, item) {
-					$('#tabsBusiness').tabs("add",{
+					$('#tabsProduct').tabs("add",{
 						title	: item.name,
 						selected: index==0?true:false ,
 						value	: item.value
@@ -26,10 +26,10 @@ var business = (function(){
 	var onAdd = function(title, index) {
 		var tab = $(this).tabs("getTab", index);
 		var value = tab.panel("options").value;
-		var datagrid = $('<table id="datagrid_business_'+value+'"></table>');
+		var datagrid = $('<table id="datagrid_product_'+value+'"></table>');
 		tab.html(datagrid);
 		datagrid.datagrid({
-			url			: ctx + '/businessArea/queryListByType?type='+value,
+			url			: ctx + '/productCenter/queryListByType?type='+value,
 			singleSelect: true,
 			rownumbers	: true,
 			loadMsg		: '查询中',
@@ -49,8 +49,8 @@ var business = (function(){
 	}
 	
 	function _add(event) {
-		var type = $('#tabsBusiness').tabs("getSelected").panel("options").value;
-		var url = ctx + '/businessArea/add';
+		var type = $('#tabsProduct').tabs("getSelected").panel("options").value;
+		var url = ctx + '/productCenter/add';
 		var params = {
 				type	: type
 		};
@@ -80,13 +80,13 @@ var business = (function(){
 	}
 	
 	var _edit = function (event) {
-		var type = $('#tabsBusiness').tabs("getSelected").panel("options").value;
-		var row = $('#datagrid_business_'+type).datagrid("getSelected");
+		var type = $('#tabsProduct').tabs("getSelected").panel("options").value;
+		var row = $('#datagrid_product_'+type).datagrid("getSelected");
 		if(!row) {
 			OFLY.message("请先选择一条数据");
 			return;
 		}
-		var url = ctx + '/businessArea/edit';
+		var url = ctx + '/productCenter/edit';
 		var params = {
 			id	: row.id,
 			type: type
@@ -115,13 +115,13 @@ var business = (function(){
 		$("#addDialog").dialog(options);
 	}
 	var _del = function (event) {
-		var type = $('#tabsBusiness').tabs("getSelected").panel("options").value;
-		var row = $('#datagrid_business_'+type).datagrid("getSelected");
+		var type = $('#tabsProduct').tabs("getSelected").panel("options").value;
+		var row = $('#datagrid_product_'+type).datagrid("getSelected");
 		if(!row) {
 			OFLY.message("请先选择一条数据");
 			return;
 		}
-		var url = ctx + '/businessArea/delete';
+		var url = ctx + '/productCenter/delete';
 		var params = {
 			id	: row.id
 		}
@@ -129,8 +129,8 @@ var business = (function(){
 			$.post(url, params, function(data) {
 				OFLY.message(data.msg, function() {
 					if(data.code){
-						var type = $('#tabsBusiness').tabs("getSelected").panel("options").value;
-						$('#datagrid_business_'+type).datagrid("reload");
+						var type = $('#tabsProduct').tabs("getSelected").panel("options").value;
+						$('#datagrid_product_'+type).datagrid("reload");
 					}
 				});
 			});
@@ -141,10 +141,10 @@ var business = (function(){
 		if(!_saveValid()) {
 			return;
 		}
-		var url = ctx +'/businessArea/save';
-		var formData = new FormData($('#businessForm')[0]);
+		var url = ctx +'/productCenter/save';
+		var formData = new FormData($('#productForm')[0]);
 		formData.append("content",editor.getContent());
-		formData.append("title",$('#businessForm').find("#title").textbox("getValue"));
+		formData.append("title",$('#productForm').find("#title").textbox("getValue"));
 		OFLY.confirm("确认保存?", function() {
 			$.ajax({
 			    url			: url,
@@ -156,8 +156,8 @@ var business = (function(){
 			}).done(function(res) {
 				OFLY.message(res.msg,function() {
 					if(res.code) {
-						var type = $('#tabsBusiness').tabs("getSelected").panel("options").value;
-						$("#datagrid_business_"+type).datagrid("reload");
+						var type = $('#tabsProduct').tabs("getSelected").panel("options").value;
+						$("#datagrid_product_"+type).datagrid("reload");
 						OFLY.dialog.close("addDialog");
 					}
 				});
@@ -168,11 +168,11 @@ var business = (function(){
 	}
 	
 	var _saveValid = function() {
-		if(!$('#businessForm').form("validate")) {
+		if(!$('#productForm').form("validate")) {
 			return false;
 		}
 		//验证图片
-		if(!$('#businessForm').find('#picFile').val() && !id) {
+		if(!$('#productForm').find('#picFile').val() && !id) {
 			OFLY.message("请选择标题图片");
 			return false;
 		}
