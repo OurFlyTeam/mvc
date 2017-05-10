@@ -1,12 +1,27 @@
 package ofly.ep.test.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.alibaba.fastjson.JSONObject;
+
+import ofly.ep.test.api.IEpSubDesService;
+import ofly.ep.test.vo.EpSubDesVO;
 
 @Controller
 @RequestMapping("ofly/ep/main")
 public class MainController {
+	
+	@Resource
+	private IEpSubDesService epSubDesService;
 
 	@RequestMapping("/goMain")
 	public String go_main(Model m, String source) {
@@ -130,6 +145,18 @@ public class MainController {
 		m.addAttribute("id", id);
 		m.addAttribute("type", type);
 		return "application/newsinfo";
+	}
+	
+	@RequestMapping("/queryListByType")
+	@ResponseBody
+	public  JSONObject queryListByType(int sort_code_id,String type) {
+		Map<String, Object> params =new HashMap<>();
+		params.put("type",type);
+		params.put("sort_code_id",sort_code_id);
+		JSONObject result = new JSONObject();
+		List<EpSubDesVO> list = epSubDesService.queryListByType(params);
+        result.put("rows", list);
+        return result;
 	}
 
 }

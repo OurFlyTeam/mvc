@@ -40,11 +40,11 @@
 	<!--头部导航开始-->
 	<jsp:include page="../allUse/Head.jsp" flush="true" />
 	<!--头部导航结束-->
-	<!--图片-->
+	<!--图片
 	<div class="pc">
 		<img src="${pageContext.request.contextPath}/img/business.jpg"
-			alt="产品中心">
-	</div>
+			alt="业务领域">
+	</div>-->
 	<!--图片结束-->
 
 	<div id="tpl_c">
@@ -54,16 +54,7 @@
 				<p>${type_name}</p>
 			</div>
 			<ul>
-				<li><p>AAAAAAAA</p></li>
-				<li><p>BBBBBBBBBBB</p></li>
-				<li><p>CCCCCCCCCCC</p></li>
-				<li><p>DDDDDDDDD</p></li>
-				<li><p>EEEEEEEE</p></li>
-				<li><p>AAAAAAAA</p></li>
-				<li><p>BBBBBBBBBBB</p></li>
-				<li><p>CCCCCCCCCCC</p></li>
-				<li><p>DDDDDDDDD</p></li>
-				<li><p>EEEEEEEE</p></li>
+				
 			</ul>
 			<div><img src="${pageContext.request.contextPath}/img/product/tpl_l_f.gif"></div>
 		</div>
@@ -103,6 +94,7 @@
 		var page_num;//总页数
 		var type="${type}";
 		var page = "${page}";
+		//查询内容
 		$(function(){
 			var business_type;
 			business_type = get_business_type(type);
@@ -135,6 +127,34 @@
 				},
 				error : function() {
 					
+				}
+			});
+		});
+		//查询标题说明信息
+		$(function(){
+			var business_type;
+			business_type = get_business_type(type);
+			
+			var ctx = '<%=request.getContextPath()%>';
+			var url = ctx + '/ofly/ep/main/queryListByType';
+			$.ajax({
+				method : "POST",
+				url : url,
+				dataType: "json",
+				data : {
+					"type" : business_type,
+					"sort_code_id" : 3,
+				},
+				success : function(data) {
+					if(data){
+						if(data.rows){
+							data.rows.forEach(function(item){
+								$("#tpl_l ul").append('<li><p>'+item.des+'</p></li>');
+							});	
+						}
+					} 
+				},
+				error : function() {
 				}
 			});
 		});

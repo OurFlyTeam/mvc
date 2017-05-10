@@ -42,11 +42,11 @@
 	<!--头部导航开始-->
 	<jsp:include page="../allUse/Head.jsp" flush="true" />
 	<!--头部导航结束-->
-	<!--图片-->
+	<!--图片
 	<div class="pc">
 		<img src="${pageContext.request.contextPath}/img/business.jpg"
 			alt="业务领域">
-	</div>
+	</div>-->
 	<!--图片结束-->
 	<div class="businessinfo-tab wrap">
 
