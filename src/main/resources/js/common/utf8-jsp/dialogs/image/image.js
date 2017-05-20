@@ -87,12 +87,7 @@
                     list = remoteImage.getInsertList();
                     break;
                 case 'upload':
-                    list = uploadImage.getInsertList();
-                    var count = uploadImage.getQueueCount();
-                    if (count) {
-                        $('.info', '#queueList').html('<span style="color:red;">' + '还有2个未上传文件'.replace(/[\d]/, count) + '</span>');
-                        return false;
-                    }
+                   list = singleImg();
                     break;
                 case 'online':
                     list = onlineImage.getInsertList();
@@ -287,9 +282,17 @@
         }
     };
 
-
-
-    /* 上传图片 */
+    
+    function singleImg() {
+    	debugger;
+    	if($('#imgUrl').val()) {
+    		return {
+                src: $('#imgUrl').val()    			
+    		}
+    	}
+    }
+    
+    /*TODO 废弃不用自己写 上传图片 */
     function UploadImage(target) {
         this.$wrap = target.constructor == String ? $('#' + target) : $(target);
         this.init();

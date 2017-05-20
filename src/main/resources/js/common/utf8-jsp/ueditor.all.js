@@ -27801,7 +27801,9 @@ UE.ui = baidu.editor.ui = {};
 
     var iframeUrlMap = {
         'anchor':'~/dialogs/anchor/anchor.html',
-        'insertimage':'~/dialogs/image/image.html',
+        //'insertimage':'~/dialogs/image/image.html',
+        'insertimage':'~/dialogs/image/image2.html',
+        'simpleupload':'~/dialogs/image/simpleImage.jsp',
         'link':'~/dialogs/link/link.html',
         'spechars':'~/dialogs/spechars/spechars.html',
         'searchreplace':'~/dialogs/searchreplace/searchreplace.html',
@@ -27950,7 +27952,7 @@ UE.ui = baidu.editor.ui = {};
 
     var dialogBtns = {
         noOk:['searchreplace', 'help', 'spechars', 'webapp','preview'],
-        ok:['attachment', 'anchor', 'link', 'insertimage', 'map', 'gmap', 'insertframe', 'wordimage',
+        ok:['attachment', 'anchor', 'link', 'insertimage','simpleupload', 'map', 'gmap', 'insertframe', 'wordimage',
             'insertvideo', 'insertframe', 'edittip', 'edittable', 'edittd', 'scrawl', 'template', 'music', 'background', 'charts']
     };
 

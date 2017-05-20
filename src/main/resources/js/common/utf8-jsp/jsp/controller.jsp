@@ -2,6 +2,8 @@
 	import="com.baidu.ueditor.ActionEnter"
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
+<html>
+
 <%
 
     request.setCharacterEncoding( "utf-8" );
@@ -12,3 +14,7 @@
 	out.write( new ActionEnter( request, rootPath ).exec() );
 	
 %>
+<body>
+dsdasd
+</body>
+</html>

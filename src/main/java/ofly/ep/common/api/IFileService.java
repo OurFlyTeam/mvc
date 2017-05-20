@@ -9,7 +9,10 @@
 
 package ofly.ep.common.api;
 
+import java.io.IOException;
+
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import ofly.ep.common.vo.FileVo;
 
@@ -26,6 +29,7 @@ public interface IFileService {
 	
 	boolean upload(FileVo vo);
 	byte[] download(String id);
+	String upload(MultipartFile file)throws IOException;
 	boolean update(FileVo vo);
 	boolean delete(String id);
 }

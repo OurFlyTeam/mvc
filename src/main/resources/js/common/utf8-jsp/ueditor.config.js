@@ -32,6 +32,8 @@
 
         // 服务器统一请求接口路径
         //, serverUrl: URL + "jsp/controller.jsp"
+        ,imageUrl:URL+"jsp/controller.jsp"             //图片上传提交地址
+        ,imagePath:URL + "jsp/"                     //图片修正地址，引用了fixedImagePath,如有特殊需求，可自行配置
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[
