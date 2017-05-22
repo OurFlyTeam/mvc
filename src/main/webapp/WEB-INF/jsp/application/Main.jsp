@@ -123,7 +123,7 @@
 					<div class="fl">
 
 						<p class= "pb">企业使命</p>
-						<p class= "pnb">引领环保行业，改善生态环境</p>
+						<p class= "pnb">引领环保行业 改善生态环境</p>
 						<p class= "pb">企业愿景</p>
 						<p class= "pnb">为客户创造价值 为社会创造美好</p>
 						<p class= "pb">经营理念</p>
