@@ -167,7 +167,7 @@
 				page = 1;
 				business_type = get_business_type(type);
 				var ctx = '<%=request.getContextPath()%>';
-				var url = ctx + '/businessArea/queryListByType';
+				var url = ctx + '/productCenter/queryListByType';
 				$.ajax({
 					method : "POST",
 					url : url,
@@ -208,7 +208,7 @@
 				
 				business_type = get_business_type(type);
 				var ctx = '<%=request.getContextPath()%>';
-				var url = ctx + '/businessArea/queryListByType';
+				var url = ctx + '/productCenter/queryListByType';
 				$.ajax({
 					method : "POST",
 					url : url,
@@ -245,10 +245,9 @@
 				}else{
 					page = parseInt(page) + 1;
 				}
-				
 				business_type = get_business_type(type);
 				var ctx = '<%=request.getContextPath()%>';
-				var url = ctx + '/businessArea/queryListByType';
+				var url = ctx + '/productCenter/queryListByType';
 				$.ajax({
 					method : "POST",
 					url : url,
@@ -285,7 +284,7 @@
 
 				business_type = get_business_type(type);
 				var ctx = '<%=request.getContextPath()%>';
-				var url = ctx + '/businessArea/queryListByType';
+				var url = ctx + '/productCenter/queryListByType';
 				$.ajax({
 					method : "POST",
 					url : url,
@@ -323,7 +322,7 @@
 					
 					business_type = get_business_type(type);
 					var ctx = '<%=request.getContextPath()%>';
-					var url = ctx + '/businessArea/queryListByType';
+					var url = ctx + '/productCenter/queryListByType';
 					$.ajax({
 						method : "POST",
 						url : url,
