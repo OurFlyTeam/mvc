@@ -460,12 +460,13 @@
 							</td>
 							<td valign="top">
 								<p>&nbsp;</p>
-								<p><strong style="font-size:16px; color:#009944;">青岛晟荣环境工程有限公司</strong><br>
-									QingDao ShengRong Environmental Protection</p>
+								<p><strong style="font-size:27px; color:#009944;">青岛晟荣环境工程有限公司</strong></p>
+								<p style="font-size:12px;">QingDao ShengRong Environmental Protection CO.,LTD</p>
 								<p>&nbsp;</p>
 								<p>
-									销售电话：刘经理 18053215436<br>
-									技术电话：杨经理 13668861007<br>
+									环保事业部：刘经理 15339993191<br>
+									钢构事业部：于经理 13789856760<br>
+									技术部电话：杨经理 15339993090<br>
 									公司QQ：1191183939<br>
 									邮 箱：qdsrhj@163.com<br>
 									地 址：山东省青岛市即墨市南泉华骏物流园东（邮编266231）<br>

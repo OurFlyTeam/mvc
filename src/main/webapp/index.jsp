@@ -27,6 +27,8 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/allUse/reset.css">
 <body>
+    <jsp:forward page="/WEB-INF/jsp/application/Main.jsp"/>
+	<!--  
 	<div id="index-main" onmousedown="on_click()">
 		<div align="center">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
@@ -47,6 +49,7 @@
 			</object>
 		</div>
 	</div>
+	-->
 </body>
 <script src="${pageContext.request.contextPath}/js/min/jquery-1.8.3.js"></script>
 <script>
@@ -62,7 +65,7 @@
 
 <!-- 
 http://localhost:88/mvc/ofly/test/find/
-jsp:    -forward page="/WEB-INF/jsp/application/Main.jsp"
+jsp:forward page="/WEB-INF/jsp/application/Main.jsp"
 http://localhost:88/mvc
 http://localhost:88/mvc/ofly/test/test/
 http://localhost:88/mvc/newsEdit/init

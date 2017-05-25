@@ -44,13 +44,13 @@
 .header .title .china-name{
     float: left;
     margin-top: 10px;
-    font: 25px "华文隶书","Microsoft YaHei";
+    font: 27px "华文隶书","Microsoft YaHei";
 }
 .header .title .english-name{
     float: left;
-    font: 12px "Microsoft YaHei";
+    font: 15px "华文隶书","Microsoft YaHei";
     text-align: center;
-    width: 300px;
+    width: 324px;
 }
 .header .title .tell{
     float: right;

@@ -6,11 +6,11 @@
                 <h1>
                     <a href="#" class="logo"></a>
                     <span class="china-name">青岛晟荣环境工程有限公司</span>
-                    <span class="english-name">QingDao ShengRong Environmental Protection</span>
+                    <span class="english-name">QingDao ShengRong Environmental Protection CO.,LTD</span>
                 </h1>
                 <p class="tell">
                     <span class="link">咨询热线</span>
-                    <span class="num">18053215436</span>
+                    <span class="num">15339993191</span>
                 </p>
             </div>
         </div>
