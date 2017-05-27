@@ -460,8 +460,8 @@
 							</td>
 							<td valign="top">
 								<p>&nbsp;</p>
-								<p><strong style="font-size:27px; color:#009944;">青岛晟荣环境工程有限公司</strong></p>
-								<p style="font-size:12px;">QingDao ShengRong Environmental Protection CO.,LTD</p>
+								<p><strong style="font-size:18px; color:#009944;">青岛晟荣环境工程有限公司</strong></p>
+								<!--  <p style="font-size:12px;">QingDao ShengRong Environmental Protection CO.,LTD</p>-->
 								<p>&nbsp;</p>
 								<p>
 									环保事业部：刘经理 15339993191<br>
